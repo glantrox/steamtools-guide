@@ -533,21 +533,15 @@
                                 <span
                                     class="font-mono text-xs font-semibold text-emerald-400 shrink-0 mt-0.5">01.</span>
                                 <p class="text-zinc-300">
-                                    Buka situs <a href="https://steamdb.info/" target="_blank" rel="noopener noreferrer"
-                                        class="text-emerald-400 underline underline-offset-2">steamdb.info</a>, cari
-                                    game yang ingin lu mainin, lalu copy angka <strong class="text-zinc-100">App
-                                        ID</strong> game-nya.
+                                    Gunakan widget <strong class="text-emerald-400">Cari App ID</strong> di sidebar kanan website ini, ketik judul game yang ingin kamu mainkan, lalu klik kartu game-nya (angka <strong class="text-zinc-100 font-mono">App ID</strong> otomatis tersalin ke clipboard). <span class="text-zinc-500 text-[11px] block mt-0.5">*(Opsi alternatif: bisa cari manual via <a href="https://steamdb.info/" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-200 underline">steamdb.info</a>)*</span>
                                 </p>
                             </div>
                             <div class="flex items-start gap-3 border-t border-zinc-800/60 pt-3">
                                 <span
                                     class="font-mono text-xs font-semibold text-emerald-400 shrink-0 mt-0.5">02.</span>
                                 <p class="text-zinc-300">
-                                    Paste App ID tadi di <a href="https://kernelos.org/games" target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="text-emerald-400 underline underline-offset-2">kernelos.org/games</a>
-                                    lalu download file manifest-nya yang berformat <code
-                                        class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded">.lua</code>.
+                                    Klik tombol <strong class="text-emerald-400 font-semibold">KernelOS</strong> atau <strong class="text-zinc-200 font-semibold">AHD Mirror</strong> yang langsung aktif di bawah nama game yang kamu pilih untuk mengunduh file manifest/LUA resminya (<code
+                                        class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded">.lua</code>).
                                 </p>
                             </div>
                             <div class="flex items-start gap-3 border-t border-zinc-800/60 pt-3">
@@ -580,11 +574,9 @@
                         <!-- Tip Box referencing sidebar tool -->
                         <div
                             class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 flex items-start gap-2.5 text-xs text-zinc-400">
-                            <i class="fa-solid fa-gamepad text-emerald-400 text-xs mt-0.5 shrink-0"></i>
+                            <i class="fa-solid fa-bolt text-emerald-400 text-xs mt-0.5 shrink-0"></i>
                             <div>
-                                <strong class="text-zinc-200 font-medium">Cari App ID Cepat:</strong> Gunakan widget
-                                <strong class="text-emerald-400">Cari Game ID by Title</strong> di sidebar kanan untuk
-                                mengetik nama game favorit lu dan langsung menyalin App ID-nya dalam satu klik.
+                                <strong class="text-zinc-200 font-medium">Tips Cepat:</strong> Kamu tidak perlu repot membuka tab baru untuk mencari App ID & link manifest. Cukup gunakan widget <strong class="text-emerald-400">Cari App ID</strong> di sebelah kanan untuk menyalin ID dan langsung membuka halaman download KernelOS / AHD Mirror dalam 1 klik.
                             </div>
                         </div>
 
@@ -1235,29 +1227,18 @@
             <div class="sticky top-20 space-y-4 text-xs">
 
                 <!-- Find Game & DLC App ID Widget -->
-                <div class="p-3.5 bg-zinc-900/60 border border-zinc-800/90 rounded-lg space-y-3">
-                    <!-- Title & Header -->
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-semibold text-zinc-200 flex items-center gap-1.5">
-                            <i id="search-mode-icon" class="fa-solid fa-gamepad text-zinc-400"></i>
-                            <span id="search-widget-title">Cari App ID</span>
-                        </span>
-                        <span class="text-[10px] text-zinc-500 font-mono">Steam</span>
-                    </div>
-
-                    <!-- Mode Switcher: Game vs DLC (Sleek Apple/Raycast Segmented Control) -->
-                    <div class="grid grid-cols-2 p-1 bg-zinc-950 rounded-lg border border-zinc-800/80 text-xs font-medium gap-1">
+                <div class="p-3 bg-zinc-900/60 border border-zinc-800/90 rounded-xl space-y-2.5">
+                    <!-- Header & Mode Switcher -->
+                    <div class="grid grid-cols-2 p-0.5 bg-zinc-950 rounded-lg border border-zinc-800/90 text-xs font-medium gap-0.5">
                         <button id="search-mode-btn-game" onclick="setSearchMode('game')"
-                            class="py-1 px-2.5 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm">
-                            <i class="fa-solid fa-gamepad text-[11px] text-zinc-300"></i> Game
+                            class="py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm text-xs">
+                            <i class="fa-solid fa-gamepad text-[10px]"></i> Game
                         </button>
                         <button id="search-mode-btn-dlc" onclick="setSearchMode('dlc')"
-                            class="py-1 px-2.5 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200">
-                            <i class="fa-solid fa-puzzle-piece text-[11px] text-zinc-400"></i> DLC / Addon
+                            class="py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs">
+                            <i class="fa-solid fa-puzzle-piece text-[10px]"></i> DLC / Addon
                         </button>
                     </div>
-
-                    <p id="search-mode-hint" class="text-[11px] text-zinc-400 leading-tight">Ketik judul game untuk salin App ID utama:</p>
 
                     <!-- Search Input with Glowing Border Beam -->
                     <div id="game-search-wrapper" class="border-beam-container">
@@ -1265,7 +1246,7 @@
                         <div class="border-beam-inner">
                             <i class="fa-solid fa-magnifying-glass pl-2.5 text-zinc-500 text-[10px] shrink-0"></i>
                             <input type="text" id="game-search-input" oninput="handleGameSearchInput()"
-                                placeholder="Cth: GTA, Wukong, Elden..."
+                                placeholder="Cari judul game (GTA, Wukong...)"
                                 class="w-full bg-transparent pl-2 pr-2.5 py-1.5 text-xs text-zinc-200 placeholder-zinc-500 focus:outline-none font-sans">
                         </div>
                     </div>
@@ -1276,36 +1257,91 @@
                     </div>
 
                     <!-- Active Selected Game Action Bar -->
-                    <div id="game-active-detail" class="hidden pt-2.5 border-t border-zinc-800/80 space-y-2">
-                        <div class="flex items-center justify-between text-xs">
-                            <span class="text-zinc-400 truncate max-w-[140px]">ID: <strong id="game-active-id"
-                                    class="text-zinc-200 font-mono"></strong></span>
-                            <span class="text-emerald-400 text-[11px] flex items-center gap-1 font-mono shrink-0">
-                                <i class="fa-solid fa-check text-[10px]"></i> Disalin
+                    <div id="game-active-detail" class="hidden pt-2.5 border-t border-zinc-800/90 space-y-2">
+                        <!-- Active Game Header (Title & DRM Badge) -->
+                        <div class="flex items-center justify-between gap-1.5">
+                            <span id="game-active-title" class="text-xs font-semibold text-zinc-100 truncate flex-1 leading-tight"></span>
+                            <span id="game-active-drm" class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">
+                                Clean
                             </span>
                         </div>
-                        <div class="grid grid-cols-4 gap-1 text-[11px] font-medium text-center">
-                            <a id="link-steamdb" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1 px-1 rounded-md bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 transition truncate"
-                                title="Cek di SteamDB">
-                                SteamDB
-                            </a>
-                            <a id="link-dlcs" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1 px-1 rounded-md bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-amber-300 border border-zinc-800 transition truncate"
-                                title="Lihat Daftar Semua DLC di SteamDB">
-                                DLCs
-                            </a>
+
+                        <!-- ID & Copy Feedback -->
+                        <div class="flex items-center justify-between text-[11px] font-mono text-zinc-400">
+                            <span>App ID: <strong id="game-active-id" class="text-zinc-200"></strong></span>
+                            <span class="text-emerald-400 text-[10px] flex items-center gap-1 font-mono">
+                                <i class="fa-solid fa-check text-[9px]"></i> Disalin
+                            </span>
+                        </div>
+
+                        <!-- Quick External Resources Grid (Direct Links) -->
+                        <div class="grid grid-cols-2 gap-1.5">
                             <a id="link-kernel" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1 px-1 rounded-md bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 transition truncate"
-                                title="Download Manifest di KernelOS">
-                                KernelOS
+                                class="py-1.5 px-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold text-[11px] transition flex items-center justify-center gap-1.5 shadow-sm active:scale-95 text-center"
+                                title="Download LUA & Manifest resmi di KernelOS">
+                                <i class="fa-solid fa-download text-[10px]"></i>
+                                <span>KernelOS</span>
                             </a>
                             <a id="link-mirror" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1 px-1 rounded-md bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 transition truncate"
-                                title="Download di AHD Mirror">
-                                Mirror
+                                class="py-1.5 px-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-medium text-[11px] border border-zinc-700 transition flex items-center justify-center gap-1.5 active:scale-95 text-center"
+                                title="Download Manifest di AHD Mirror">
+                                <i class="fa-solid fa-server text-[10px]"></i>
+                                <span>AHD Mirror</span>
                             </a>
                         </div>
+
+                        <div class="grid grid-cols-2 gap-1.5 text-[10px] font-medium text-center">
+                            <a id="link-steamdb" href="#" target="_blank" rel="noopener noreferrer"
+                                class="py-1 px-1 rounded bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 transition flex items-center justify-center gap-1"
+                                title="Cek di SteamDB">
+                                <i class="fa-solid fa-globe text-[9px]"></i> SteamDB
+                            </a>
+                            <a id="link-dlcs" href="#" target="_blank" rel="noopener noreferrer"
+                                class="py-1 px-1 rounded bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-amber-300 border border-zinc-800 transition flex items-center justify-center gap-1"
+                                title="Lihat Daftar DLC">
+                                <i class="fa-solid fa-puzzle-piece text-[9px]"></i> Daftar DLC
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steam Directory Quick Launcher (Win + R Helper) -->
+                <div class="p-3.5 bg-zinc-900/60 border border-zinc-800/90 rounded-lg space-y-2.5 text-xs">
+                    <div class="flex items-center justify-between">
+                        <span class="font-semibold text-zinc-200 text-xs flex items-center gap-1.5">
+                            <i class="fa-solid fa-folder-open text-amber-400 text-[11px]"></i>
+                            <span>Steam Folder Helper</span>
+                        </span>
+                        <span class="text-[10px] text-zinc-500 font-mono">Win + R</span>
+                    </div>
+                    <p class="text-[11px] text-zinc-400 leading-tight">Klik untuk menyalin perintah buka folder cepat:</p>
+
+                    <div class="space-y-1.5">
+                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\appcache&quot;', 'Folder appcache')"
+                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                            <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 appcache <span class="text-[10px] text-zinc-500 font-sans">(Hapus packageinfo)</span></span>
+                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                        </button>
+                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\steamapps\\depotcache&quot;', 'Folder depotcache')"
+                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                            <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 depotcache <span class="text-[10px] text-zinc-500 font-sans">(Paste manifest)</span></span>
+                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                        </button>
+                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\steamapps\\common&quot;', 'Folder common')"
+                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                            <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 steamapps/common <span class="text-[10px] text-zinc-500 font-sans">(Game install)</span></span>
+                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                        </button>
+                        <button onclick="copyWinRPath('explorer &quot;%USERPROFILE%\\Saved Games&quot;', 'Folder Saved Games')"
+                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                            <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 Saved Games <span class="text-[10px] text-zinc-500 font-sans">(Save file)</span></span>
+                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                        </button>
+                        <button onclick="copyWinRPath('explorer &quot;%LOCALAPPDATA%\\SteamTools&quot;', 'Folder SteamTools')"
+                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                            <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 SteamTools <span class="text-[10px] text-zinc-500 font-sans">(Config & Logs)</span></span>
+                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -1356,8 +1392,8 @@
             const tocForums = document.getElementById('toc-forums-list');
 
             if (tab === 'guides') {
-                btnGuides.classList.add('active');
-                btnForums.classList.remove('active');
+                btnGuides.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 bg-zinc-800 text-zinc-100 shadow-sm';
+                btnForums.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 text-zinc-400 hover:text-zinc-200';
 
                 contentGuides.classList.remove('hidden');
                 contentForums.classList.add('hidden');
@@ -1365,11 +1401,11 @@
                 sidebarGuides.classList.remove('hidden');
                 sidebarForums.classList.add('hidden');
 
-                if (tocGuides) tocGuides.classList.remove('hidden');
-                if (tocForums) tocForums.classList.add('hidden');
+                tocGuides.classList.remove('hidden');
+                tocForums.classList.add('hidden');
             } else {
-                btnForums.classList.add('active');
-                btnGuides.classList.remove('active');
+                btnForums.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 bg-zinc-800 text-zinc-100 shadow-sm';
+                btnGuides.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 text-zinc-400 hover:text-zinc-200';
 
                 contentForums.classList.remove('hidden');
                 contentGuides.classList.add('hidden');
@@ -1377,86 +1413,100 @@
                 sidebarForums.classList.remove('hidden');
                 sidebarGuides.classList.add('hidden');
 
-                if (tocForums) tocForums.classList.remove('hidden');
-                if (tocGuides) tocGuides.classList.add('hidden');
+                tocForums.classList.remove('hidden');
+                tocGuides.classList.add('hidden');
             }
         }
 
-        function filterForumThreads() {
-            const input = document.getElementById('forum-search-input').value.toLowerCase().trim();
-            const cards = document.querySelectorAll('.forum-thread-card');
-
-            cards.forEach(card => {
-                const text = card.innerText.toLowerCase();
-                const keywords = card.getAttribute('data-keywords') || '';
-
-                if (!input || text.includes(input) || keywords.includes(input)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
+        // Forum Filter & Search Logic
         function filterForumCategory(cat) {
+            const btns = document.querySelectorAll('.forum-cat-btn');
+            btns.forEach(btn => {
+                const val = btn.getAttribute('data-cat-val');
+                if (val === cat) {
+                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-emerald-400 bg-zinc-900/80 transition';
+                } else {
+                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition';
+                }
+            });
+
+            applyForumFilters();
+        }
+
+        function filterForumCategoryChip(cat, el) {
+            const chips = document.querySelectorAll('.forum-chip');
+            chips.forEach(chip => {
+                chip.className = 'forum-chip px-2.5 py-1 rounded-full bg-zinc-900 text-zinc-400 border border-zinc-800 hover:border-zinc-700 transition text-[11px] whitespace-nowrap';
+            });
+            el.className = 'forum-chip px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-medium transition text-[11px] whitespace-nowrap';
+
+            // Sync left sidebar button as well
+            const btns = document.querySelectorAll('.forum-cat-btn');
+            btns.forEach(btn => {
+                const val = btn.getAttribute('data-cat-val');
+                if (val === cat) {
+                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-emerald-400 bg-zinc-900/80 transition';
+                } else {
+                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition';
+                }
+            });
+
+            applyForumFilters();
+        }
+
+        function handleForumSearch() {
+            applyForumFilters();
+        }
+
+        function applyForumFilters() {
+            const searchInput = document.getElementById('forum-search-input');
+            const query = (searchInput?.value || '').toLowerCase().trim();
+
+            const activeBtn = document.querySelector('.forum-cat-btn.text-emerald-400');
+            const selectedCat = activeBtn ? activeBtn.getAttribute('data-cat-val') : 'all';
+
             const cards = document.querySelectorAll('.forum-thread-card');
-            const catBtns = document.querySelectorAll('.forum-cat-btn');
-            const mobileCatBtns = document.querySelectorAll('.forum-mobile-cat-btn');
+            let visibleCount = 0;
 
-            // Sync Desktop Sidebar Category Buttons
-            catBtns.forEach(btn => {
-                const btnCat = btn.getAttribute('data-cat-val');
-                if (btnCat === cat) {
-                    btn.classList.add('text-emerald-400', 'bg-zinc-900/80');
-                    btn.classList.remove('text-zinc-400');
-                } else {
-                    btn.classList.remove('text-emerald-400', 'bg-zinc-900/80');
-                    btn.classList.add('text-zinc-400');
-                }
-            });
-
-            // Sync Mobile / Quick Filter Chips
-            mobileCatBtns.forEach(btn => {
-                const btnCat = btn.getAttribute('data-cat-val');
-                if (btnCat === cat) {
-                    btn.classList.add('active');
-                    btn.classList.remove('text-zinc-400');
-                } else {
-                    btn.classList.remove('active');
-                    btn.classList.add('text-zinc-400');
-                }
-            });
-
-            // Filter the actual thread cards
             cards.forEach(card => {
-                if (cat === 'all' || card.getAttribute('data-category') === cat) {
-                    card.style.display = '';
+                const cardCat = card.getAttribute('data-category');
+                const cardKeywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+                const cardText = card.innerText.toLowerCase();
+
+                const matchesCat = (selectedCat === 'all' || cardCat === selectedCat);
+                const matchesQuery = (!query || cardKeywords.includes(query) || cardText.includes(query));
+
+                if (matchesCat && matchesQuery) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
                 } else {
-                    card.style.display = 'none';
+                    card.classList.add('hidden');
                 }
             });
+
+            const emptyNotice = document.getElementById('forum-empty-state');
+            if (emptyNotice) {
+                if (visibleCount === 0) {
+                    emptyNotice.classList.remove('hidden');
+                } else {
+                    emptyNotice.classList.add('hidden');
+                }
+            }
         }
 
-        function fillPreset(appId) {
-            const input = document.getElementById('appid-input');
-            input.value = appId;
-            generateAppLinks();
-        }
-
-        function copyCode(elementId, btnEl) {
-            const codeText = document.getElementById(elementId).innerText;
+        function copyInstallCode() {
+            const code = document.getElementById('install-code').innerText;
+            const btnText = document.getElementById('btn-copy-text');
+            const icon = document.getElementById('btn-copy-icon');
 
             const textArea = document.createElement("textarea");
-            textArea.value = codeText;
+            textArea.value = code;
             document.body.appendChild(textArea);
             textArea.select();
-            try { document.execCommand('copy'); } catch (err) { }
+            document.execCommand('copy');
             document.body.removeChild(textArea);
 
-            const btnText = btnEl.querySelector('.btn-text');
-            const icon = btnEl.querySelector('i');
-
-            if (btnText) btnText.innerText = 'Tersalin';
+            if (btnText) btnText.innerText = 'Tersalin!';
             if (icon) icon.className = 'fa-solid fa-check text-emerald-400';
 
             showToast('Perintah disalin ke clipboard');
@@ -1520,22 +1570,16 @@
             currentSearchMode = mode;
             const btnGame = document.getElementById('search-mode-btn-game');
             const btnDlc = document.getElementById('search-mode-btn-dlc');
-            const modeIcon = document.getElementById('search-mode-icon');
-            const modeHint = document.getElementById('search-mode-hint');
             const input = document.getElementById('game-search-input');
 
             if (mode === 'game') {
-                btnGame.className = 'py-1 px-2.5 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm';
-                btnDlc.className = 'py-1 px-2.5 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200';
-                if (modeIcon) modeIcon.className = 'fa-solid fa-gamepad text-zinc-400';
-                if (modeHint) modeHint.innerText = 'Ketik judul game untuk salin App ID utama:';
-                if (input) input.placeholder = 'Cth: GTA, Wukong, Elden, Cyberpunk...';
+                btnGame.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm text-xs';
+                btnDlc.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs';
+                if (input) input.placeholder = 'Cari judul game (GTA, Wukong...)';
             } else {
-                btnDlc.className = 'py-1 px-2.5 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm';
-                btnGame.className = 'py-1 px-2.5 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200';
-                if (modeIcon) modeIcon.className = 'fa-solid fa-puzzle-piece text-zinc-400';
-                if (modeHint) modeHint.innerText = 'Ketik nama DLC / ekspansi untuk salin App ID DLC:';
-                if (input) input.placeholder = 'Cth: Phantom Liberty, Erdtree, Iceborne, DLC...';
+                btnDlc.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm text-xs';
+                btnGame.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs';
+                if (input) input.placeholder = 'Cari nama DLC (Phantom Liberty, DLC...)';
             }
 
             // Clear text field, active item bar, and results list on tab switch
@@ -1567,13 +1611,13 @@
                     if (currentSearchMode === 'game') {
                         resultsContainer.innerHTML = `
                             <div class="p-3 text-center bg-zinc-950/40 rounded-lg text-zinc-500 text-[11px] leading-relaxed">
-                                Ketik nama game (cth: GTA, Cyberpunk, Danganronpa) untuk mencari App ID.
+                                Ketik nama game untuk mencari App ID & Manifest.
                             </div>
                         `;
                     } else {
                         resultsContainer.innerHTML = `
                             <div class="p-3 text-center bg-zinc-950/40 rounded-lg text-zinc-500 text-[11px] leading-relaxed">
-                                Ketik nama game atau judul DLC (cth: Phantom Liberty, Erdtree) untuk mencari DLC.
+                                Ketik nama DLC untuk mencari App ID DLC.
                             </div>
                         `;
                     }
@@ -1609,105 +1653,99 @@
             { name: "Euro Truck Simulator 2 - Cabin Accessories", id: "388470", game: "Euro Truck Simulator 2", isDlc: true },
             { name: "Euro Truck Simulator 2 - Wheel Tuning Pack", id: "388475", game: "Euro Truck Simulator 2", isDlc: true },
             { name: "Euro Truck Simulator 2 - Michelin Fan Pack", id: "388477", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Mighty Griffin Tuning Pack", id: "461244", game: "Euro Truck Simulator 2", isDlc: true },
 
             // American Truck Simulator DLCs
-            { name: "American Truck Simulator - Nebraska", id: "2584600", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Kansas", id: "2292180", game: "American Truck Simulator", isDlc: true },
+            { name: "American Truck Simulator - Nebraska", id: "2588150", game: "American Truck Simulator", isDlc: true },
+            { name: "American Truck Simulator - Kansas", id: "2298430", game: "American Truck Simulator", isDlc: true },
             { name: "American Truck Simulator - Oklahoma", id: "2209650", game: "American Truck Simulator", isDlc: true },
             { name: "American Truck Simulator - Texas", id: "1465750", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Montana", id: "1584710", game: "American Truck Simulator", isDlc: true },
+            { name: "American Truck Simulator - Montana", id: "1576200", game: "American Truck Simulator", isDlc: true },
             { name: "American Truck Simulator - Wyoming", id: "1415692", game: "American Truck Simulator", isDlc: true },
             { name: "American Truck Simulator - Colorado", id: "1209471", game: "American Truck Simulator", isDlc: true },
             { name: "American Truck Simulator - Idaho", id: "1209470", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Utah", id: "1107710", game: "American Truck Simulator", isDlc: true },
+            { name: "American Truck Simulator - Utah", id: "1104880", game: "American Truck Simulator", isDlc: true },
             { name: "American Truck Simulator - Washington", id: "1015160", game: "American Truck Simulator", isDlc: true },
             { name: "American Truck Simulator - Oregon", id: "800370", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - New Mexico", id: "684630", game: "American Truck Simulator", isDlc: true },
+            { name: "American Truck Simulator - New Mexico", id: "684690", game: "American Truck Simulator", isDlc: true },
 
             // Cyberpunk 2077 DLCs
             { name: "Cyberpunk 2077: Phantom Liberty", id: "2138330", game: "Cyberpunk 2077", isDlc: true },
-            { name: "Cyberpunk 2077: REDmod", id: "2060310", game: "Cyberpunk 2077", isDlc: true },
-            { name: "Cyberpunk 2077 Bonus Content", id: "1091501", game: "Cyberpunk 2077", isDlc: true },
 
             // Elden Ring DLCs
-            { name: "ELDEN RING Shadow of the Erdtree", id: "2778580", game: "Elden Ring", isDlc: true },
-            { name: "ELDEN RING Shadow of the Erdtree Premium Bundle", id: "2778590", game: "Elden Ring", isDlc: true },
-            { name: "ELDEN RING Digital Artbook & Soundtrack", id: "1896330", game: "Elden Ring", isDlc: true },
+            { name: "ELDEN RING Shadow of the Erdtree", id: "2778580", game: "ELDEN RING", isDlc: true },
+            { name: "ELDEN RING Shadow of the Erdtree Premium Bundle", id: "2778590", game: "ELDEN RING", isDlc: true },
 
-            // Resident Evil 4 DLCs
-            { name: "Resident Evil 4 - Separate Ways", id: "2109300", game: "Resident Evil 4", isDlc: true },
-            { name: "Resident Evil 4 - Extra DLC Pack", id: "2109710", game: "Resident Evil 4", isDlc: true },
-            { name: "Resident Evil 4 - The Mercenaries", id: "2109315", game: "Resident Evil 4", isDlc: true },
-            { name: "Resident Evil 4 Original Soundtrack", id: "2593600", game: "Resident Evil 4", isDlc: true },
-            { name: "Resident Evil 4 Treasure Map: Expansion", id: "2109301", game: "Resident Evil 4", isDlc: true },
+            // Resident Evil 4 Remake DLCs
+            { name: "Resident Evil 4 - Separate Ways", id: "2109315", game: "Resident Evil 4", isDlc: true },
+            { name: "Resident Evil 4 - Extra DLC Pack", id: "2109301", game: "Resident Evil 4", isDlc: true },
 
-            // Monster Hunter Series DLCs
+            // Monster Hunter DLCs
             { name: "Monster Hunter World: Iceborne", id: "1118010", game: "Monster Hunter: World", isDlc: true },
-            { name: "Monster Hunter World: Iceborne Deluxe Kit", id: "1118012", game: "Monster Hunter: World", isDlc: true },
             { name: "Monster Hunter Rise: Sunbreak", id: "1880360", game: "Monster Hunter Rise", isDlc: true },
-            { name: "Monster Hunter Rise: Sunbreak Deluxe Kit", id: "1880361", game: "Monster Hunter Rise", isDlc: true },
 
             // The Witcher 3 DLCs
-            { name: "The Witcher 3: Wild Hunt - Blood and Wine", id: "378648", game: "The Witcher 3", isDlc: true },
-            { name: "The Witcher 3: Wild Hunt - Hearts of Stone", id: "378649", game: "The Witcher 3", isDlc: true },
+            { name: "The Witcher 3: Wild Hunt - Blood and Wine", id: "378648", game: "The Witcher 3: Wild Hunt", isDlc: true },
+            { name: "The Witcher 3: Wild Hunt - Hearts of Stone", id: "378649", game: "The Witcher 3: Wild Hunt", isDlc: true },
+            { name: "The Witcher 3: Wild Hunt - Expansion Pass", id: "355880", game: "The Witcher 3: Wild Hunt", isDlc: true },
 
             // Forza Horizon 5 DLCs
-            { name: "Forza Horizon 5: Rally Adventure", id: "1613281", game: "Forza Horizon 5", isDlc: true },
-            { name: "Forza Horizon 5: Hot Wheels", id: "1613280", game: "Forza Horizon 5", isDlc: true },
+            { name: "Forza Horizon 5 Rally Adventure", id: "1613281", game: "Forza Horizon 5", isDlc: true },
+            { name: "Forza Horizon 5 Hot Wheels", id: "1613280", game: "Forza Horizon 5", isDlc: true },
             { name: "Forza Horizon 5 Car Pass", id: "1613282", game: "Forza Horizon 5", isDlc: true },
+            { name: "Forza Horizon 5 Premium Add-Ons Bundle", id: "1613285", game: "Forza Horizon 5", isDlc: true },
 
             // Dead by Daylight DLCs
-            { name: "Dead by Daylight - Resident Evil Chapter", id: "1634040", game: "Dead by Daylight", isDlc: true },
+            { name: "Dead by Daylight - Castlevania Chapter", id: "3139360", game: "Dead by Daylight", isDlc: true },
+            { name: "Dead by Daylight - Tomb Raider Chapter", id: "3052820", game: "Dead by Daylight", isDlc: true },
+            { name: "Dead by Daylight - Dungeons & Dragons Chapter", id: "2825470", game: "Dead by Daylight", isDlc: true },
+            { name: "Dead by Daylight - Alan Wake Chapter", id: "2729900", game: "Dead by Daylight", isDlc: true },
             { name: "Dead by Daylight - Stranger Things Chapter", id: "1135280", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Silent Hill Chapter", id: "1324970", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Halloween Chapter", id: "530711", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Saw Chapter", id: "750381", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Tomb Raider Chapter", id: "2809910", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Castlevania Chapter", id: "2809920", game: "Dead by Daylight", isDlc: true },
 
             // The Sims 4 DLCs
-            { name: "The Sims 4 Lovestruck Expansion Pack", id: "2826500", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 For Rent Expansion Pack", id: "2549640", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Horse Ranch Expansion Pack", id: "2353080", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Growing Together Expansion Pack", id: "2224090", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 High School Years Expansion Pack", id: "1975760", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Cottage Living Expansion Pack", id: "1458150", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Snowy Escape Expansion Pack", id: "1368590", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Eco Lifestyle Expansion Pack", id: "1222671", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Discover University Expansion Pack", id: "1222672", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Island Living Expansion Pack", id: "1222673", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Seasons Expansion Pack", id: "1222675", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Cats & Dogs Expansion Pack", id: "1222676", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 City Living Expansion Pack", id: "1222677", game: "The Sims 4", isDlc: true },
+            { name: "The Sims 4 Lovestruck Expansion Pack", id: "2830880", game: "The Sims 4", isDlc: true },
+            { name: "The Sims 4 For Rent Expansion Pack", id: "2444630", game: "The Sims 4", isDlc: true },
+            { name: "The Sims 4 Horse Ranch Expansion Pack", id: "2353060", game: "The Sims 4", isDlc: true },
+            { name: "The Sims 4 Growing Together Expansion Pack", id: "2168540", game: "The Sims 4", isDlc: true },
+            { name: "The Sims 4 High School Years Expansion Pack", id: "1978280", game: "The Sims 4", isDlc: true },
+            { name: "The Sims 4 Cottage Living Expansion Pack", id: "1598710", game: "The Sims 4", isDlc: true },
 
             // Cities: Skylines DLCs
-            { name: "Cities: Skylines - Mass Transit", id: "547502", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - After Dark", id: "369150", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Snowfall", id: "420610", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Green Cities", id: "614580", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Industries", id: "715190", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Hotels & Retreats", id: "2224690", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Financial Districts", id: "2148901", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Plazas & Promenades", id: "2008400", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Airports", id: "1726380", game: "Cities: Skylines", isDlc: true },
             { name: "Cities: Skylines - Sunset Harbor", id: "1146930", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Plazas & Promenades", id: "2001440", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Campus", id: "944071", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Industries", id: "715190", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Parklife", id: "715194", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Green Cities", id: "614580", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Mass Transit", id: "547502", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Natural Disasters", id: "515120", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - Snowfall", id: "420610", game: "Cities: Skylines", isDlc: true },
+            { name: "Cities: Skylines - After Dark", id: "369110", game: "Cities: Skylines", isDlc: true },
 
             // Fallout 4 DLCs
+            { name: "Fallout 4 - Nuka-World", id: "404090", game: "Fallout 4", isDlc: true },
+            { name: "Fallout 4 - Vault-Tec Workshop", id: "480631", game: "Fallout 4", isDlc: true },
+            { name: "Fallout 4 - Contraptions Workshop", id: "480630", game: "Fallout 4", isDlc: true },
             { name: "Fallout 4 - Far Harbor", id: "435881", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 - Nuka-World", id: "435880", game: "Fallout 4", isDlc: true },
+            { name: "Fallout 4 - Wasteland Workshop", id: "435880", game: "Fallout 4", isDlc: true },
             { name: "Fallout 4 - Automatron", id: "435870", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 - Season Pass", id: "404090", game: "Fallout 4", isDlc: true },
+            { name: "Fallout 4 Season Pass", id: "404090", game: "Fallout 4", isDlc: true },
 
-            // Skyrim DLCs
-            { name: "Skyrim Anniversary Upgrade", id: "1746860", game: "Skyrim", isDlc: true },
-            { name: "The Elder Scrolls V: Skyrim - Dragonborn", id: "226880", game: "Skyrim", isDlc: true },
-            { name: "The Elder Scrolls V: Skyrim - Dawnguard", id: "211720", game: "Skyrim", isDlc: true },
-            { name: "The Elder Scrolls V: Skyrim - Hearthfire", id: "220760", game: "Skyrim", isDlc: true },
+            // Skyrim Special Edition DLCs
+            { name: "Skyrim Special Edition: Survival Mode", id: "761600", game: "The Elder Scrolls V: Skyrim Special Edition", isDlc: true },
+            { name: "Skyrim Anniversary Edition Upgrade", id: "1746860", game: "The Elder Scrolls V: Skyrim Special Edition", isDlc: true },
 
-            // Persona Series DLCs
-            { name: "Persona 3 Reload: Expansion Pass (Episode Aigis)", id: "2708380", game: "Persona 3 Reload", isDlc: true },
-            { name: "Persona 5 Royal DLC Pack", id: "2018590", game: "Persona 5 Royal", isDlc: true },
+            // Persona 3 Reload DLCs
+            { name: "Persona 3 Reload: Expansion Pass", id: "2775610", game: "Persona 3 Reload", isDlc: true },
+            { name: "Persona 3 Reload - Episode Aigis -The Answer-", id: "2775620", game: "Persona 3 Reload", isDlc: true },
 
-            // Black Myth: Wukong DLC
-            { name: "Black Myth: Wukong Deluxe Edition Upgrade", id: "2826430", game: "Black Myth: Wukong", isDlc: true }
+            // Persona 5 Royal DLCs
+            { name: "Persona 5 Royal - DLC Pack", id: "2079080", game: "Persona 5 Royal", isDlc: true },
+
+            // Black Myth: Wukong DLCs
+            { name: "Black Myth: Wukong - Deluxe Edition Upgrade", id: "2826350", game: "Black Myth: Wukong", isDlc: true }
         ];
 
         async function fetchLiveSteamGames(query) {
@@ -1831,6 +1869,72 @@
             }
         }
 
+        // DRM & Anti-Cheat Compatibility Database
+        const DRM_DATABASE = {
+            // Denuvo Protected Games (Amber/Yellow badge)
+            "2358720": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Black Myth: Wukong
+            "2161700": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Persona 3 Reload
+            "1687950": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Persona 5 Royal
+            "2050650": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Resident Evil 4
+            "1693980": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Dead Space
+            "2054970": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Dragon's Dogma 2
+            "2195250": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // EA Sports FC 24
+            "2669320": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // EA Sports FC 25
+            "1142710": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Total War Warhammer 3
+            "1364780": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Street Fighter 6
+            "1627720": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Lies of P
+            "990080":  { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Hogwarts Legacy
+            "1774580": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // STAR WARS Jedi: Survivor
+            "1235140": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Yakuza: Like a Dragon
+            "2072450": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Like a Dragon: Infinite Wealth
+            "2246340": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Monster Hunter Wilds
+
+            // Kernel Anti-Cheat (Red badge)
+            "1172470": { status: "anticheat", label: "Kernel EAC", desc: "Hanya aman Singleplayer / Offline" }, // Apex Legends
+            "252490":  { status: "anticheat", label: "Easy Anti-Cheat", desc: "Hanya aman Singleplayer / Offline" }, // Rust
+            "359550":  { status: "anticheat", label: "BattlEye AC", desc: "Hanya aman Singleplayer / Offline" }, // Tom Clancy's Rainbow Six Siege
+            "381210":  { status: "anticheat", label: "Easy Anti-Cheat", desc: "Hanya aman Singleplayer / Offline" }, // Dead by Daylight
+            "578080":  { status: "anticheat", label: "BattlEye AC", desc: "Hanya aman Singleplayer / Offline" }, // PUBG: BATTLEGROUNDS
+            "1085660": { status: "anticheat", label: "BattlEye AC", desc: "Hanya aman Singleplayer / Offline" }, // Destiny 2
+
+            // Clean Steam / Playable (Emerald badge)
+            "1222670": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // The Sims 4
+            "227300":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // ETS2
+            "270880":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // ATS
+            "1245620": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Elden Ring
+            "1091500": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Cyberpunk 2077
+            "292030":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // The Witcher 3
+            "1551360": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Forza Horizon 5
+            "271590":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // GTA V
+            "1174180": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Red Dead Redemption 2
+            "1086940": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Baldur's Gate 3
+            "582010":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Monster Hunter: World
+            "1446780": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Monster Hunter Rise
+            "489830":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Skyrim SE
+            "377160":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Fallout 4
+            "255710":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Cities Skylines
+            "218620":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Payday 2
+            "1817070": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Spider-Man Remastered
+            "1817190": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Spider-Man: Miles Morales
+            "1593500": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // God of War
+            "1332010": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Stray
+            "814380":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }  // Sekiro
+        };
+
+        function getGameDrmInfo(appId, gameName) {
+            if (DRM_DATABASE[String(appId)]) {
+                return DRM_DATABASE[String(appId)];
+            }
+            const nameLower = (gameName || '').toLowerCase();
+            if (nameLower.includes('wukong') || nameLower.includes('persona 3 reload') || nameLower.includes('persona 5') || nameLower.includes('fc 24') || nameLower.includes('fc 25') || nameLower.includes('fifa') || nameLower.includes('denuvo') || nameLower.includes('sonic frontiers') || nameLower.includes('like a dragon') || nameLower.includes('jedi survivor')) {
+                return { status: 'denuvo', label: 'Denuvo DRM', desc: 'Butuh crack/bypass terpisah' };
+            }
+            if (nameLower.includes('apex') || nameLower.includes('rust') || nameLower.includes('rainbow six') || nameLower.includes('siege') || nameLower.includes('destiny 2') || nameLower.includes('pubg') || nameLower.includes('easy anti-cheat') || nameLower.includes('battleye')) {
+                return { status: 'anticheat', label: 'Kernel AC', desc: 'Hanya aman Singleplayer / Offline' };
+            }
+            return { status: 'clean', label: 'Clean Steam', desc: '100% Playable' };
+        }
+
         function renderGameResults(games, query) {
             const resultsContainer = document.getElementById('game-search-results');
             if (!resultsContainer) return;
@@ -1854,10 +1958,21 @@
 
             resultsContainer.innerHTML = games.slice(0, 10).map(game => {
                 const isDlc = isDlcMode || game.isDlc;
+                const drm = getGameDrmInfo(game.id, game.name);
+
+                let badgeHtml = '';
+                if (isDlc) {
+                    badgeHtml = `<span class="text-[9px] font-mono font-bold text-amber-300 bg-amber-500/30 px-1 py-0.2 rounded border border-amber-500/40 backdrop-blur-sm shrink-0">DLC</span>`;
+                } else if (drm.status === 'denuvo') {
+                    badgeHtml = `<span class="text-[9px] font-mono font-medium px-1 py-0.2 rounded bg-amber-500/30 text-amber-300 border border-amber-500/40 backdrop-blur-sm shrink-0" title="${drm.desc}">Denuvo</span>`;
+                } else if (drm.status === 'anticheat') {
+                    badgeHtml = `<span class="text-[9px] font-mono font-medium px-1 py-0.2 rounded bg-rose-500/30 text-rose-300 border border-rose-500/40 backdrop-blur-sm shrink-0" title="${drm.desc}">AC</span>`;
+                }
+
                 return `
                 <div onclick="copyGameId(${game.id}, '${game.name.replace(/'/g, "\\'")}', ${isDlc})"
-                    class="group relative overflow-hidden rounded-lg min-h-[62px] p-2.5 flex flex-col justify-end border border-zinc-800/80 hover:border-zinc-600 transition-all duration-200 cursor-pointer select-none bg-zinc-950 shadow-sm"
-                    title="Klik untuk salin ID: ${game.id}">
+                    class="group relative overflow-hidden rounded-lg min-h-[58px] p-2 flex flex-col justify-end border border-zinc-800/80 hover:border-zinc-500 transition-all duration-200 cursor-pointer select-none bg-zinc-950 shadow-sm"
+                    title="Klik untuk memilih & salin ID: ${game.id}">
                     
                     <!-- Full Game Capsule Background Image -->
                     ${game.logo ? `
@@ -1867,22 +1982,19 @@
                     ` : ''}
                     
                     <!-- Smooth Bottom-to-Top Scrim Gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/75 to-zinc-950/20 pointer-events-none"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/20 pointer-events-none"></div>
 
                     <!-- Overlay Content -->
-                    <div class="relative z-10 space-y-1 w-full min-w-0">
+                    <div class="relative z-10 space-y-0.5 w-full min-w-0">
                         <div class="flex items-center gap-1.5 min-w-0">
-                            ${isDlc ? `<span class="text-[9px] font-mono font-bold text-amber-300 bg-amber-500/30 px-1 py-0.2 rounded border border-amber-500/40 backdrop-blur-sm shrink-0">DLC</span>` : ''}
+                            ${badgeHtml}
                             <div class="marquee-wrapper min-w-0 flex-1">
                                 <p class="marquee-content text-xs font-semibold text-white drop-shadow-md group-hover:text-emerald-300 transition">${game.name}</p>
                             </div>
                         </div>
-                        <div class="flex items-center justify-between gap-1 text-[11px] font-mono">
-                            <span class="text-zinc-300 bg-zinc-950/80 px-1.5 py-0.5 rounded border border-white/10 backdrop-blur-sm shadow-sm">
-                                ID: <strong class="${isDlc ? 'text-amber-400' : 'text-emerald-400'}">${game.id}</strong>
-                            </span>
-                            
-                            <span class="text-[10px] text-zinc-300 bg-zinc-950/80 px-1.5 py-0.5 rounded border border-white/10 opacity-0 group-hover:opacity-100 transition backdrop-blur-sm flex items-center gap-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-zinc-300 pt-0.5">
+                            <span class="text-zinc-400">ID: <strong class="${isDlc ? 'text-amber-400' : 'text-emerald-400'}">${game.id}</strong></span>
+                            <span class="text-[10px] text-zinc-400 opacity-0 group-hover:opacity-100 transition flex items-center gap-1">
                                 <i class="fa-regular fa-copy text-[9px]"></i> Salin
                             </span>
                         </div>
@@ -1890,6 +2002,8 @@
                 </div>
             `}).join('');
         }
+
+        let activeSelectedGame = null;
 
         function copyGameId(appId, gameName, isDlc = false) {
             const textArea = document.createElement("textarea");
@@ -1902,25 +2016,63 @@
             const prefix = isDlc ? 'DLC App ID' : 'App ID';
             showToast(`${prefix} ${appId} (${gameName}) disalin!`);
 
+            activeSelectedGame = { appId, gameName, isDlc };
+
             // Update Active Detail Card in Sidebar
             const activeDetail = document.getElementById('game-active-detail');
+            const activeTitleEl = document.getElementById('game-active-title');
             const activeIdEl = document.getElementById('game-active-id');
+            const activeDrmEl = document.getElementById('game-active-drm');
             const linkSteamdb = document.getElementById('link-steamdb');
             const linkDlcs = document.getElementById('link-dlcs');
             const linkKernel = document.getElementById('link-kernel');
             const linkMirror = document.getElementById('link-mirror');
 
             if (activeDetail && activeIdEl) {
-                activeIdEl.innerText = `${appId} (${gameName})`;
+                if (activeTitleEl) {
+                    activeTitleEl.innerText = gameName;
+                    activeTitleEl.title = gameName;
+                }
+                activeIdEl.innerText = appId;
                 if (linkSteamdb) linkSteamdb.href = `https://steamdb.info/app/${appId}/`;
                 if (linkDlcs) linkDlcs.href = `https://steamdb.info/app/${appId}/dlc/`;
                 if (linkKernel) linkKernel.href = `https://kernelos.org/games?search=${appId}`;
                 if (linkMirror) linkMirror.href = `https://ahd-manifest.lovable.app/?appid=${appId}`;
+
+                if (activeDrmEl) {
+                    if (isDlc) {
+                        activeDrmEl.innerText = 'DLC / Addon';
+                        activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20';
+                    } else {
+                        const drm = getGameDrmInfo(appId, gameName);
+                        activeDrmEl.innerText = drm.label;
+                        if (drm.status === 'denuvo') {
+                            activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20';
+                        } else if (drm.status === 'anticheat') {
+                            activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20';
+                        } else {
+                            activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
+                        }
+                    }
+                }
+
                 activeDetail.classList.remove('hidden');
             }
         }
 
-        // Initialize search UI on page load
+        // --- Steam Folder Helper (Win + R Copy Handler) ---
+        function copyWinRPath(pathCommand, label) {
+            const textArea = document.createElement("textarea");
+            textArea.value = pathCommand;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try { document.execCommand('copy'); } catch (err) { }
+            document.body.removeChild(textArea);
+
+            showToast(`Perintah ${label} disalin! (Buka via Win + R)`);
+        }
+
+        // Initialize UI on page load
         document.addEventListener('DOMContentLoaded', () => {
             handleGameSearchInput();
         });
