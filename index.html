@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial & Forum SteamTools - Panduan & Problem Solver</title>
 
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Tutorial & Forum SteamTools - Panduan & Problem Solver">
+    <meta name="description" content="Panduan lengkap instalasi SteamTools, cara pasang game & DLC, pencarian App ID & Manifest 1-klik, serta forum solusi error terlengkap.">
+    <meta name="keywords" content="steamtools, steam manifest, steamtools guide, app id steam, unlock dlc steam, steamtools tutorial">
+    <meta name="author" content="glantrox">
+
+    <!-- Discord & Open Graph (OG) Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glantrox.github.io/steamtools-guide/">
+    <meta property="og:title" content="Tutorial & Forum SteamTools - Panduan & Problem Solver">
+    <meta property="og:description" content="Panduan lengkap instalasi SteamTools, cara pasang game & DLC, pencarian App ID & Manifest 1-klik, serta forum solusi error terlengkap.">
+    <meta property="og:image" content="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1">
+    <meta property="og:site_name" content="SteamTools Guide by glantrox">
+
+    <!-- Discord Theme Color (Garis Aksen Hijau Emerald di Sisi Kiri Embed) -->
+    <meta name="theme-color" content="#10b981">
+    <meta name="msapplication-TileColor" content="#10b981">
+
+    <!-- Twitter Card Meta Tags (Large Image Banner Preview) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://glantrox.github.io/steamtools-guide/">
+    <meta name="twitter:title" content="Tutorial & Forum SteamTools - Panduan & Problem Solver">
+    <meta name="twitter:description" content="Panduan lengkap instalasi SteamTools, cara pasang game & DLC, pencarian App ID & Manifest 1-klik, serta forum solusi error terlengkap.">
+    <meta name="twitter:image" content="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -81,12 +106,6 @@
         .toc-link.active {
             color: #10b981;
             font-weight: 500;
-        }
-
-        .tab-btn.active {
-            background-color: #27272a;
-            color: #10b981;
-            border-color: rgba(16, 185, 129, 0.4);
         }
 
         /* Animated Green Spinning Border Beam for Search Bar */
@@ -189,55 +208,54 @@
 <body
     class="bg-zinc-950 text-zinc-300 antialiased font-sans min-h-screen selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden">
 
-    <!-- Top Global Header with Tab View Selector -->
-    <header class="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-2 sm:gap-4">
+    <!-- Top Global Header with Sleek Floating Tab Selector -->
+    <header class="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-zinc-950/80 backdrop-blur-xl transition-all">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-2 sm:gap-4">
 
             <!-- Left: Logo & Repository Info -->
-            <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
                 <button id="mobile-menu-btn" aria-label="Buka Menu"
-                    class="lg:hidden p-2 text-zinc-400 hover:text-white rounded-md hover:bg-zinc-800/60 transition focus:outline-none focus:ring-1 focus:ring-emerald-500">
+                    class="lg:hidden p-1.5 text-zinc-400 hover:text-white rounded-lg hover:bg-zinc-800/60 transition focus:outline-none focus:ring-1 focus:ring-emerald-500">
                     <i class="fa-solid fa-bars text-sm"></i>
                 </button>
 
-                <a href="#" class="flex items-center gap-1.5 sm:gap-2">
-                    <span
-                        class="w-6 h-6 rounded bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xs font-mono font-bold shrink-0">
-                        <i class="fa-brands fa-github text-xs"></i>
+                <a href="#" class="flex items-center gap-2 group">
+                    <span class="w-7 h-7 rounded-lg bg-zinc-900 border border-zinc-800 group-hover:border-zinc-700 flex items-center justify-center text-zinc-300 text-xs font-mono font-bold transition shadow-sm">
+                        <i class="fa-brands fa-github text-sm text-emerald-400"></i>
                     </span>
-                    <span
-                        class="font-semibold text-xs sm:text-sm text-zinc-100 tracking-tight font-mono">glantrox</span>
-                    <span class="text-zinc-600 text-xs sm:text-sm hidden xs:inline">/</span>
-                    <span
-                        class="text-[11px] sm:text-xs text-zinc-400 font-mono hidden md:inline">steamtools-guide</span>
+                    <div class="flex items-center gap-1.5 font-mono">
+                        <span class="font-semibold text-xs sm:text-sm text-zinc-100 tracking-tight group-hover:text-white transition">glantrox</span>
+                        <span class="text-zinc-600 text-xs">/</span>
+                        <span class="text-xs text-zinc-400 hidden sm:inline group-hover:text-zinc-300 transition">steamtools-guide</span>
+                    </div>
                 </a>
             </div>
 
-            <!-- Center: Tab View Selector (Daftar Panduan vs Forums) -->
-            <div class="flex items-center bg-zinc-900 border border-zinc-800 p-0.5 sm:p-1 rounded-lg shrink-0">
+            <!-- Center: Floating Capsule Segmented Tab Selector -->
+            <div class="flex items-center bg-zinc-900/90 border border-zinc-800/90 p-1 rounded-full backdrop-blur-md shadow-inner shadow-black/50">
                 <button id="tab-btn-guides" onclick="switchTab('guides')"
-                    class="tab-btn active flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md text-zinc-300 hover:text-white transition border border-transparent">
-                    <i class="fa-solid fa-book-open text-xs"></i>
+                    class="tab-nav-btn active flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 bg-zinc-800 text-zinc-100 shadow-sm border border-zinc-700/60">
+                    <i class="fa-solid fa-book-bookmark text-[11px] text-emerald-400"></i>
                     <span>Panduan</span>
                 </button>
                 <button id="tab-btn-forums" onclick="switchTab('forums')"
-                    class="tab-btn flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md text-zinc-400 hover:text-white transition border border-transparent">
-                    <i class="fa-brands fa-reddit text-orange-500 text-xs"></i>
+                    class="tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 text-zinc-400 hover:text-zinc-200 border border-transparent">
+                    <i class="fa-brands fa-reddit text-[12px] text-orange-400"></i>
                     <span>Forums</span>
                 </button>
             </div>
 
-            <!-- Right: Discord & SteamTools External Links -->
-            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <!-- Right: External Actions -->
+            <div class="flex items-center gap-2 shrink-0">
                 <a href="https://discord.gg/k3rnalyze" target="_blank" rel="noopener noreferrer"
                     title="Gabung Discord K3rnalyze"
-                    class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition">
-                    <i class="fa-brands fa-discord text-indigo-400"></i>
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition">
+                    <i class="fa-brands fa-discord text-indigo-400 text-xs"></i>
                     <span class="hidden md:inline">Discord</span>
                 </a>
                 <a href="https://steamtools.net/" target="_blank" rel="noopener noreferrer"
                     title="Download SteamTools Resmi"
-                    class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-semibold transition shadow-sm">
+                    class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 transition shadow-sm shadow-emerald-500/20 active:scale-95">
                     <i class="fa-solid fa-download text-[11px]"></i>
                     <span class="hidden sm:inline">SteamTools</span>
                 </a>
@@ -1391,9 +1409,12 @@
             const tocGuides = document.getElementById('toc-guides-list');
             const tocForums = document.getElementById('toc-forums-list');
 
+            const activeClasses = 'tab-nav-btn active flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 bg-zinc-800 text-zinc-100 shadow-sm border border-zinc-700/60';
+            const inactiveClasses = 'tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 text-zinc-400 hover:text-zinc-200 border border-transparent';
+
             if (tab === 'guides') {
-                btnGuides.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 bg-zinc-800 text-zinc-100 shadow-sm';
-                btnForums.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 text-zinc-400 hover:text-zinc-200';
+                btnGuides.className = activeClasses;
+                btnForums.className = inactiveClasses;
 
                 contentGuides.classList.remove('hidden');
                 contentForums.classList.add('hidden');
@@ -1404,8 +1425,8 @@
                 tocGuides.classList.remove('hidden');
                 tocForums.classList.add('hidden');
             } else {
-                btnForums.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 bg-zinc-800 text-zinc-100 shadow-sm';
-                btnGuides.className = 'px-3 py-1.5 rounded-md transition-all flex items-center gap-2 text-zinc-400 hover:text-zinc-200';
+                btnForums.className = activeClasses;
+                btnGuides.className = inactiveClasses;
 
                 contentForums.classList.remove('hidden');
                 contentGuides.classList.add('hidden');
