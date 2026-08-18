@@ -962,6 +962,251 @@
                         </div>
                     </div>
 
+                    <!-- Thread Item 6 -->
+                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
+                        data-category="cache" data-keywords="dlc lock locked unlock smokeapi creamapi paradox capcom bandai">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
+                                <i class="fa-solid fa-puzzle-piece text-[9px]"></i> Cache & DLC Unlock
+                            </span>
+                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> Solved Thread
+                            </span>
+                        </div>
+
+                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
+                            DLC Tercentang di Library Steam, Tetapi di Dalam Game Konten Masih Terkunci?
+                        </h3>
+
+                        <p class="text-zinc-400 leading-relaxed text-xs">
+                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Setelah menambahkan file LUA DLC (seperti Tekken 8, Monster Hunter, ETS2, Persona, HOI4), Steam menampilkan status DLC sebagai "Installed", namun menu di dalam game tetap menganggap DLC belum dibeli.
+                        </p>
+
+                        <div
+                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
+                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas (SmokeAPI / CreamAPI):
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
+                                <li>Beberapa game (terutama Capcom, Paradox, Bandai) memiliki verifikasi runtime internal pada file <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">steam_api64.dll</code>.</li>
+                                <li>Pasang <strong>SmokeAPI</strong> atau <strong>CreamAPI</strong> ke dalam folder instalasi executable game utama.</li>
+                                <li>Salin App ID DLC dari menu pencarian di sebelah kanan panduan ini, lalu masukkan ke dalam file konfigurasi <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">smokeapi.config.json</code> atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">cream_api.ini</code>.</li>
+                                <li>Jalankan game secara langsung dari Steam.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Thread Item 7 -->
+                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
+                        data-category="depot" data-keywords="stuck 0 b/s download slow no internet connection timeout cdn speed">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-mono">
+                                <i class="fa-solid fa-gauge-simple-high text-[9px]"></i> Depot & Download
+                            </span>
+                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> Solved Thread
+                            </span>
+                        </div>
+
+                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
+                            Download Game Stuck di 0 B/s atau Muncul Pesan "No Internet Connection"
+                        </h3>
+
+                        <p class="text-zinc-400 leading-relaxed text-xs">
+                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Kecepatan download Steam tiba-tiba drop menjadi 0 B/s dan tidak bergerak, atau Steam melaporkan error koneksi saat mengunduh file game besar.
+                        </p>
+
+                        <div
+                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
+                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
+                                <li>Buka menu <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Steam Settings &gt; Downloads</code> dan ubah <strong>Download Region</strong> ke <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Singapore</code> atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Germany - Frankfurt</code>.</li>
+                                <li>Nonaktifkan sementara protokol <strong>IPv6</strong> pada pengaturan Network Adapter Windows kamu.</li>
+                                <li>Jika depot manifest kadaluarsa, unduh manual file manifest via <a href="https://ahd-manifest.lovable.app/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline">AHD Manifest Mirror</a> lalu paste ke folder <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Steam/steamapps/depotcache</code>.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Thread Item 8 -->
+                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
+                        data-category="permission" data-keywords="update klien hilang overlay re-inject reinject powershell hook hilang">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
+                                <i class="fa-solid fa-rotate text-[9px]"></i> Permission & Injection
+                            </span>
+                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> Solved Thread
+                            </span>
+                        </div>
+
+                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
+                            Overlay SteamTools Hilang Setelah Steam Melakukan Auto-Update Klien
+                        </h3>
+
+                        <p class="text-zinc-400 leading-relaxed text-xs">
+                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Setelah Steam mengunduh update klien otomatis dari Valve dan restart, window overlay SteamTools tidak lagi muncul dan menu game kembali normal.
+                        </p>
+
+                        <div
+                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
+                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas (Re-inject Hook):
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
+                                <li>Update klien Steam sering menimpa file dynamic library (<code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">chrome_elf.dll</code> / <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">steamui.dll</code>) yang di-hook oleh SteamTools.</li>
+                                <li>Tutup Steam sepenuhnya dari Task Manager.</li>
+                                <li>Buka terminal PowerShell Administrator dan jalankan ulang perintah installer satu baris: <code class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded">irm steam.run | iex</code>.</li>
+                                <li>Buka kembali Steam. Semua file game dan konfigurasi LUA yang sudah terpasang <strong>tetap aman dan tidak hilang</strong>.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Thread Item 9 -->
+                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
+                        data-category="permission" data-keywords="easy anti-cheat eac battleye vac multiplayer online kick untrusted">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 font-mono">
+                                <i class="fa-solid fa-shield-virus text-[9px]"></i> Anti-Cheat & Multiplayer
+                            </span>
+                            <span class="text-rose-400 font-mono text-[10px] flex items-center gap-1">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Security Advisory
+                            </span>
+                        </div>
+
+                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
+                            Error "Easy Anti-Cheat Untrusted System File" atau Game Online Menolak Masuk Server
+                        </h3>
+
+                        <p class="text-zinc-400 leading-relaxed text-xs">
+                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Saat meluncurkan game multiplayer (seperti Dead by Daylight, Rust, Apex, atau game ber-EAC lainnya), game langsung force close dengan notifikasi "Untrusted system file".
+                        </p>
+
+                        <div
+                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
+                            <div class="font-semibold text-amber-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-shield-halved"></i> Panduan Keamanan Akun:
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
+                                <li>Anti-cheat level kernel (seperti Easy Anti-Cheat dan BattlEye) mendeteksi injeksi runtime memory pada Steam client.</li>
+                                <li>SteamTools <strong>hanya ditujukan untuk game singleplayer, offline, atau local co-op</strong>.</li>
+                                <li>Jangan pernah mencoba mengakses server resmi game ber-anti-cheat ketat menggunakan akun Steam utama untuk menghindari risiko ban akun (VAC/Game Ban).</li>
+                                <li>Untuk game dengan fitur multiplayer, gunakan komunitas server terpisah (Spacewar fix / Goldberg LAN emulator).</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Thread Item 10 -->
+                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
+                        data-category="cache" data-keywords="update loop update required loop infinite loop acf stateflags">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
+                                <i class="fa-solid fa-arrows-rotate text-[9px]"></i> License & Cache
+                            </span>
+                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> Solved Thread
+                            </span>
+                        </div>
+
+                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
+                            Game Terjebak di Status "Update Required" dan Masuk Infinite Update Loop
+                        </h3>
+
+                        <p class="text-zinc-400 leading-relaxed text-xs">
+                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Tombol di Library Steam terus meminta "Update", dan setiap kali tombol Update ditekan, proses selesai seketika (0 detik) namun tombol kembali lagi menjadi "Update" bukannya "Play".
+                        </p>
+
+                        <div
+                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
+                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas (Edit ACF StateFlags):
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
+                                <li>Tutup Steam sepenuhnya dari Task Manager.</li>
+                                <li>Buka folder <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">C:\Program Files (x86)\Steam\steamapps\</code>.</li>
+                                <li>Cari file <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">appmanifest_[APPID].acf</code> sesuai App ID game yang bermasalah, lalu buka dengan Notepad.</li>
+                                <li>Cari baris <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">"StateFlags"</code> dan ubah nilainya menjadi <code class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded">"4"</code> (Status: Fully Installed).</li>
+                                <li>Pastikan baris <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">"BytesToDownload"</code> dan <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">"BytesDownloaded"</code> keduanya bernilai <code class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded">"0"</code>.</li>
+                                <li>Simpan file (<kbd class="font-mono bg-zinc-900 px-1 rounded text-zinc-300">Ctrl+S</kbd>) lalu buka kembali Steam. Status game akan langsung berubah menjadi <strong>Play</strong>.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Thread Item 11 -->
+                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
+                        data-category="cloud" data-keywords="save hilang progress savegame reset permission uac document">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-mono">
+                                <i class="fa-solid fa-floppy-disk text-[9px]"></i> Steam Cloud & Save
+                            </span>
+                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> Solved Thread
+                            </span>
+                        </div>
+
+                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
+                            Progres / Save File Game Tidak Tersimpan Setelah Menutup Game atau Restart PC
+                        </h3>
+
+                        <p class="text-zinc-400 leading-relaxed text-xs">
+                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Progres gameplay yang sudah dimainkan berjam-jam tidak tersimpan dan selalu memulai permainan baru (New Game) setiap kali game dibuka kembali.
+                        </p>
+
+                        <div
+                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
+                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
+                                <li>Karena Steam Cloud dinonaktifkan, game menyimpan data secara lokal pada direktori <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">%USERPROFILE%\Saved Games</code>, <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">%APPDATA%</code>, atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Documents</code>.</li>
+                                <li>Pastikan folder penyimpanan tersebut tidak berada dalam status <em>Read-Only</em> dan antivirus tidak mengunci izin tulis folder (Ransomware Protection).</li>
+                                <li>Jalankan shortcut executable game dengan opsi <strong>"Run as Administrator"</strong> agar game memiliki hak akses menulis file save data.</li>
+                                <li>Cek lokasi penyimpanan spesifik tiap game melalui situs <a href="https://www.pcgamingwiki.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline">PCGamingWiki</a>.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Thread Item 12 -->
+                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
+                        data-category="depot" data-keywords="invalid manifest lua corrupted archive extract gzip drop">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-mono">
+                                <i class="fa-solid fa-file-circle-exclamation text-[9px]"></i> Depot & Extraction
+                            </span>
+                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> Solved Thread
+                            </span>
+                        </div>
+
+                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
+                            Error "Invalid Manifest Structure" atau "Corrupted File" saat Drag & Drop File LUA
+                        </h3>
+
+                        <p class="text-zinc-400 leading-relaxed text-xs">
+                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Muncul notifikasi error pada overlay SteamTools saat mencoba men-drag file konfigurasi LUA atau manifest yang baru diunduh.
+                        </p>
+
+                        <div
+                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
+                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
+                            </div>
+                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
+                                <li>Pastikan file yang di-drag adalah file mentah berekstensi <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">.lua</code> atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">.manifest</code>, <strong>bukan file arsip terkompresi (.zip / .rar / .7z)</strong>. Ekstrak terlebih dahulu jika berformat zip.</li>
+                                <li>Gunakan sumber file resmi terverifikasi dari <strong>KernelOS</strong> atau <strong>AHD Manifest Mirror</strong>.</li>
+                                <li>Hindari mengedit struktur tabel kode di dalam file <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">.lua</code> secara manual jika format string belum dipahami.</li>
+                            </ol>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -1637,17 +1882,9 @@
                                 ID: <strong class="${isDlc ? 'text-amber-400' : 'text-emerald-400'}">${game.id}</strong>
                             </span>
                             
-                            <div class="flex items-center gap-1 shrink-0">
-                                <a href="https://steamdb.info/app/${game.id}/dlc/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()"
-                                    class="opacity-0 group-hover:opacity-100 transition text-[10px] text-zinc-300 hover:text-white bg-zinc-950/80 px-1.5 py-0.5 rounded border border-white/10 backdrop-blur-sm flex items-center gap-1 shadow-sm"
-                                    title="Buka daftar DLC di SteamDB">
-                                    <span>DLC</span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square text-[7px]"></i>
-                                </a>
-                                <span class="text-[10px] text-zinc-300 bg-zinc-950/80 px-1.5 py-0.5 rounded border border-white/10 opacity-0 group-hover:opacity-100 transition backdrop-blur-sm flex items-center gap-1">
-                                    <i class="fa-regular fa-copy text-[9px]"></i> Salin
-                                </span>
-                            </div>
+                            <span class="text-[10px] text-zinc-300 bg-zinc-950/80 px-1.5 py-0.5 rounded border border-white/10 opacity-0 group-hover:opacity-100 transition backdrop-blur-sm flex items-center gap-1">
+                                <i class="fa-regular fa-copy text-[9px]"></i> Salin
+                            </span>
                         </div>
                     </div>
                 </div>
