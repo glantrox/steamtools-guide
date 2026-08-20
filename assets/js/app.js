@@ -1,14 +1,20 @@
 /**
  * SteamTools Guide - Main Application Entry Point
  */
-import { initI18n, registerLanguageChangeListener } from './modules/i18n.js';
-import { initNavigation } from './modules/navigation.js';
+import { initI18n, registerLanguageChangeListener, toggleLanguage, setLanguage } from './modules/i18n.js';
+import { initNavigation, switchTab } from './modules/navigation.js';
 import { initClipboard } from './modules/clipboard.js';
 import { initForum, renderForumThreads } from './modules/forum.js';
-import { initGameSearch, handleGameSearchInput } from './modules/game-search.js';
+import { initGameSearch, handleGameSearchInput, setSearchMode } from './modules/game-search.js';
 import { initInteractions } from './modules/interactions.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function startApp() {
+    // Expose global functions to window so inline onclick handlers always work
+    window.toggleLanguage = toggleLanguage;
+    window.setLanguage = setLanguage;
+    window.switchTab = switchTab;
+    window.setSearchMode = setSearchMode;
+
     // 1. Initialize Internationalization (i18n) Engine
     initI18n();
 
@@ -26,4 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderForumThreads();
         handleGameSearchInput();
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startApp);
+} else {
+    startApp();
+}

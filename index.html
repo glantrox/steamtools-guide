@@ -7,25 +7,26 @@
     <title data-i18n="page_title">Tutorial & Forum SteamTools - Panduan & Problem Solver</title>
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="🎮 SteamTools: Complete Guide & Forum Problem Solver">
-    <meta name="description" content="📖 Panduan Lengkap Instalasi SteamTools & Manifest Mirror | 🔍 1-Click Cari App ID & Launcher | 🛡️ DRM Checker | 💬 12+ Forum Solusi Error Terverifikasi">
-    <meta name="keywords" content="steamtools, steam manifest, steamtools guide, app id steam, unlock dlc steam, steamtools tutorial, kernelos, ahd mirror, fix steamtools">
+    <meta name="title" content="SteamTools Setup Guide & Forum Problem Solver">
+    <meta name="description" content="Step-by-step installation guide for SteamTools, manifest mirrors, App ID lookup, and community error troubleshooting.">
+    <meta name="keywords" content="steamtools, steam manifest, steamtools guide, app id steam, kernelos, ahd mirror, fix steamtools">
     <meta name="author" content="glantrox">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph (OG) & Twitter Meta Tags -->
+    <!-- Open Graph (OG) & Twitter Meta Tags for Discord & Social Previews -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:url" content="https://glantrox.github.io/steamtools-guide/">
-    <meta property="og:site_name" content="⚡ STEAMTOOLS COMMUNITY • HUB & SOLVER">
-    <meta property="og:title" content="🎮 SteamTools: Complete Guide & Forum Problem Solver">
-    <meta property="og:description" content="📖 Panduan Lengkap Step-by-Step Instalasi & Manifest Mirror&#10;🔍 1-Click App ID Search, DRM Status & Manifest Launcher&#10;🛡️ DRM & Anti-Cheat Compatibility Checker&#10;💬 12+ Solusi Masalah Error Populer">
+    <meta property="og:site_name" content="SteamTools Guide">
+    <meta property="og:title" content="SteamTools Setup Guide & Forum Problem Solver">
+    <meta property="og:description" content="Step-by-step installation guide for SteamTools, manifest mirrors, App ID lookup, and community error troubleshooting.">
     <meta property="og:image" content="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1">
     <meta name="theme-color" content="#10b981">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://glantrox.github.io/steamtools-guide/">
-    <meta name="twitter:title" content="🎮 SteamTools: Complete Guide & Forum Problem Solver">
+    <meta name="twitter:title" content="SteamTools Setup Guide & Forum Problem Solver">
+    <meta name="twitter:description" content="Step-by-step installation guide for SteamTools, manifest mirrors, App ID lookup, and community error troubleshooting.">
     <meta name="twitter:image" content="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1">
 
     <!-- Tailwind CSS CDN -->
@@ -71,13 +72,12 @@
 
             <!-- Center: Sliding Capsule Segmented Tab Selector -->
             <div id="top-tab-container" class="segmented-container">
-                <div class="segmented-pill"></div>
-                <button id="tab-btn-guides"
-                    class="segmented-btn tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full text-zinc-100">
+                <button id="tab-btn-guides" onclick="switchTab('guides')"
+                    class="segmented-btn tab-nav-btn active flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full text-zinc-100">
                     <i class="fa-solid fa-book-bookmark text-[11px] text-emerald-400"></i>
                     <span data-i18n="tab_guides">Panduan</span>
                 </button>
-                <button id="tab-btn-forums"
+                <button id="tab-btn-forums" onclick="switchTab('forums')"
                     class="segmented-btn tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full text-zinc-400 hover:text-zinc-200">
                     <i class="fa-brands fa-reddit text-[12px] text-orange-400"></i>
                     <span data-i18n="tab_forums">Forums</span>
@@ -87,19 +87,19 @@
             <!-- Right: External Actions & Language Switcher -->
             <div class="flex items-center gap-2 shrink-0">
                 <!-- Language Switcher Pill -->
-                <button id="lang-switch-btn" title="Switch Language / Ganti Bahasa"
+                <button id="lang-switch-btn" onclick="toggleLanguage()" title="Switch Language / Ganti Bahasa"
                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition active:scale-95">
                     <span id="current-lang-flag">🇮🇩</span>
                     <span id="current-lang-text">ID</span>
                     <i class="fa-solid fa-globe text-[10px] text-emerald-400 ml-0.5"></i>
                 </button>
 
-                <a href="https://discord.gg/k3rnalyze" target="_blank" rel="noopener noreferrer"
-                    title="Gabung Discord K3rnalyze"
-                    class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition">
-                    <i class="fa-brands fa-discord text-indigo-400 text-xs"></i>
-                    <span class="hidden md:inline" data-i18n="discord_btn">Discord</span>
+                <a href="https://saweria.co/ijan" target="_blank" rel="noopener noreferrer"
+                    title="Traktir Kopi / Support"
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-zinc-900/60 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800/90 transition active:scale-95">
+                    <span data-i18n="donate_nav">☕ Traktir Kopi</span>
                 </a>
+
                 <a href="https://steamtools.net/" target="_blank" rel="noopener noreferrer"
                     title="Download SteamTools Resmi"
                     class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 transition shadow-sm shadow-emerald-500/20 active:scale-95">
@@ -109,6 +109,24 @@
             </div>
         </div>
     </header>
+
+    <!-- Full-Width Running Text Banner Below Topbar -->
+    <div class="top-ticker-banner">
+        <div class="top-ticker-track">
+            <span class="inline-flex items-center gap-10 text-[11px] font-mono text-zinc-400 font-medium">
+                <span data-i18n="educational_badge">THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+                <span>THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+                <span>THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+                <span>THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+            </span>
+            <span class="inline-flex items-center gap-10 text-[11px] font-mono text-zinc-400 font-medium">
+                <span data-i18n="educational_badge">THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+                <span>THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+                <span>THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+                <span>THIS IS FOR EDUCATIONAL PURPOSES!!</span>
+            </span>
+        </div>
+    </div>
 
     <!-- Main Container -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex gap-6 lg:gap-10">
@@ -157,7 +175,7 @@
                             class="forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-emerald-400 bg-zinc-900/80 transition"
                             data-cat-val="all">
                             <span data-i18n="nav_cat_all">Semua Diskusi Error</span>
-                            <span class="text-[10px] bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-400 font-mono">12</span>
+                            <span class="text-[10px] bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-400 font-mono">18</span>
                         </button>
                         <button onclick="filterForumCategory('cache'); closeSidebarOnMobile();"
                             class="forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition"
@@ -226,6 +244,21 @@
                     </p>
                 </div>
 
+                <!-- Left Sidebar Support Bento Box -->
+                <div class="p-3 bg-zinc-900/40 border border-zinc-800/80 rounded-lg text-xs space-y-2">
+                    <span class="text-zinc-200 font-semibold flex items-center gap-1.5">
+                        <span>☕</span> <span data-i18n="donate_right_title">Dukung Project</span>
+                    </span>
+                    <p class="text-zinc-500 text-[11px] leading-relaxed" data-i18n="donate_left_sub">
+                        Dukung kelangsungan project ini via Saweria / Trakteer.
+                    </p>
+                    <a href="https://saweria.co/ijan" target="_blank" rel="noopener noreferrer"
+                        class="w-full py-1.5 px-2 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-[11px] font-medium flex items-center justify-center gap-1.5 transition text-center">
+                        <i class="fa-solid fa-mug-hot text-amber-400 text-[10px]"></i>
+                        <span data-i18n="donate_btn">Dukung via Saweria / Trakteer</span>
+                    </a>
+                </div>
+
             </div>
         </aside>
 
@@ -252,20 +285,38 @@
                     </div>
                 </div>
 
-                <!-- Plain Educational Disclaimer Text Directly Below Hero Container -->
-                <p class="mt-1.5 mb-6 text-[11px] text-zinc-500 font-mono tracking-tight" data-i18n="educational_badge">
-                    THIS IS FOR EDUCATIONAL PURPOSES!!
-                </p>
-
                 <!-- SECTION 1 -->
-                <section id="section-setup" class="scroll-mt-20 mb-10 sm:mb-12">
-                    <h2 class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
-                        <span class="step-number-badge w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">1</span>
-                        <span data-i18n="section1_title">Setup & Eksekusi Script</span>
-                    </h2>
+                <section id="section-setup" class="step-section scroll-mt-20">
+                    <!-- Sticky Step Command Dock (Morphing Header) -->
+                    <div class="sticky-step-dock flex items-center justify-between gap-3">
+                        <!-- Left: Badge + Title -->
+                        <div class="flex items-center gap-2 min-w-0">
+                            <span class="step-number-badge w-6 h-6 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold flex items-center justify-center shrink-0">01</span>
+                            <h2 class="text-xs sm:text-sm font-semibold text-zinc-100 truncate" data-i18n="section1_title">Setup & Eksekusi Script</h2>
+                        </div>
 
-                    <!-- Clean Pre-flight Checklist -->
-                    <div class="mb-6 p-3.5 sm:p-4 rounded-lg bg-zinc-900/40 border border-zinc-800/80 space-y-2.5">
+                        <!-- Right: Granular Sub-step Navigation Track (Icons Only) -->
+                        <div class="flex items-center gap-1.5 font-mono">
+                            <a href="#substep-1-chk" title="Checklist Persiapan" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-solid fa-list-check text-xs"></i>
+                            </a>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-zinc-700"></i>
+                            <a href="#substep-1-software" title="Unduh Software Utama" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-solid fa-download text-xs"></i>
+                            </a>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-zinc-700"></i>
+                            <a href="#substep-1-cmd" title="Perintah Terminal / PowerShell" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-solid fa-terminal text-xs"></i>
+                            </a>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-zinc-700"></i>
+                            <a href="#substep-1-discord" title="Verifikasi Akun Discord" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-brands fa-discord text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Substep Target 1.1: Checklist -->
+                    <div id="substep-1-chk" class="mb-6 p-3.5 sm:p-4 rounded-lg bg-zinc-900/40 border border-zinc-800/80 space-y-2.5 scroll-mt-28">
                         <span class="text-xs font-semibold text-zinc-200" data-i18n="checklist_title">
                             Check-list Persiapan Sebelum Mulai:
                         </span>
@@ -304,8 +355,8 @@
                     <!-- Clean Step Container -->
                     <div class="relative pl-5 sm:pl-6 border-l border-zinc-800/80 space-y-6 sm:space-y-8 ml-2 sm:ml-3">
 
-                        <!-- Step 1.1 -->
-                        <div class="relative">
+                        <!-- Substep 1.2: Software -->
+                        <div id="substep-1-software" class="relative scroll-mt-28">
                             <span class="absolute -left-[27px] sm:-left-[31px] top-1 w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700"></span>
                             <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1" data-i18n="step1_1_title">Unduh & Install Software Utama</h3>
                             <p class="text-xs text-zinc-400 leading-relaxed mb-3" data-i18n="step1_1_desc">
@@ -318,8 +369,8 @@
                             </a>
                         </div>
 
-                        <!-- Step 1.2 -->
-                        <div class="relative">
+                        <!-- Substep 1.3: Terminal Command -->
+                        <div id="substep-1-cmd" class="relative scroll-mt-28">
                             <span class="absolute -left-[27px] sm:-left-[31px] top-1 w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700"></span>
                             <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1" data-i18n="step1_2_title">Jalankan Perintah di Terminal / PowerShell</h3>
                             <p class="text-xs text-zinc-400 leading-relaxed mb-3" data-i18n="step1_2_desc">
@@ -350,8 +401,8 @@
                             </p>
                         </div>
 
-                        <!-- Step 1.3 -->
-                        <div class="relative">
+                        <!-- Substep 1.4: Discord -->
+                        <div id="substep-1-discord" class="relative scroll-mt-28">
                             <span class="absolute -left-[27px] sm:-left-[31px] top-1 w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700"></span>
                             <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1" data-i18n="step1_3_title">Verifikasi & Link Akun Discord</h3>
                             <p class="text-xs text-zinc-400 leading-relaxed" data-i18n="step1_3_desc">
@@ -363,24 +414,62 @@
                 </section>
 
                 <!-- SECTION 2 -->
-                <section id="section-install" class="scroll-mt-20 mb-10 sm:mb-12">
-                    <h2 class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
-                        <span class="step-number-badge w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">2</span>
-                        <span data-i18n="section2_title">Cara Pasang Game</span>
-                    </h2>
+                <section id="section-install" class="step-section scroll-mt-20">
+                    <!-- Sticky Step Command Dock (Morphing Header) -->
+                    <div class="sticky-step-dock flex items-center justify-between gap-3">
+                        <!-- Left: Badge + Title -->
+                        <div class="flex items-center gap-2 min-w-0">
+                            <span class="step-number-badge w-6 h-6 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold flex items-center justify-center shrink-0">02</span>
+                            <h2 class="text-xs sm:text-sm font-semibold text-zinc-100 truncate" data-i18n="section2_title">Cara Pasang Game</h2>
+                        </div>
+
+                        <!-- Right: Granular Sub-step Navigation Track (Icons Only) -->
+                        <div class="flex items-center gap-1.5 font-mono">
+                            <a href="#substep-2-appid" title="Cari App ID Game" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                            </a>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-zinc-700"></i>
+                            <a href="#substep-2-lua" title="Unduh File .LUA / Manifest" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-solid fa-file-arrow-down text-xs"></i>
+                            </a>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-zinc-700"></i>
+                            <a href="#substep-2-drag" title="Drag & Drop ke Overlay" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-solid fa-hand-pointer text-xs"></i>
+                            </a>
+                            <i class="fa-solid fa-chevron-right text-[8px] text-zinc-700"></i>
+                            <a href="#substep-2-onlinefix" title="Patch Multiplayer / Online-Fix" class="substep-pill flex items-center justify-center w-7 h-7 rounded-full border border-zinc-800/80 bg-zinc-900/60 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/80 transition">
+                                <i class="fa-solid fa-users text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="space-y-4 text-xs text-zinc-400 leading-relaxed">
-                        <!-- Clean Ordered Steps -->
-                        <ol class="space-y-2.5 list-decimal list-inside p-4 rounded-lg bg-zinc-900/30 border border-zinc-800/80 text-zinc-300">
-                            <li class="pl-1" data-i18n="sec2_step1">Gunakan widget Cari App ID di sidebar kanan website ini, ketik judul game, lalu klik kartu game-nya.</li>
-                            <li class="pl-1" data-i18n="sec2_step2">Klik tombol KernelOS atau AHD Mirror untuk mengunduh file manifest/LUA resminya (.lua).</li>
-                            <li class="pl-1" data-i18n="sec2_step3">Jalankan aplikasi SteamTools sampai window overlay muncul di atas Steam.</li>
-                            <li class="pl-1" data-i18n="sec2_step4">Drag & Drop file .lua langsung ke kotak overlay SteamTools.</li>
-                            <li class="pl-1" data-i18n="sec2_step5">Klik kanan overlay SteamTools -> pilih Restart Steam. Selesai!</li>
-                        </ol>
+                        <!-- Clean Icon Steps with Granular Anchors -->
+                        <div class="space-y-2.5 p-4 rounded-lg bg-zinc-900/30 border border-zinc-800/80 text-zinc-300">
+                            <div id="substep-2-appid" class="flex items-start gap-2.5 scroll-mt-28">
+                                <i class="fa-solid fa-angle-right text-emerald-400 text-xs shrink-0 mt-0.5"></i>
+                                <span data-i18n="sec2_step1">Gunakan widget Cari App ID di sidebar kanan website ini, ketik judul game, lalu klik kartu game-nya.</span>
+                            </div>
+                            <div id="substep-2-lua" class="flex items-start gap-2.5 scroll-mt-28">
+                                <i class="fa-solid fa-angle-right text-emerald-400 text-xs shrink-0 mt-0.5"></i>
+                                <span data-i18n="sec2_step2">Klik tombol KernelOS atau AHD Mirror untuk mengunduh file manifest/LUA resminya (.lua).</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-emerald-400 text-xs shrink-0 mt-0.5"></i>
+                                <span data-i18n="sec2_step3">Jalankan aplikasi SteamTools sampai window overlay muncul di atas Steam.</span>
+                            </div>
+                            <div id="substep-2-drag" class="flex items-start gap-2.5 scroll-mt-28">
+                                <i class="fa-solid fa-angle-right text-emerald-400 text-xs shrink-0 mt-0.5"></i>
+                                <span data-i18n="sec2_step4">Drag & Drop file .lua langsung ke kotak overlay SteamTools.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-angle-right text-emerald-400 text-xs shrink-0 mt-0.5"></i>
+                                <span data-i18n="sec2_step5">Klik kanan overlay SteamTools -> pilih Restart Steam. Selesai!</span>
+                            </div>
+                        </div>
 
                         <!-- Clean Online-Fix Note -->
-                        <div class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 space-y-2 text-xs">
+                        <div id="substep-2-onlinefix" class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 space-y-2 text-xs scroll-mt-28">
                             <div class="text-emerald-400 font-semibold flex items-center gap-2">
                                 <i class="fa-solid fa-lightbulb"></i>
                                 <span data-i18n="fun_fact_title">Fun Fact & Pro-Tip: Mau Main Multiplayer / Online?</span>
@@ -392,28 +481,44 @@
                     </div>
                 </section>
 
-                <!-- SECTION 3 -->
+                <!-- SECTION 3 (Troubleshooting / Additional Step) -->
                 <section id="section-fix" class="scroll-mt-20 mb-10 sm:mb-12">
-                    <h2 class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
-                        <span class="step-number-badge w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">3</span>
+                    <h2 class="text-sm sm:text-base font-semibold text-zinc-200 tracking-tight mb-3 flex items-center gap-2">
+                        <span class="step-number-badge w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-400 text-xs font-mono font-bold flex items-center justify-center shrink-0">03</span>
                         <span data-i18n="section3_title">Fix Error "No Internet Connection"</span>
                     </h2>
 
-                    <div class="space-y-3 text-xs text-zinc-400">
-                        <div class="p-3.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300/90 flex items-start gap-2.5">
-                            <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xs mt-0.5 shrink-0"></i>
-                            <p data-i18n="sec3_warning" class="leading-relaxed">
-                                <strong class="text-amber-300 font-medium">Solusi Jika Download Bermasalah:</strong> Langkah di bawah ini dipakai kalau lu ngalamin error tulisan <em>"No Internet Connection"</em> saat pencet tombol download game di dalam Steam.
+                    <div class="space-y-3 text-xs text-zinc-400 leading-relaxed">
+                        <p data-i18n="sec3_warning" class="text-zinc-400 text-xs">
+                            <strong class="text-amber-400 font-medium">Jika download bermasalah:</strong> Langkah tambahan ini dipakai jika muncul error tulisan <em>"No Internet Connection"</em> saat menekan tombol download game di Steam.
+                        </p>
+
+                        <ol class="space-y-2 text-zinc-300 list-decimal list-inside pl-1">
+                            <li data-i18n="sec3_s1">Buka situs mirror manifest alternatif di <a href="https://ahd-manifest.lovable.app/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline font-mono">ahd-manifest.lovable.app</a>.</li>
+                            <li data-i18n="sec3_s2">Paste App ID game di kolom search &rarr; lalu klik tombol <strong>Download All</strong>.</li>
+                            <li data-i18n="sec3_s3">Klik kanan overlay SteamTools &rarr; masuk ke menu <code class="bg-zinc-900 text-zinc-200 px-1 py-0.5 rounded font-mono text-[11px]">Steam Folder</code> &rarr; pilih <code class="bg-zinc-900 text-zinc-200 px-1 py-0.5 rounded font-mono text-[11px]">Steam Manifests</code>.</li>
+                            <li data-i18n="sec3_s4">Paste semua file manifest yang baru di-download ke folder tersebut.</li>
+                            <li data-i18n="sec3_s5">Drag semua file manifest tersebut ke overlay SteamTools.</li>
+                            <li data-i18n="sec3_s6">Restart Steam sekali lagi lewat menu overlay SteamTools. Beres!</li>
+                        </ol>
+                    </div>
+
+                    <!-- End of Guide Gratitude / Support Card (Highest Conversion) -->
+                    <div class="mt-8 p-4 sm:p-5 rounded-xl border border-dashed border-zinc-800 bg-zinc-900/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="space-y-1 text-center sm:text-left">
+                            <h3 class="text-xs sm:text-sm font-semibold text-zinc-100 flex items-center justify-center sm:justify-start gap-1.5">
+                                <i class="fa-solid fa-mug-hot text-amber-400 text-xs"></i>
+                                <span data-i18n="donate_hero_title">Panduan Ini Membantu Kamu?</span>
+                            </h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed max-w-md" data-i18n="donate_hero_sub">
+                                Bantu jaga kelangsungan panduan & pembaruan database dengan segelas kopi.
                             </p>
                         </div>
-                        <ol class="list-decimal list-inside space-y-2 p-4 rounded-lg bg-zinc-900/30 border border-zinc-800/80 leading-relaxed text-zinc-300">
-                            <li class="pl-1" data-i18n="sec3_s1">Buka situs mirror manifest alternatif di ahd-manifest.lovable.app.</li>
-                            <li class="pl-1" data-i18n="sec3_s2">Paste App ID game di kolom search -> lalu klik Download All.</li>
-                            <li class="pl-1" data-i18n="sec3_s3">Klik kanan overlay SteamTools -> Steam Folder > Steam Manifests.</li>
-                            <li class="pl-1" data-i18n="sec3_s4">Paste semua file manifest yang baru saja di-download ke folder tersebut.</li>
-                            <li class="pl-1" data-i18n="sec3_s5">Drag semua file manifest tersebut ke overlay SteamTools.</li>
-                            <li class="pl-1" data-i18n="sec3_s6">Restart Steam sekali lagi lewat menu overlay SteamTools. Beres!</li>
-                        </ol>
+                        <a href="https://saweria.co/ijan" target="_blank" rel="noopener noreferrer"
+                            class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold text-xs transition shadow-sm flex items-center gap-2 shrink-0 active:scale-95">
+                            <i class="fa-solid fa-mug-hot text-xs"></i>
+                            <span data-i18n="donate_btn">Dukung via Saweria / Trakteer</span>
+                        </a>
                     </div>
                 </section>
             </div>
@@ -506,13 +611,12 @@
                 <div class="p-3 bg-zinc-900/60 border border-zinc-800/90 rounded-xl space-y-2.5">
                     <!-- Header & Sliding Mode Switcher -->
                     <div id="search-mode-container" class="segmented-container w-full grid grid-cols-2">
-                        <div class="segmented-pill"></div>
-                        <button id="search-mode-btn-game"
-                            class="segmented-btn py-1 px-2 rounded-full transition-all flex items-center justify-center gap-1.5 text-zinc-100 text-xs">
+                        <button id="search-mode-btn-game" onclick="setSearchMode('game')"
+                            class="segmented-btn py-1 px-2 rounded-full transition-all flex items-center justify-center gap-1.5 active text-zinc-100 text-xs">
                             <i class="fa-solid fa-gamepad text-[10px]"></i>
                             <span data-i18n="right_mode_game">Game</span>
                         </button>
-                        <button id="search-mode-btn-dlc"
+                        <button id="search-mode-btn-dlc" onclick="setSearchMode('dlc')"
                             class="segmented-btn py-1 px-2 rounded-full transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs">
                             <i class="fa-solid fa-puzzle-piece text-[10px]"></i>
                             <span data-i18n="right_mode_dlc">DLC / Addon</span>
@@ -535,7 +639,7 @@
                     <div id="game-search-results" class="space-y-1 max-h-72 overflow-y-auto pr-0.5">
                     </div>
 
-                    <!-- Active Selected Game Action Bar -->
+                    <!-- Active Selected Game Action Bar / Quick-Card -->
                     <div id="game-active-detail" class="hidden pt-2.5 border-t border-zinc-800/90 space-y-2">
                         <div class="flex items-center justify-between gap-1.5">
                             <span id="game-active-title" class="text-xs font-semibold text-zinc-100 truncate flex-1 leading-tight"></span>
@@ -549,6 +653,16 @@
                             <span class="text-emerald-400 text-[10px] flex items-center gap-1 font-mono">
                                 <i class="fa-solid fa-check text-[9px]"></i> Disalin
                             </span>
+                        </div>
+
+                        <!-- Manifest Quick-Card Details -->
+                        <div class="p-2 rounded bg-zinc-950 border border-zinc-800/80 space-y-1.5 text-[11px] font-mono">
+                            <div class="flex items-center justify-between gap-1 text-zinc-400">
+                                <span class="truncate text-[10px] text-zinc-500">File: <code id="game-active-manifest-file" class="text-amber-400">appmanifest_0.acf</code></span>
+                                <button onclick="copyManifestFileName()" class="hover:text-zinc-200 text-zinc-400 transition shrink-0" title="Salin Nama File Manifest">
+                                    <i class="fa-regular fa-copy text-[10px]"></i>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="grid grid-cols-2 gap-1.5">

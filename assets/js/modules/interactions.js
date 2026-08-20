@@ -1,5 +1,5 @@
 /**
- * Unified Technical Docs Interactions & ScrollSpy
+ * Unified Technical Docs Interactions, Sticky Morphing Command Bar & Granular Substep Spy
  */
 
 export function initSpotlightCards() {
@@ -36,7 +36,6 @@ export function initScrollSpy() {
             const stepBadge = entry.target.querySelector('.step-number-badge');
 
             if (entry.isIntersecting) {
-                // 1. Shift left sidebar active link state with matching category button styles
                 navLinks.forEach(link => {
                     if (link.getAttribute('href') === `#${sectionId}`) {
                         link.className = activeClasses;
@@ -45,7 +44,6 @@ export function initScrollSpy() {
                     }
                 });
 
-                // 2. Section Step Badge Activation
                 if (stepBadge) {
                     stepBadge.classList.add('active-step');
                 }
@@ -60,7 +58,41 @@ export function initScrollSpy() {
     sections.forEach(section => observer.observe(section));
 }
 
+export function initSubstepSpy() {
+    const substepTargets = document.querySelectorAll('[id^="substep-"]');
+    if (substepTargets.length === 0) return;
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -55% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                const matchingPills = document.querySelectorAll(`.substep-pill[href="#${id}"]`);
+                
+                const parentDock = entry.target.closest('.step-section')?.querySelector('.sticky-step-dock');
+                if (parentDock) {
+                    parentDock.querySelectorAll('.substep-pill').forEach(pill => {
+                        pill.classList.remove('active-substep');
+                    });
+                }
+
+                matchingPills.forEach(pill => {
+                    pill.classList.add('active-substep');
+                });
+            }
+        });
+    }, observerOptions);
+
+    substepTargets.forEach(target => observer.observe(target));
+}
+
 export function initInteractions() {
     initSpotlightCards();
     initScrollSpy();
+    initSubstepSpy();
 }

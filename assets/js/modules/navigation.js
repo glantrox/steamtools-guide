@@ -2,23 +2,9 @@
  * Tab Navigation & Mobile Drawer Management Module
  */
 
-export function updateSlidingPill(container, activeBtn) {
-    if (!container || !activeBtn) return;
-    let pill = container.querySelector('.segmented-pill');
-    if (!pill) {
-        pill = document.createElement('div');
-        pill.className = 'segmented-pill';
-        container.prepend(pill);
-    }
-    
-    pill.style.transform = `translateX(${activeBtn.offsetLeft}px)`;
-    pill.style.width = `${activeBtn.offsetWidth}px`;
-}
-
 export function switchTab(tab) {
     const btnGuides = document.getElementById('tab-btn-guides');
     const btnForums = document.getElementById('tab-btn-forums');
-    const topContainer = document.getElementById('top-tab-container');
 
     const contentGuides = document.getElementById('tab-content-guides');
     const contentForums = document.getElementById('tab-content-forums');
@@ -26,16 +12,13 @@ export function switchTab(tab) {
     const sidebarGuides = document.getElementById('sidebar-guides-nav');
     const sidebarForums = document.getElementById('sidebar-forums-nav');
 
-    const activeBtn = tab === 'guides' ? btnGuides : btnForums;
-    const activeContent = tab === 'guides' ? contentGuides : contentForums;
-
     if (tab === 'guides') {
         if (btnGuides) {
-            btnGuides.classList.add('text-zinc-100');
+            btnGuides.classList.add('active', 'text-zinc-100');
             btnGuides.classList.remove('text-zinc-400');
         }
         if (btnForums) {
-            btnForums.classList.remove('text-zinc-100');
+            btnForums.classList.remove('active', 'text-zinc-100');
             btnForums.classList.add('text-zinc-400');
         }
 
@@ -46,11 +29,11 @@ export function switchTab(tab) {
         if (sidebarForums) sidebarForums.classList.add('hidden');
     } else {
         if (btnForums) {
-            btnForums.classList.add('text-zinc-100');
+            btnForums.classList.add('active', 'text-zinc-100');
             btnForums.classList.remove('text-zinc-400');
         }
         if (btnGuides) {
-            btnGuides.classList.remove('text-zinc-100');
+            btnGuides.classList.remove('active', 'text-zinc-100');
             btnGuides.classList.add('text-zinc-400');
         }
 
@@ -61,11 +44,7 @@ export function switchTab(tab) {
         if (sidebarGuides) sidebarGuides.classList.add('hidden');
     }
 
-    if (topContainer && activeBtn) {
-        updateSlidingPill(topContainer, activeBtn);
-    }
-
-    // Trigger fast staggered reveal for active content children
+    const activeContent = tab === 'guides' ? contentGuides : contentForums;
     if (activeContent) {
         triggerStaggerReveal(activeContent);
     }
@@ -104,7 +83,6 @@ export function closeSidebarOnMobile() {
 export function initNavigation() {
     const btnGuides = document.getElementById('tab-btn-guides');
     const btnForums = document.getElementById('tab-btn-forums');
-    const topContainer = document.getElementById('top-tab-container');
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const overlay = document.getElementById('sidebar-overlay');
 
@@ -113,18 +91,8 @@ export function initNavigation() {
     if (mobileBtn) mobileBtn.addEventListener('click', toggleSidebar);
     if (overlay) overlay.addEventListener('click', toggleSidebar);
 
-    // Initial pill placement
-    if (topContainer && btnGuides) {
-        setTimeout(() => updateSlidingPill(topContainer, btnGuides), 50);
-    }
-
-    // Recalculate pill on window resize
-    window.addEventListener('resize', () => {
-        const currentActive = document.querySelector('#top-tab-container .segmented-btn.text-zinc-100');
-        if (topContainer && currentActive) {
-            updateSlidingPill(topContainer, currentActive);
-        }
-    });
+    // Clean up any leftover segmented-pill elements if present
+    document.querySelectorAll('.segmented-pill').forEach(el => el.remove());
 
     window.switchTab = switchTab;
     window.toggleSidebar = toggleSidebar;

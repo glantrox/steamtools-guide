@@ -3,7 +3,13 @@
  */
 import { TRANSLATIONS } from '../data/translations.js';
 
-let currentLanguage = localStorage.getItem('preferred_language') || 'id';
+let currentLanguage = 'id';
+try {
+    currentLanguage = localStorage.getItem('preferred_language') || 'id';
+} catch (e) {
+    currentLanguage = 'id';
+}
+
 let onLanguageChangeCallbacks = [];
 
 export function getCurrentLanguage() {
@@ -19,7 +25,12 @@ export function registerLanguageChangeListener(callback) {
 export function setLanguage(lang) {
     if (!TRANSLATIONS[lang]) return;
     currentLanguage = lang;
-    localStorage.setItem('preferred_language', lang);
+
+    try {
+        localStorage.setItem('preferred_language', lang);
+    } catch (e) {
+        // Ignore localStorage error in restricted browsing modes
+    }
 
     // Update document lang attribute
     document.documentElement.lang = lang;
@@ -53,20 +64,37 @@ export function setLanguage(lang) {
         flagIcon.innerText = lang === 'id' ? '🇮🇩' : '🇬🇧';
     }
 
-    // Trigger registered callbacks (e.g. re-render forum cards, game search placeholders)
-    onLanguageChangeCallbacks.forEach(cb => cb(lang));
+    // Trigger registered callbacks
+    onLanguageChangeCallbacks.forEach(cb => {
+        try {
+            cb(lang);
+        } catch (err) {
+            console.error('Error in language change callback:', err);
+        }
+    });
 }
 
+let lastToggleTime = 0;
 export function toggleLanguage() {
+    const now = Date.now();
+    if (now - lastToggleTime < 250) return; // Debounce double-invocations
+    lastToggleTime = now;
+
     const nextLang = currentLanguage === 'id' ? 'en' : 'id';
     setLanguage(nextLang);
 }
 
 export function initI18n() {
+    window.toggleLanguage = toggleLanguage;
+    window.setLanguage = setLanguage;
+
     setLanguage(currentLanguage);
 
     const langBtn = document.getElementById('lang-switch-btn');
     if (langBtn) {
-        langBtn.addEventListener('click', toggleLanguage);
+        langBtn.onclick = (e) => {
+            if (e && e.preventDefault) e.preventDefault();
+            toggleLanguage();
+        };
     }
 }

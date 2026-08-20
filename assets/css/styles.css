@@ -28,6 +28,82 @@
 }
 
 /* ==========================================================================
+   Full-Width Top Running Ticker Banner (Below Global Header)
+   ========================================================================== */
+.top-ticker-banner {
+    width: 100%;
+    background-color: rgba(9, 9, 11, 0.95);
+    border-bottom: 1px solid rgba(39, 39, 42, 0.8);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.35rem 0;
+    user-select: none;
+    z-index: 30;
+    position: relative;
+}
+
+.top-ticker-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 3rem;
+    white-space: nowrap;
+    will-change: transform;
+    animation: top-ticker-slide 28s linear infinite;
+}
+
+.top-ticker-banner:hover .top-ticker-track {
+    animation-play-state: paused;
+}
+
+@keyframes top-ticker-slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================================================
+   Apple Docs / Linear-style Morphing Command Bar (Sticky Step Header)
+   ========================================================================== */
+.step-section {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.sticky-step-dock {
+    position: sticky;
+    top: 57px; /* Sits right under topbar navbar */
+    z-index: 25;
+    background-color: rgba(9, 9, 11, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(39, 39, 42, 0.85);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.25rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (min-width: 640px) {
+    .sticky-step-dock {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.substep-pill {
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.substep-pill.active-substep {
+    color: #34d399 !important;
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    border-color: rgba(16, 185, 129, 0.35) !important;
+}
+
+/* ==========================================================================
    Hero Article Cover Card with Animated Moving Grid Background
    ========================================================================== */
 .hero-cover-card {
@@ -38,7 +114,7 @@
     background-color: #09090b;
     padding: 1.5rem 1.25rem;
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 640px) {
@@ -107,9 +183,9 @@
    1. Sliding Tab Indicator & Pill Controls (Input Driven)
    ========================================================================== */
 .segmented-container {
-    position: relative;
     display: inline-flex;
     align-items: center;
+    gap: 4px;
     background-color: rgba(24, 24, 27, 0.9);
     border: 1px solid rgba(39, 39, 42, 0.9);
     padding: 3px;
@@ -117,24 +193,32 @@
     backdrop-filter: blur(12px);
 }
 
-.segmented-pill {
-    position: absolute;
-    top: 3px;
-    bottom: 3px;
-    left: 0;
+.segmented-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 14px;
     border-radius: 9999px;
-    background-color: #27272a;
-    border: 1px solid rgba(63, 63, 70, 0.6);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), width 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    pointer-events: none;
-    z-index: 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #a1a1aa;
+    border: 1px solid transparent;
+    transition: all 0.15s ease;
+    cursor: pointer;
 }
 
-.segmented-btn {
-    position: relative;
-    z-index: 1;
-    transition: color 0.15s ease;
+.segmented-btn:hover:not(.active) {
+    color: #e4e4e7;
+    background-color: rgba(39, 39, 42, 0.4);
+}
+
+.segmented-btn.active {
+    background-color: #27272a;
+    color: #f4f4f5;
+    font-weight: 600;
+    border-color: rgba(63, 63, 70, 0.8);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================================================

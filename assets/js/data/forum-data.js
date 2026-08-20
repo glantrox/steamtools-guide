@@ -493,5 +493,259 @@ export const FORUM_THREADS = [
                 en: "Avoid manually editing code table structures inside <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">.lua</code> files."
             }
         ]
+    },
+    {
+        id: "thread-13",
+        category: "cache",
+        keywords: "missing license no licenses available purchase popup steam",
+        badge: {
+            text: { id: "Cache & License", en: "Cache & License" },
+            color: "amber"
+        },
+        status: {
+            text: { id: "Solved Thread", en: "Solved Thread" },
+            isSolved: true
+        },
+        title: {
+            id: "Error \"Missing License\" / \"No Licenses Available\" Saat Meluncurkan Game via Steam",
+            en: "\"Missing License\" / \"No Licenses Available\" Error When Launching Game via Steam"
+        },
+        description: {
+            id: "Ketika menekan tombol Play di Steam, muncul dialog pop-up resmi dari Steam bertuliskan \"No Steam License\" atau \"You do not own this game\".",
+            en: "When pressing Play in Steam, an official Steam dialog pops up stating \"No Steam License\" or \"You do not own this game\"."
+        },
+        solutionTitle: {
+            id: "Solusi Komunitas:",
+            en: "Community Solution:"
+        },
+        solutionSteps: [
+            {
+                id: "Tutup Steam secara penuh di <strong>Task Manager</strong> (<code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">steam.exe</code>).",
+                en: "Close Steam completely via <strong>Task Manager</strong> (<code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">steam.exe</code>)."
+            },
+            {
+                id: "Buka folder <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">C:\\Program Files (x86)\\Steam\\appcache</code> lalu hapus folder tersebut.",
+                en: "Open folder <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">C:\\Program Files (x86)\\Steam\\appcache</code> and delete it."
+            },
+            {
+                id: "Buka kembali SteamTools dalam mode <strong>Run as Administrator</strong> dan drag ulang file manifest <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">.lua</code> game tersebut.",
+                en: "Re-launch SteamTools in <strong>Run as Administrator</strong> mode and re-drag the game's <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">.lua</code> manifest file."
+            },
+            {
+                id: "Klik kanan overlay SteamTools -&gt; pilih <strong>Restart Steam</strong>. Lisensi akan diperbarui secara otomatis.",
+                en: "Right-click SteamTools overlay -&gt; select <strong>Restart Steam</strong>. Licenses will refresh automatically."
+            }
+        ]
+    },
+    {
+        id: "thread-14",
+        category: "permission",
+        keywords: "windows defender trojan gamehack quarantine false positive antivirus",
+        badge: {
+            text: { id: "Permission & Antivirus", en: "Permission & Antivirus" },
+            color: "amber"
+        },
+        status: {
+            text: { id: "Solved Thread", en: "Solved Thread" },
+            isSolved: true
+        },
+        title: {
+            id: "Windows Defender Menghapus File \"steamtools.dll\" / Mendeteksi Trojan:Win32/GameHack",
+            en: "Windows Defender Deletes \"steamtools.dll\" / Flags False Positive Trojan:Win32/GameHack"
+        },
+        description: {
+            id: "Windows Defender atau Antivirus (Avast, Kaspersky, Bitdefender) tiba-tiba memberikan notifikasi ancaman dan mengkarantina file SteamTools DLL.",
+            en: "Windows Defender or Antivirus (Avast, Kaspersky, Bitdefender) suddenly triggers a threat notification and quarantines the SteamTools DLL."
+        },
+        solutionTitle: {
+            id: "Solusi Komunitas:",
+            en: "Community Solution:"
+        },
+        solutionSteps: [
+            {
+                id: "SteamTools menggunakan teknik memory hooking (<code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">steamui.dll</code> / <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">chrome_elf.dll</code>) yang memicu deteksi <em>False-Positive</em> pada heuristik Windows Defender.",
+                en: "SteamTools uses memory hooking (<code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">steamui.dll</code> / <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">chrome_elf.dll</code>) which triggers <em>False-Positive</em> heuristic alerts in Windows Defender."
+            },
+            {
+                id: "Buka menu <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">Windows Security &gt; Virus &amp; threat protection &gt; Protection history</code>.",
+                en: "Open <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">Windows Security &gt; Virus &amp; threat protection &gt; Protection history</code>."
+            },
+            {
+                id: "Pilih item ancaman yang dikarantina -&gt; klik <strong>Actions &gt; Restore</strong>.",
+                en: "Select the quarantined item -&gt; click <strong>Actions &gt; Restore</strong>."
+            },
+            {
+                id: "Tambahkan folder <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">C:\\Program Files (x86)\\Steam</code> dan <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">%LOCALAPPDATA%\\SteamTools</code> ke dalam daftar <strong>Exclusions</strong> (Pengecualian) pada Windows Security.",
+                en: "Add folder <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">C:\\Program Files (x86)\\Steam</code> and <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">%LOCALAPPDATA%\\SteamTools</code> to <strong>Exclusions</strong> in Windows Security."
+            }
+        ]
+    },
+    {
+        id: "thread-15",
+        category: "depot",
+        keywords: "stuck 99% disk write error corrupt download downloading folder",
+        badge: {
+            text: { id: "Depot & Download", en: "Depot & Download" },
+            color: "red"
+        },
+        status: {
+            text: { id: "Solved Thread", en: "Solved Thread" },
+            isSolved: true
+        },
+        title: {
+            id: "Game Download Berhenti di 99% atau \"Disk Write Error\" / \"Corrupt Download\"",
+            en: "Game Download Stuck at 99% or \"Disk Write Error\" / \"Corrupt Download\""
+        },
+        description: {
+            id: "Progres download game hampir selesai (99%), namun tiba-tiba terhenti dengan status Disk Write Error di folder steamapps/downloading.",
+            en: "Game download progress reaches 99% then halts with Disk Write Error in steamapps/downloading folder."
+        },
+        solutionTitle: {
+            id: "Solusi Komunitas:",
+            en: "Community Solution:"
+        },
+        solutionSteps: [
+            {
+                id: "Pause proses download di Steam.",
+                en: "Pause the download in Steam."
+            },
+            {
+                id: "Buka folder <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">C:\\Program Files (x86)\\Steam\\steamapps\\downloading\\</code> lalu cari folder sesuai App ID game.",
+                en: "Open <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">C:\\Program Files (x86)\\Steam\\steamapps\\downloading\\</code> and locate the folder corresponding to the game's App ID."
+            },
+            {
+                id: "Klik kanan folder tersebut -&gt; <strong>Properties</strong> -&gt; hilangkan centang <em>Read-only</em> -&gt; Apply ke seluruh subfolder &amp; file.",
+                en: "Right-click the folder -&gt; <strong>Properties</strong> -&gt; uncheck <em>Read-only</em> -&gt; apply to all subfolders and files."
+            },
+            {
+                id: "Buka menu Steam <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">Settings &gt; Downloads &gt; Clear Download Cache</code> lalu lanjutkan kembali unduhan.",
+                en: "In Steam, go to <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">Settings &gt; Downloads &gt; Clear Download Cache</code>, then resume download."
+            }
+        ]
+    },
+    {
+        id: "thread-16",
+        category: "cloud",
+        keywords: "achievement popup unlock sam steam achievement manager trophy",
+        badge: {
+            text: { id: "Steam Cloud & Save", en: "Steam Cloud & Save" },
+            color: "sky"
+        },
+        status: {
+            text: { id: "Solved Thread", en: "Solved Thread" },
+            isSolved: true
+        },
+        title: {
+            id: "Achievement Steam Tidak Muncul / Gagal Pop-Up Saat Menyelesaikan Mission",
+            en: "Steam Achievements Not Unlocking / Failing to Pop-Up Upon Completing Quests"
+        },
+        description: {
+            id: "Game berjalan lancar, tetapi achievement Steam tidak terbuka atau kodenya tidak terdaftar di profile Steam.",
+            en: "Game runs smoothly, but Steam achievements do not unlock or register to the Steam profile."
+        },
+        solutionTitle: {
+            id: "Solusi Komunitas (SAM / Unlocker):",
+            en: "Community Solution (SAM / Unlocker):"
+        },
+        solutionSteps: [
+            {
+                id: "SteamTools bekerja secara <em>client-side</em> dan secara bawaan tidak mengirim sinkronisasi achievement resmi ke server cloud Valve untuk mencegah flag akun.",
+                en: "SteamTools operates client-side only and does not sync achievements directly to Valve's official cloud servers to prevent account flags."
+            },
+            {
+                id: "Untuk membuka dan mencatat achievement secara lokal di profile Steam, kamu bisa menggunakan tool <strong>SAM (Steam Achievement Manager)</strong> atau <strong>SmokeAPI Achievement Unlocker</strong>.",
+                en: "To unlock and view achievements locally, use <strong>SAM (Steam Achievement Manager)</strong> or <strong>SmokeAPI achievement unlocker</strong>."
+            },
+            {
+                id: "Buka tool SAM, pilih App ID game kamu, centang achievement yang sudah berhasil kamu selesaikan, lalu klik tombol <strong>Commit Changes</strong>.",
+                en: "Open SAM, select your game App ID, check the unlocked achievements, and click <strong>Commit Changes</strong>."
+            }
+        ]
+    },
+    {
+        id: "thread-17",
+        category: "cache",
+        keywords: "workshop mod subscribe not subscribed download failed workshop.download",
+        badge: {
+            text: { id: "Cache & Workshop", en: "Cache & Workshop" },
+            color: "amber"
+        },
+        status: {
+            text: { id: "Solved Thread", en: "Solved Thread" },
+            isSolved: true
+        },
+        title: {
+            id: "Mod Steam Workshop Tidak Mau Ter-download / Error \"Not Subscribed\"",
+            en: "Steam Workshop Mods Not Downloading / \"Not Subscribed\" Error"
+        },
+        description: {
+            id: "Mencoba menekan tombol Subscribe mod di Steam Workshop, tetapi file mod tidak terunduh ke folder steamapps/workshop/content.",
+            en: "Clicking Subscribe on Steam Workshop mods, but mod files do not download to steamapps/workshop/content."
+        },
+        solutionTitle: {
+            id: "Solusi Komunitas:",
+            en: "Community Solution:"
+        },
+        solutionSteps: [
+            {
+                id: "Verifikasi langganan Steam Workshop membutuhkan lisensi asli game di server Steam.",
+                en: "Steam Workshop subscription verification requires legitimate base game licenses on Steam servers."
+            },
+            {
+                id: "Gunakan situs downloader Workshop alternatif seperti <code class=\"font-mono text-emerald-400\">steamworkshop.download</code> atau <code class=\"font-mono text-emerald-400\">ggntw.com</code>.",
+                en: "Use alternative Workshop downloader tools like <code class=\"font-mono text-emerald-400\">steamworkshop.download</code> or <code class=\"font-mono text-emerald-400\">ggntw.com</code>."
+            },
+            {
+                id: "Paste URL item Workshop yang ingin kamu unduh, lalu download file mod mentah dalam format ZIP.",
+                en: "Paste the Workshop item URL, download the raw ZIP mod files."
+            },
+            {
+                id: "Ekstrak file mod langsung ke folder <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">Mods</code> di direktori game atau <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">steamapps\\workshop\\content\\[APPID]\\[WORKSHOPID]</code>.",
+                en: "Extract mod files directly into the game's <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">Mods</code> or <code class=\"font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded\">steamapps\\workshop\\content\\[APPID]\\[WORKSHOPID]</code> directory."
+            }
+        ]
+    },
+    {
+        id: "thread-18",
+        category: "permission",
+        keywords: "powershell script execution disabled policy set-executionpolicy bypass",
+        badge: {
+            text: { id: "PowerShell / Defender", en: "PowerShell / Defender" },
+            color: "amber"
+        },
+        status: {
+            text: { id: "Solved Thread", en: "Solved Thread" },
+            isSolved: true
+        },
+        title: {
+            id: "Error \"Script Execution Is Disabled On This System\" di PowerShell",
+            en: "PowerShell Error \"Script Execution Is Disabled On This System\""
+        },
+        description: {
+            id: "Saat menjalankan installer `irm steam.run | iex`, PowerShell menolak eksekusi dengan pesan merah bahwa script execution dinonaktifkan.",
+            en: "When running installer `irm steam.run | iex`, PowerShell rejects execution stating script execution is disabled on this system."
+        },
+        solutionTitle: {
+            id: "Solusi Komunitas:",
+            en: "Community Solution:"
+        },
+        solutionSteps: [
+            {
+                id: "Buka terminal <strong>PowerShell as Administrator</strong>.",
+                en: "Open terminal <strong>PowerShell as Administrator</strong>."
+            },
+            {
+                id: "Jalankan perintah: <code class=\"font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal\">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force</code>.",
+                en: "Run command: <code class=\"font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal\">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force</code>."
+            },
+            {
+                id: "Jalankan perintah: <code class=\"font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal\">Set-ExecutionPolicy Bypass -Scope Process -Force</code>.",
+                en: "Run command: <code class=\"font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal\">Set-ExecutionPolicy Bypass -Scope Process -Force</code>."
+            },
+            {
+                id: "Jalankan ulang perintah installer utama: <code class=\"font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal\">irm steam.run | iex</code>.",
+                en: "Re-run the main installer command: <code class=\"font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal\">irm steam.run | iex</code>."
+            }
+        ]
     }
 ];

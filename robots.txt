@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glantrox.github.io/steamtools-guide/sitemap.xml

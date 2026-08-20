@@ -84,7 +84,13 @@ export const TRANSLATIONS = {
         warning_box_text: "KALO LU PUNYA DUIT YA BELI DONG GAME NYA JANGAN KESINI!",
         footer_built_by: "Dibuat oleh <strong class=\"text-zinc-300\">glantrox</strong> • Hosted di <strong>GitHub Pages</strong>",
         footer_copy_link: "Salin Link Page",
-        footer_back_top: "Kembali ke Atas ↑"
+        footer_back_top: "Kembali ke Atas ↑",
+        donate_nav: "☕ Traktir Kopi",
+        donate_hero_title: "Panduan Ini Membantu Kamu?",
+        donate_hero_sub: "Jika panduan ini membantumu menghemat waktu, kamu bisa traktir segelas kopi untuk mendukung pengembang.",
+        donate_btn: "Dukung via Saweria / Trakteer",
+        donate_left_sub: "Traktir segelas kopi via Saweria / Trakteer.",
+        donate_right_title: "Dukung Project"
     },
     en: {
         page_title: "SteamTools Tutorial & Forum - Guide & Problem Solver",
@@ -167,6 +173,12 @@ export const TRANSLATIONS = {
         warning_box_text: "IF YOU HAVE MONEY BUY THE GAME! DON'T COME HERE!",
         footer_built_by: "Created by <strong class=\"text-zinc-300\">glantrox</strong> • Hosted on <strong>GitHub Pages</strong>",
         footer_copy_link: "Copy Page Link",
-        footer_back_top: "Back to Top ↑"
+        footer_back_top: "Back to Top ↑",
+        donate_nav: "☕ Support",
+        donate_hero_title: "Did this guide save you time?",
+        donate_hero_sub: "If this guide saved you time, feel free to buy the developer a coffee to support the project.",
+        donate_btn: "Support via Saweria / Ko-fi",
+        donate_left_sub: "Buy a coffee via Saweria / Ko-fi.",
+        donate_right_title: "Support Project"
     }
 };

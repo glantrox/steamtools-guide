@@ -5,7 +5,6 @@ import { STEAM_DLC_DATABASE } from '../data/dlc-db.js';
 import { getGameDrmInfo } from '../data/drm-db.js';
 import { getCurrentLanguage } from './i18n.js';
 import { showToast } from './clipboard.js';
-import { updateSlidingPill } from './navigation.js';
 
 let apiSearchTimeout = null;
 let activeSearchAbortController = null;
@@ -23,28 +22,24 @@ export function setSearchMode(mode) {
 
     if (mode === 'game') {
         if (btnGame) {
-            btnGame.classList.add('text-zinc-100');
+            btnGame.classList.add('active', 'text-zinc-100');
             btnGame.classList.remove('text-zinc-400');
         }
         if (btnDlc) {
-            btnDlc.classList.remove('text-zinc-100');
+            btnDlc.classList.remove('active', 'text-zinc-100');
             btnDlc.classList.add('text-zinc-400');
         }
         if (input) input.placeholder = lang === 'id' ? 'Cari judul game (GTA, Wukong...)' : 'Search game title (GTA, Wukong...)';
     } else {
         if (btnDlc) {
-            btnDlc.classList.add('text-zinc-100');
+            btnDlc.classList.add('active', 'text-zinc-100');
             btnDlc.classList.remove('text-zinc-400');
         }
         if (btnGame) {
-            btnGame.classList.remove('text-zinc-100');
+            btnGame.classList.remove('active', 'text-zinc-100');
             btnGame.classList.add('text-zinc-400');
         }
         if (input) input.placeholder = lang === 'id' ? 'Cari nama DLC (Phantom Liberty...)' : 'Search DLC name (Phantom Liberty...)';
-    }
-
-    if (modeContainer && activeBtn) {
-        updateSlidingPill(modeContainer, activeBtn);
     }
 
     if (input) input.value = '';
@@ -341,16 +336,11 @@ export function copyGameId(appId, gameName, isDlc = false) {
 export function initGameSearch() {
     const btnGame = document.getElementById('search-mode-btn-game');
     const btnDlc = document.getElementById('search-mode-btn-dlc');
-    const modeContainer = document.getElementById('search-mode-container');
     const searchInput = document.getElementById('game-search-input');
 
     if (btnGame) btnGame.addEventListener('click', () => setSearchMode('game'));
     if (btnDlc) btnDlc.addEventListener('click', () => setSearchMode('dlc'));
     if (searchInput) searchInput.addEventListener('input', handleGameSearchInput);
-
-    if (modeContainer && btnGame) {
-        setTimeout(() => updateSlidingPill(modeContainer, btnGame), 50);
-    }
 
     window.setSearchMode = setSearchMode;
     window.handleGameSearchInput = handleGameSearchInput;
