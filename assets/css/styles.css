@@ -43,12 +43,12 @@
 }
 
 .top-ticker-track {
-    display: inline-flex;
+    display: flex;
+    width: max-content;
     align-items: center;
-    gap: 3rem;
     white-space: nowrap;
     will-change: transform;
-    animation: top-ticker-slide 28s linear infinite;
+    animation: top-ticker-slide 45s linear infinite;
 }
 
 .top-ticker-banner:hover .top-ticker-track {
