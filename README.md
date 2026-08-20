@@ -1,53 +1,50 @@
 <img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1" />
+# SteamTools Setup & Client Cache Documentation
 
-# ⚡ SteamTools Guide & Forum Problem Solver
-
-Panduan Lengkap Instalasi SteamTools, Manifest Mirror, 1-Click Game App ID Finder, DRM Compatibility Checker, & 12+ Forum Solusi Error Terverifikasi.
-
----
-
-## 📁 Project Structure & Scalability Architecture
-
-Project ini dirancang dengan struktur yang sangat modular, bersih, dan mudah dikembangkan (*scalable*), serta tetap kompatibel 100% dengan **GitHub Pages** (tanpa butuh build step / bundler).
-
-```text
-steamtools-guide/
-├── index.html                    # HTML shell bersih dengan semantic elements & data-i18n
-├── README.md                     # Dokumentasi project & arsitektur
-└── assets/
-    ├── css/
-    │   └── styles.css            # Custom scrollbars, border-beam glowing effects & animations
-    └── js/
-        ├── config.js             # Tailwind CSS configuration & global settings
-        ├── app.js                # Entry point utama aplikasi (DOM initialization & event bindings)
-        ├── data/
-        │   ├── dlc-db.js         # Database koleksi DLC & Addon game populer
-        │   ├── drm-db.js         # Database proteksi DRM (Denuvo, EAC, BattlEye, Clean Steam)
-        │   ├── forum-data.js     # Data 12+ thread forum solusi error (dukungan ID & EN)
-        │   └── translations.js   # Kamus terjemahan Bahasa Indonesia & Inggris (i18n)
-        └── modules/
-            ├── i18n.js           # Engine pengganti bahasa (ID / EN) & simpan preferensi ke localStorage
-            ├── navigation.js     # Navigasi tab (Guides vs Forums) & drawer mobile sidebar
-            ├── forum.js          # Rendering dinamis forum thread cards, filter kategori & pencarian
-            ├── game-search.js    # Live search App ID game & DLC via CheapShark API & SteamDB links
-            └── clipboard.js      # Copy code helper, Win+R directory opener & toast notification
-```
+A static, client-side technical reference and troubleshooting guide documenting Steam directory architecture, manifest cache hierarchies (`depotcache`, `appcache`), and common local client resolution workflows.
 
 ---
 
-## 🌐 Feature: Multi-Language Switcher (i18n)
+## 📌 Project Overview
 
-Aplikasi ini sudah dilengkapi dengan fitur **Switch Language** yang mendukung **Bahasa Indonesia (ID)** dan **English (EN)** secara langsung:
+This repository hosts the source code for an open educational reference designed to assist users in understanding local Steam client directory structures, configuration caching, and diagnostic troubleshooting.
 
-- **Toggle Button**: Tombol switch bahasa terdapat di kanan atas header (`🇮🇩 ID` / `🇬🇧 EN`).
-- **Data Attribute**: Menggunakan atribut `data-i18n` dan `data-i18n-placeholder` untuk menerjemahkan elemen HTML secara instan.
-- **Dynamic Content**: Data forum & pencarian game merender teks sesuai bahasa yang aktif secara otomatis.
-- **Persistent Choice**: Pilihan bahasa disimpan secara otomatis di `localStorage` peramban pengguna.
+* **Format**: Pure static HTML/CSS/JS documentation.
+* **Architecture**: Client-side only; no backend servers, database storage, or external payload hosting.
+* **Scope**: Technical documentation of directory pathways, command execution policies, and public AppID metadata indexing.
 
 ---
 
-## 🚀 Depoloyment on GitHub Pages
+## ⚖️ Legal Disclaimer & Non-Affiliation
 
-1. Commit dan push seluruh perubahan di branch utama (`main`).
-2. Pastikan di opsi **Repository Settings -> Pages**, Source diatur ke **Deploy from a branch (`main` / root)**.
-3. Website akan langsung aktif tanpa perlu proses kompilasi tambahan.
+1. **Non-Affiliation**: This project is an independent community documentation effort and is **not affiliated, associated, authorized, endorsed by, or in any way officially connected** with Valve Corporation, Steam, or any of their subsidiaries or affiliates. The official Steam website can be found at [https://store.steampowered.com](https://store.steampowered.com).
+2. **Trademarks**: "Steam", the Steam logo, and related trademarks, assets, and service marks are the registered property of Valve Corporation.
+3. **No File Hosting**: This repository **does not host, distribute, transmit, or store** copyrighted software binaries, modified dynamic link libraries (`.dll`), proprietary game data, license patches, or decrypted game files. 
+4. **Third-Party References**: Any command-line snippets, external URLs, or utility names mentioned within this documentation are references to external third-party software managed independently by their respective creators.
+5. **Research & Educational Use**: All material provided in this repository is intended strictly for local system diagnostics, file system interoperability research, and educational purposes.
+
+---
+
+## 🛡️ DMCA & Content Takedown Policy
+
+We respect intellectual property rights and strive to comply with all copyright legislation (including DMCA / international copyright standards).
+
+If you are a copyright owner or an authorized representative thereof and believe that any link, reference, or documentation in this repository inadvertently infringes upon your intellectual property:
+
+* **Notice**: Please file a formal takedown or content modification request directly via email to: `[YOUR_CONTACT_EMAIL@DOMAIN.COM]`
+* **Required Information**: Include specific details regarding the material in question, proof of authorization/ownership, and the requested remedy.
+* **Turnaround**: Verified requests are processed and resolved within **24 to 48 hours** prior to any escalation.
+
+---
+
+## 🛠️ Local Development
+
+```bash
+# Clone the static guide
+git clone [https://github.com/glantrox/steamtools-guide.git](https://github.com/glantrox/steamtools-guide.git)
+
+# Navigate into directory
+cd steamtools-guide
+
+# Serve locally via any static server
+npx serve .
