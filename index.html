@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial & Forum SteamTools - Panduan & Problem Solver</title>
+    <title data-i18n="page_title">Tutorial & Forum SteamTools - Panduan & Problem Solver</title>
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="🎮 SteamTools: Complete Guide & Forum Problem Solver">
@@ -13,209 +13,40 @@
     <meta name="author" content="glantrox">
     <meta name="robots" content="index, follow">
 
-    <!-- Discord & Open Graph (OG) Meta Tags (Advanced Rich Preview) -->
+    <!-- Open Graph (OG) & Twitter Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:url" content="https://glantrox.github.io/steamtools-guide/">
     <meta property="og:site_name" content="⚡ STEAMTOOLS COMMUNITY • HUB & SOLVER">
     <meta property="og:title" content="🎮 SteamTools: Complete Guide & Forum Problem Solver">
-    <meta property="og:description" content="📖 Panduan Lengkap Step-by-Step Instalasi & Manifest Mirror&#10;🔍 1-Click App ID Search, DRM Status & Manifest Launcher&#10;🛡️ DRM & Anti-Cheat Compatibility Checker (Denuvo, EAC, Clean)&#10;💬 12+ Solusi Masalah Error Populer (Reddit & CS.RIN.RU Verified)&#10;🚀 Steam Directory Launcher (Win + R Quick Access)">
+    <meta property="og:description" content="📖 Panduan Lengkap Step-by-Step Instalasi & Manifest Mirror&#10;🔍 1-Click App ID Search, DRM Status & Manifest Launcher&#10;🛡️ DRM & Anti-Cheat Compatibility Checker&#10;💬 12+ Solusi Masalah Error Populer">
     <meta property="og:image" content="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1">
-    <meta property="og:image:secure_url" content="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="SteamTools Guide & Problem Solver Banner">
-
-    <!-- Discord Theme Color (Garis Aksen Hijau Emerald di Sisi Kiri Embed) -->
     <meta name="theme-color" content="#10b981">
-    <meta name="msapplication-TileColor" content="#10b981">
 
-    <!-- Twitter Card Meta Tags (Large Image Banner Preview) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://glantrox.github.io/steamtools-guide/">
     <meta name="twitter:title" content="🎮 SteamTools: Complete Guide & Forum Problem Solver">
-    <meta name="twitter:description" content="📖 Panduan Lengkap Step-by-Step Instalasi & Manifest Mirror&#10;🔍 1-Click App ID Search, DRM Status & Manifest Launcher&#10;🛡️ DRM & Anti-Cheat Compatibility Checker (Denuvo, EAC, Clean)&#10;💬 12+ Solusi Masalah Error Populer (Reddit & CS.RIN.RU Verified)&#10;🚀 Steam Directory Launcher (Win + R Quick Access)">
     <meta name="twitter:image" content="https://github.com/user-attachments/assets/bb1414a6-0556-434f-8555-7d8850ccf5c1">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/config.js"></script>
 
     <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        zinc: {
-                            850: '#141417',
-                            900: '#18181b',
-                            950: '#09090b',
-                        },
-                        accent: {
-                            50: '#ecfdf5',
-                            500: '#10b981',
-                            600: '#059669',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #09090b;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 3px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3f3f46;
-        }
-
-        /* Hide horizontal scrollbar for chips on touch */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Navigation active state styling */
-        .nav-link.active,
-        .toc-link.active {
-            color: #10b981;
-            font-weight: 500;
-        }
-
-        /* Animated Green Spinning Border Beam for Search Bar */
-        @keyframes border-beam-spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .border-beam-container {
-            position: relative;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            padding: 1px;
-            background: #27272a;
-            transition: all 0.3s ease;
-        }
-
-        .border-beam-container:focus-within {
-            background: #3f3f46;
-        }
-
-        .border-beam-spinner {
-            position: absolute;
-            inset: -200%;
-            background: conic-gradient(from 0deg, transparent 0deg, transparent 270deg, rgba(16, 185, 129, 0.3) 310deg, #10b981 340deg, #6ee7b7 360deg);
-            animation: border-beam-spin 1.4s linear infinite;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-            pointer-events: none;
-        }
-
-        .border-beam-container.is-loading .border-beam-spinner {
-            opacity: 1;
-        }
-
-        .border-beam-container.is-loading {
-            background: transparent;
-            box-shadow: 0 0 16px -2px rgba(16, 185, 129, 0.35);
-        }
-
-        .border-beam-inner {
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            background-color: #09090b;
-            border-radius: calc(0.5rem - 1px);
-            display: flex;
-            align-items: center;
-        }
-
-        /* Smooth Sliding Marquee for Long Game Titles */
-        .marquee-wrapper {
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%;
-            min-width: 0;
-            mask-image: linear-gradient(to right, black 88%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to right, black 88%, transparent 100%);
-        }
-
-        .group:hover .marquee-wrapper {
-            mask-image: none;
-            -webkit-mask-image: none;
-        }
-
-        .marquee-content {
-            display: inline-block;
-            white-space: nowrap;
-            will-change: transform;
-        }
-
-        .group:hover .marquee-content {
-            animation: marquee-slide-title 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes marquee-slide-title {
-            0%, 20% {
-                transform: translateX(0%);
-            }
-            80%, 100% {
-                transform: translateX(min(0px, calc(180px - 100%)));
-            }
-        }
-
-        .forum-mobile-cat-btn.active {
-            background-color: rgba(16, 185, 129, 0.15);
-            color: #34d399;
-            border-color: rgba(16, 185, 129, 0.35);
-        }
-    </style>
+    <!-- Custom Modular CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body
-    class="bg-zinc-950 text-zinc-300 antialiased font-sans min-h-screen selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden">
+<body class="bg-zinc-950 text-zinc-300 antialiased font-sans min-h-screen selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden">
 
-    <!-- Top Global Header with Sleek Floating Tab Selector -->
+    <!-- Top Global Header -->
     <header class="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-zinc-950/80 backdrop-blur-xl transition-all">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-2 sm:gap-4">
 
@@ -238,33 +69,42 @@
                 </a>
             </div>
 
-            <!-- Center: Floating Capsule Segmented Tab Selector -->
-            <div class="flex items-center bg-zinc-900/90 border border-zinc-800/90 p-1 rounded-full backdrop-blur-md shadow-inner shadow-black/50">
-                <button id="tab-btn-guides" onclick="switchTab('guides')"
-                    class="tab-nav-btn active flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 bg-zinc-800 text-zinc-100 shadow-sm border border-zinc-700/60">
+            <!-- Center: Sliding Capsule Segmented Tab Selector -->
+            <div id="top-tab-container" class="segmented-container">
+                <div class="segmented-pill"></div>
+                <button id="tab-btn-guides"
+                    class="segmented-btn tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full text-zinc-100">
                     <i class="fa-solid fa-book-bookmark text-[11px] text-emerald-400"></i>
-                    <span>Panduan</span>
+                    <span data-i18n="tab_guides">Panduan</span>
                 </button>
-                <button id="tab-btn-forums" onclick="switchTab('forums')"
-                    class="tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 text-zinc-400 hover:text-zinc-200 border border-transparent">
+                <button id="tab-btn-forums"
+                    class="segmented-btn tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full text-zinc-400 hover:text-zinc-200">
                     <i class="fa-brands fa-reddit text-[12px] text-orange-400"></i>
-                    <span>Forums</span>
+                    <span data-i18n="tab_forums">Forums</span>
                 </button>
             </div>
 
-            <!-- Right: External Actions -->
+            <!-- Right: External Actions & Language Switcher -->
             <div class="flex items-center gap-2 shrink-0">
+                <!-- Language Switcher Pill -->
+                <button id="lang-switch-btn" title="Switch Language / Ganti Bahasa"
+                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition active:scale-95">
+                    <span id="current-lang-flag">🇮🇩</span>
+                    <span id="current-lang-text">ID</span>
+                    <i class="fa-solid fa-globe text-[10px] text-emerald-400 ml-0.5"></i>
+                </button>
+
                 <a href="https://discord.gg/k3rnalyze" target="_blank" rel="noopener noreferrer"
                     title="Gabung Discord K3rnalyze"
                     class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition">
                     <i class="fa-brands fa-discord text-indigo-400 text-xs"></i>
-                    <span class="hidden md:inline">Discord</span>
+                    <span class="hidden md:inline" data-i18n="discord_btn">Discord</span>
                 </a>
                 <a href="https://steamtools.net/" target="_blank" rel="noopener noreferrer"
                     title="Download SteamTools Resmi"
                     class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 transition shadow-sm shadow-emerald-500/20 active:scale-95">
                     <i class="fa-solid fa-download text-[11px]"></i>
-                    <span class="hidden sm:inline">SteamTools</span>
+                    <span class="hidden sm:inline" data-i18n="steamtools_btn">SteamTools</span>
                 </a>
             </div>
         </div>
@@ -292,106 +132,96 @@
 
                 <!-- Sidebar content for TAB 1: DAFTAR PANDUAN -->
                 <div id="sidebar-guides-nav">
-                    <h3 class="px-2 text-[11px] font-semibold text-zinc-500 uppercase tracking-wider mb-2">Navigasi
-                        Panduan</h3>
+                    <h3 class="px-2 text-[11px] font-semibold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="sidebar_nav_title">Navigasi Panduan</h3>
                     <nav class="space-y-0.5 text-xs font-medium">
                         <a href="#section-setup" onclick="closeSidebarOnMobile()"
-                            class="nav-link flex items-center gap-2.5 px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-                            <span class="truncate">1. Setup & Skrip Utama</span>
+                            class="nav-link w-full text-left block px-2.5 py-2 rounded-md text-emerald-400 bg-zinc-900/80 transition">
+                            <span data-i18n="nav_setup">1. Setup & Skrip Utama</span>
                         </a>
                         <a href="#section-install" onclick="closeSidebarOnMobile()"
-                            class="nav-link flex items-center gap-2.5 px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-                            <span class="truncate">2. Cara Pasang Game</span>
+                            class="nav-link w-full text-left block px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition">
+                            <span data-i18n="nav_install">2. Cara Pasang Game</span>
                         </a>
                         <a href="#section-fix" onclick="closeSidebarOnMobile()"
-                            class="nav-link flex items-center gap-2.5 px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-                            <span class="truncate">3. Fix Connection Error</span>
+                            class="nav-link w-full text-left block px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition">
+                            <span data-i18n="nav_fix">3. Fix Connection Error</span>
                         </a>
                     </nav>
                 </div>
 
                 <!-- Sidebar content for TAB 2: FORUMS -->
                 <div id="sidebar-forums-nav" class="hidden">
-                    <h3 class="px-2 text-[11px] font-semibold text-zinc-500 uppercase tracking-wider mb-2">Kategori
-                        Solusi Forum</h3>
+                    <h3 class="px-2 text-[11px] font-semibold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="sidebar_forum_title">Kategori Solusi Forum</h3>
                     <nav class="space-y-0.5 text-xs font-medium">
                         <button onclick="filterForumCategory('all'); closeSidebarOnMobile();"
                             class="forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-emerald-400 bg-zinc-900/80 transition"
                             data-cat-val="all">
-                            <span>Semua Diskusi Error</span>
-                            <span class="text-[10px] bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-400 font-mono">5</span>
+                            <span data-i18n="nav_cat_all">Semua Diskusi Error</span>
+                            <span class="text-[10px] bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-400 font-mono">12</span>
                         </button>
                         <button onclick="filterForumCategory('cache'); closeSidebarOnMobile();"
                             class="forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition"
                             data-cat-val="cache">
-                            <span>License & Cache</span>
+                            <span data-i18n="nav_cat_cache">License & Cache</span>
                         </button>
                         <button onclick="filterForumCategory('depot'); closeSidebarOnMobile();"
                             class="forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition"
                             data-cat-val="depot">
-                            <span>Encrypted Depot</span>
+                            <span data-i18n="nav_cat_depot">Encrypted Depot</span>
                         </button>
                         <button onclick="filterForumCategory('permission'); closeSidebarOnMobile();"
                             class="forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition"
                             data-cat-val="permission">
-                            <span>PowerShell / Defender</span>
+                            <span data-i18n="nav_cat_permission">PowerShell / Defender</span>
                         </button>
                         <button onclick="filterForumCategory('cloud'); closeSidebarOnMobile();"
                             class="forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition"
                             data-cat-val="cloud">
-                            <span>Steam Cloud Sync</span>
+                            <span data-i18n="nav_cat_cloud">Steam Cloud Sync</span>
                         </button>
                     </nav>
                 </div>
 
                 <div class="pt-4 border-t border-zinc-800/60">
-                    <h3 class="px-2 text-[11px] font-semibold text-zinc-500 uppercase tracking-wider mb-2">Tautan
-                        External</h3>
+                    <h3 class="px-2 text-[11px] font-semibold text-zinc-500 uppercase tracking-wider mb-2" data-i18n="external_links_title">Tautan External</h3>
                     <ul class="space-y-1 text-xs text-zinc-400">
                         <li>
                             <a href="https://steamtools.net/" target="_blank" rel="noopener noreferrer"
                                 class="px-2.5 py-1.5 rounded-md hover:bg-zinc-900/60 hover:text-zinc-200 flex items-center justify-between group transition">
                                 <span>Official SteamTools</span>
-                                <i
-                                    class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://kernelos.org/games" target="_blank" rel="noopener noreferrer"
                                 class="px-2.5 py-1.5 rounded-md hover:bg-zinc-900/60 hover:text-zinc-200 flex items-center justify-between group transition">
                                 <span>KernelOS Games</span>
-                                <i
-                                    class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://steamdb.info/" target="_blank" rel="noopener noreferrer"
                                 class="px-2.5 py-1.5 rounded-md hover:bg-zinc-900/60 hover:text-zinc-200 flex items-center justify-between group transition">
                                 <span>SteamDB Database</span>
-                                <i
-                                    class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://ahd-manifest.lovable.app/" target="_blank" rel="noopener noreferrer"
                                 class="px-2.5 py-1.5 rounded-md hover:bg-zinc-900/60 hover:text-zinc-200 flex items-center justify-between group transition">
                                 <span>AHD Manifest Mirror</span>
-                                <i
-                                    class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-zinc-600 group-hover:text-zinc-400"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- GitHub Pages Helper Box -->
-                <div class="p-3 bg-zinc-900/40 border border-zinc-800/80 rounded-lg text-xs space-y-1.5">
+                <!-- GitHub Pages Helper -->
+                <div class="p-3 bg-zinc-900/30 border border-zinc-800/60 rounded-lg text-xs space-y-1.5">
                     <span class="text-zinc-300 font-medium flex items-center gap-1.5">
                         <i class="fa-brands fa-github text-zinc-400"></i> GitHub Pages
                     </span>
-                    <p class="text-zinc-500 text-[11px] leading-relaxed">
+                    <p class="text-zinc-500 text-[11px] leading-relaxed" data-i18n="github_pages_notice">
                         Halaman ini murni static HTML tanpa server/database. Bebas di-bookmark atau dibagikan ke teman.
                     </p>
                 </div>
@@ -407,107 +237,107 @@
 
             <!-- TAB 1: DAFTAR PANDUAN CONTENT -->
             <div id="tab-content-guides">
-                <!-- Header Title -->
-                <div class="mb-6 sm:mb-8 pb-4 border-b border-zinc-800/80">
-                    <div class="flex items-center gap-2 text-xs text-zinc-500 mb-2 font-mono">
-                        <span
-                            class="bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800 text-[11px] text-zinc-400">THIS IS FOR
-                            EDUCATIONAL PURPOSES!!</span>
-                    </div>
+                <!-- Clean Hero Article Cover Card -->
+                <div class="hero-cover-card">
+                    <div class="hero-grid-bg"></div>
 
-                    <h1
-                        class="text-xl sm:text-2xl lg:text-3xl font-bold text-zinc-100 tracking-tight leading-snug mb-2">
-                        Panduan Lengkap Setup & Troubleshooting SteamTools
-                    </h1>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-                        Daftar langkah instalasi script, pemasangan manifest game, dan cara fix error download koneksi.
-                    </p>
+                    <div class="hero-cover-content space-y-2.5">
+                        <h1 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-zinc-100 tracking-tight leading-snug" data-i18n="hero_title">
+                            Panduan Lengkap Setup & Troubleshooting SteamTools
+                        </h1>
+
+                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-2xl" data-i18n="hero_sub">
+                            Daftar langkah instalasi script, pemasangan manifest game, dan cara fix error download koneksi.
+                        </p>
+                    </div>
                 </div>
 
+                <!-- Plain Educational Disclaimer Text Directly Below Hero Container -->
+                <p class="mt-1.5 mb-6 text-[11px] text-zinc-500 font-mono tracking-tight" data-i18n="educational_badge">
+                    THIS IS FOR EDUCATIONAL PURPOSES!!
+                </p>
+
                 <!-- SECTION 1 -->
-                <section id="section-setup" class="scroll-mt-20 mb-10 sm:mb-14">
-                    <h2
-                        class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
-                        <span
-                            class="w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">1</span>
-                        <span>Setup & Eksekusi Script</span>
+                <section id="section-setup" class="scroll-mt-20 mb-10 sm:mb-12">
+                    <h2 class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
+                        <span class="step-number-badge w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">1</span>
+                        <span data-i18n="section1_title">Setup & Eksekusi Script</span>
                     </h2>
 
-                    <!-- Interactive Pre-flight Checklist -->
-                    <div class="mb-6 p-3.5 sm:p-4 rounded-lg bg-zinc-900/60 border border-zinc-800/80 space-y-2.5">
-                        <span class="text-xs font-semibold text-zinc-200 flex items-center">
-                            <i class="fa-solid fa-list-check text-emerald-400 mr-2"></i> Check-list Persiapan Sebelum
-                            Mulai:
+                    <!-- Clean Pre-flight Checklist -->
+                    <div class="mb-6 p-3.5 sm:p-4 rounded-lg bg-zinc-900/40 border border-zinc-800/80 space-y-2.5">
+                        <span class="text-xs font-semibold text-zinc-200" data-i18n="checklist_title">
+                            Check-list Persiapan Sebelum Mulai:
                         </span>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-400 pt-1">
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-200 py-0.5">
-                                <input type="checkbox"
-                                    class="rounded border-zinc-700 bg-zinc-950 text-emerald-500 focus:ring-0 focus:ring-offset-0 w-4 h-4 cursor-pointer">
-                                <span>Windows 10 / 11 64-bit</span>
+                            <label class="custom-checkbox-container">
+                                <input type="checkbox" class="hidden">
+                                <span class="custom-checkbox-box">
+                                    <svg class="check-svg" viewBox="0 0 24 24"><path class="check-path" d="M4 12l4 4L18 6"></path></svg>
+                                </span>
+                                <span class="custom-checkbox-text text-zinc-300" data-i18n="chk_win">Windows 10 / 11 64-bit</span>
                             </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-200 py-0.5">
-                                <input type="checkbox"
-                                    class="rounded border-zinc-700 bg-zinc-950 text-emerald-500 focus:ring-0 focus:ring-offset-0 w-4 h-4 cursor-pointer">
-                                <span>Akses PowerShell (Administrator)</span>
+                            <label class="custom-checkbox-container">
+                                <input type="checkbox" class="hidden">
+                                <span class="custom-checkbox-box">
+                                    <svg class="check-svg" viewBox="0 0 24 24"><path class="check-path" d="M4 12l4 4L18 6"></path></svg>
+                                </span>
+                                <span class="custom-checkbox-text text-zinc-300" data-i18n="chk_ps">Akses PowerShell (Administrator)</span>
                             </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-200 py-0.5">
-                                <input type="checkbox"
-                                    class="rounded border-zinc-700 bg-zinc-950 text-emerald-500 focus:ring-0 focus:ring-offset-0 w-4 h-4 cursor-pointer">
-                                <span>Aplikasi Steam sudah terinstall</span>
+                            <label class="custom-checkbox-container">
+                                <input type="checkbox" class="hidden">
+                                <span class="custom-checkbox-box">
+                                    <svg class="check-svg" viewBox="0 0 24 24"><path class="check-path" d="M4 12l4 4L18 6"></path></svg>
+                                </span>
+                                <span class="custom-checkbox-text text-zinc-300" data-i18n="chk_steam">Aplikasi Steam sudah terinstall</span>
                             </label>
-                            <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-200 py-0.5">
-                                <input type="checkbox"
-                                    class="rounded border-zinc-700 bg-zinc-950 text-emerald-500 focus:ring-0 focus:ring-offset-0 w-4 h-4 cursor-pointer">
-                                <span>Akun Discord aktif</span>
+                            <label class="custom-checkbox-container">
+                                <input type="checkbox" class="hidden">
+                                <span class="custom-checkbox-box">
+                                    <svg class="check-svg" viewBox="0 0 24 24"><path class="check-path" d="M4 12l4 4L18 6"></path></svg>
+                                </span>
+                                <span class="custom-checkbox-text text-zinc-300" data-i18n="chk_dc">Akun Discord aktif</span>
                             </label>
                         </div>
                     </div>
 
-                    <!-- Step Line Container -->
-                    <div class="relative pl-5 sm:pl-6 border-l border-zinc-800 space-y-6 sm:space-y-8 ml-2 sm:ml-3">
+                    <!-- Clean Step Container -->
+                    <div class="relative pl-5 sm:pl-6 border-l border-zinc-800/80 space-y-6 sm:space-y-8 ml-2 sm:ml-3">
 
                         <!-- Step 1.1 -->
                         <div class="relative">
-                            <span
-                                class="absolute -left-[27px] sm:-left-[31px] top-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-zinc-950 border-2 border-zinc-700"></span>
-                            <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1">Unduh & Install Software Utama
-                            </h3>
-                            <p class="text-xs text-zinc-400 leading-relaxed mb-3">
+                            <span class="absolute -left-[27px] sm:-left-[31px] top-1 w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700"></span>
+                            <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1" data-i18n="step1_1_title">Unduh & Install Software Utama</h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed mb-3" data-i18n="step1_1_desc">
                                 Langkah pertama, buka website resmi SteamTools dan unduh file installer-nya.
                             </p>
                             <a href="https://steamtools.net/" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-xs font-medium transition">
                                 <i class="fa-solid fa-download text-zinc-400"></i>
-                                <span>Buka website steamtools.net</span>
+                                <span data-i18n="step1_1_btn">Buka website steamtools.net</span>
                             </a>
                         </div>
 
                         <!-- Step 1.2 -->
                         <div class="relative">
-                            <span
-                                class="absolute -left-[27px] sm:-left-[31px] top-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-zinc-950 border-2 border-zinc-700"></span>
-                            <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1">Jalankan Perintah di Terminal
-                                / PowerShell</h3>
-                            <p class="text-xs text-zinc-400 leading-relaxed mb-3">
-                                Buka <code
-                                    class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded text-[11px]">PowerShell</code>
-                                atau Terminal (ingat: <strong class="text-zinc-200">Wajib Run as Administrator</strong>
-                                biar ngga bentrok izin
-                                akses), lalu copas perintah ini:
+                            <span class="absolute -left-[27px] sm:-left-[31px] top-1 w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700"></span>
+                            <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1" data-i18n="step1_2_title">Jalankan Perintah di Terminal / PowerShell</h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed mb-3" data-i18n="step1_2_desc">
+                                Buka <code class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded text-[11px]">PowerShell</code> atau Terminal (ingat: <strong class="text-zinc-200">Wajib Run as Administrator</strong> biar ngga bentrok izin akses), lalu copas perintah ini:
                             </p>
 
-                            <!-- Code Block Component -->
-                            <div
-                                class="rounded-lg bg-zinc-900/90 border border-zinc-800 overflow-hidden font-mono text-xs my-2">
-                                <div
-                                    class="flex items-center justify-between px-3 py-2 bg-zinc-900 border-b border-zinc-800/80 text-[11px] text-zinc-400 gap-2">
-                                    <span class="flex items-center gap-2 text-zinc-400 truncate">
-                                        <i class="fa-solid fa-terminal text-zinc-500"></i> PowerShell (Admin)
+                            <!-- Clean Terminal Code Block -->
+                            <div class="rounded-lg bg-zinc-900/90 border border-zinc-800 overflow-hidden font-mono text-xs my-2">
+                                <div class="flex items-center justify-between px-3 py-2 bg-zinc-900 border-b border-zinc-800/80 text-[11px] text-zinc-400 gap-2">
+                                    <span class="flex items-center gap-1.5 text-zinc-400 truncate">
+                                        <i class="fa-solid fa-terminal text-zinc-500"></i>
+                                        <span>PowerShell (Admin)</span>
+                                        <span class="prompt-cursor text-emerald-400 font-mono font-bold">_</span>
                                     </span>
                                     <button onclick="copyCode('ps-cmd-1', this)"
                                         class="hover:text-zinc-200 text-zinc-400 flex items-center gap-1 transition shrink-0">
                                         <i class="fa-regular fa-copy"></i>
-                                        <span class="btn-text">Salin Perintah</span>
+                                        <span class="btn-text" data-i18n="copy_cmd">Salin Perintah</span>
                                     </button>
                                 </div>
                                 <div class="p-3 overflow-x-auto text-emerald-400 break-all sm:break-normal">
@@ -515,27 +345,17 @@
                                 </div>
                             </div>
 
-                            <div
-                                class="mt-3 p-3 rounded-md bg-zinc-900/40 border-l-2 border-emerald-500 text-xs text-zinc-400 flex items-start gap-2.5">
-                                <i class="fa-solid fa-lightbulb text-emerald-500 text-xs mt-0.5 shrink-0"></i>
-                                <span>Perintah skrip di atas berguna untuk mengunduh dependency dan pustaka pendorong
-                                    yang dibutuhkan oleh SteamTools secara otomatis.</span>
-                            </div>
+                            <p class="mt-2 text-xs text-zinc-500 leading-relaxed" data-i18n="script_tip">
+                                Perintah skrip di atas berguna untuk mengunduh dependency dan pustaka pendorong yang dibutuhkan oleh SteamTools secara otomatis.
+                            </p>
                         </div>
 
-                        <!-- Step 1.3 & 1.4 -->
+                        <!-- Step 1.3 -->
                         <div class="relative">
-                            <span
-                                class="absolute -left-[27px] sm:-left-[31px] top-0.5 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-zinc-950 border-2 border-zinc-700"></span>
-                            <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1">Verifikasi & Link Akun Discord
-                            </h3>
-                            <p class="text-xs text-zinc-400 leading-relaxed">
-                                Join ke Discord <a href="https://discord.gg/k3rnalyze" target="_blank"
-                                    rel="noopener noreferrer" class="text-emerald-400 hover:underline">K3rnalyze</a>,
-                                kemudian buka web <a href="https://kernelos.org/games" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="text-emerald-400 hover:underline">kernelos.org/games</a> lalu login/link akun
-                                Discord kalian di sana.
+                            <span class="absolute -left-[27px] sm:-left-[31px] top-1 w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700"></span>
+                            <h3 class="text-xs sm:text-sm font-medium text-zinc-200 mb-1" data-i18n="step1_3_title">Verifikasi & Link Akun Discord</h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed" data-i18n="step1_3_desc">
+                                Join ke Discord <a href="https://discord.gg/k3rnalyze" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">K3rnalyze</a>, kemudian buka web <a href="https://kernelos.org/games" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">kernelos.org/games</a> lalu login/link akun Discord kalian di sana.
                             </p>
                         </div>
 
@@ -543,166 +363,56 @@
                 </section>
 
                 <!-- SECTION 2 -->
-                <section id="section-install" class="scroll-mt-20 mb-10 sm:mb-14">
-                    <h2
-                        class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
-                        <span
-                            class="w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">2</span>
-                        <span>Cara Pasang Game</span>
+                <section id="section-install" class="scroll-mt-20 mb-10 sm:mb-12">
+                    <h2 class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
+                        <span class="step-number-badge w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">2</span>
+                        <span data-i18n="section2_title">Cara Pasang Game</span>
                     </h2>
 
                     <div class="space-y-4 text-xs text-zinc-400 leading-relaxed">
+                        <!-- Clean Ordered Steps -->
+                        <ol class="space-y-2.5 list-decimal list-inside p-4 rounded-lg bg-zinc-900/30 border border-zinc-800/80 text-zinc-300">
+                            <li class="pl-1" data-i18n="sec2_step1">Gunakan widget Cari App ID di sidebar kanan website ini, ketik judul game, lalu klik kartu game-nya.</li>
+                            <li class="pl-1" data-i18n="sec2_step2">Klik tombol KernelOS atau AHD Mirror untuk mengunduh file manifest/LUA resminya (.lua).</li>
+                            <li class="pl-1" data-i18n="sec2_step3">Jalankan aplikasi SteamTools sampai window overlay muncul di atas Steam.</li>
+                            <li class="pl-1" data-i18n="sec2_step4">Drag & Drop file .lua langsung ke kotak overlay SteamTools.</li>
+                            <li class="pl-1" data-i18n="sec2_step5">Klik kanan overlay SteamTools -> pilih Restart Steam. Selesai!</li>
+                        </ol>
 
-                        <div class="p-3.5 sm:p-4 rounded-lg bg-zinc-900/40 border border-zinc-800/80 space-y-3">
-                            <div class="flex items-start gap-3">
-                                <span
-                                    class="font-mono text-xs font-semibold text-emerald-400 shrink-0 mt-0.5">01.</span>
-                                <p class="text-zinc-300">
-                                    Gunakan widget <strong class="text-emerald-400">Cari App ID</strong> di sidebar kanan website ini, ketik judul game yang ingin kamu mainkan, lalu klik kartu game-nya (angka <strong class="text-zinc-100 font-mono">App ID</strong> otomatis tersalin ke clipboard). <span class="text-zinc-500 text-[11px] block mt-0.5">*(Opsi alternatif: bisa cari manual via <a href="https://steamdb.info/" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-zinc-200 underline">steamdb.info</a>)*</span>
-                                </p>
+                        <!-- Clean Online-Fix Note -->
+                        <div class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 space-y-2 text-xs">
+                            <div class="text-emerald-400 font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <span data-i18n="fun_fact_title">Fun Fact & Pro-Tip: Mau Main Multiplayer / Online?</span>
                             </div>
-                            <div class="flex items-start gap-3 border-t border-zinc-800/60 pt-3">
-                                <span
-                                    class="font-mono text-xs font-semibold text-emerald-400 shrink-0 mt-0.5">02.</span>
-                                <p class="text-zinc-300">
-                                    Klik tombol <strong class="text-emerald-400 font-semibold">KernelOS</strong> atau <strong class="text-zinc-200 font-semibold">AHD Mirror</strong> yang langsung aktif di bawah nama game yang kamu pilih untuk mengunduh file manifest/LUA resminya (<code
-                                        class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded">.lua</code>).
-                                </p>
-                            </div>
-                            <div class="flex items-start gap-3 border-t border-zinc-800/60 pt-3">
-                                <span
-                                    class="font-mono text-xs font-semibold text-emerald-400 shrink-0 mt-0.5">03.</span>
-                                <p class="text-zinc-300">
-                                    Jalankan aplikasi SteamTools sampai kotak / window overlay SteamTools muncul di atas
-                                    tampilan Steam lu.
-                                </p>
-                            </div>
-                            <div class="flex items-start gap-3 border-t border-zinc-800/60 pt-3">
-                                <span
-                                    class="font-mono text-xs font-semibold text-emerald-400 shrink-0 mt-0.5">04.</span>
-                                <p class="text-zinc-300">
-                                    Tinggal tarik dan lepas (<strong class="text-zinc-100">Drag & Drop</strong>) file
-                                    <code class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded">.lua</code>
-                                    yang tadi di-download langsung ke kotak overlay SteamTools.
-                                </p>
-                            </div>
-                            <div class="flex items-start gap-3 border-t border-zinc-800/60 pt-3">
-                                <span
-                                    class="font-mono text-xs font-semibold text-emerald-400 shrink-0 mt-0.5">05.</span>
-                                <p class="text-zinc-300">
-                                    Klik kanan pada kotak overlay SteamTools &rarr; pilih opsi <strong
-                                        class="text-zinc-100">Restart Steam</strong>. Selesai!
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Tip Box referencing sidebar tool -->
-                        <div
-                            class="p-3.5 rounded-lg bg-zinc-900/40 border border-zinc-800/80 flex items-start gap-2.5 text-xs text-zinc-400">
-                            <i class="fa-solid fa-bolt text-emerald-400 text-xs mt-0.5 shrink-0"></i>
-                            <div>
-                                <strong class="text-zinc-200 font-medium">Tips Cepat:</strong> Kamu tidak perlu repot membuka tab baru untuk mencari App ID & link manifest. Cukup gunakan widget <strong class="text-emerald-400">Cari App ID</strong> di sebelah kanan untuk menyalin ID dan langsung membuka halaman download KernelOS / AHD Mirror dalam 1 klik.
-                            </div>
-                        </div>
-
-                        <!-- Fun Fact / Online-Fix Patcher -->
-                        <div class="p-3.5 sm:p-4 rounded-lg bg-emerald-950/20 border border-emerald-500/30 space-y-3">
-                            <div class="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
-                                <i class="fa-solid fa-lightbulb text-emerald-400 shrink-0"></i>
-                                <span>Fun Fact & Pro-Tip: Mau Main Multiplayer / Online?</span>
-                            </div>
-                            <p class="text-[11px] sm:text-xs text-zinc-300 leading-relaxed">
-                                Secara bawaan, file manifest yang di-download via SteamTools utamanya difokuskan untuk
-                                mode <strong class="text-white">Single Player</strong>. Jika game tersebut memiliki
-                                fitur multiplayer dan kamu ingin mabar dengan teman, kamu bisa memanfaatkan patcher dari
-                                <a href="https://online-fix.me/" target="_blank" rel="noopener noreferrer"
-                                    class="text-emerald-400 underline font-mono">online-fix.me</a>.
+                            <p class="text-zinc-400 text-[11px] leading-relaxed" data-i18n="fun_fact_desc">
+                                Secara bawaan, manifest SteamTools terutama difokuskan untuk Single Player. Untuk mabar multiplayer dengan teman, unduh fix patch tambahan dari <a href="https://online-fix.me/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline font-mono">online-fix.me</a> lalu timpa ke folder game.
                             </p>
-
-                            <div
-                                class="p-3 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-[11px] sm:text-xs">
-                                <span class="text-zinc-200 font-medium block">⚡ Panduan Essential Pemasangan
-                                    Online-Fix:</span>
-                                <ol class="list-decimal list-inside space-y-1.5 text-zinc-400">
-                                    <li>
-                                        <strong class="text-zinc-200">Cari Judul Game:</strong> Buka situs <code
-                                            class="font-mono text-emerald-400">online-fix.me</code> lalu cari game yang
-                                        sudah kamu install.
-                                    </li>
-                                    <li>
-                                        <strong class="text-zinc-200">Download Fix Patch:</strong> Unduh file <code
-                                            class="font-mono text-zinc-200">Multiplayer / Online Fix</code> yang
-                                        disediakan di halaman game tersebut.
-                                    </li>
-                                    <li>
-                                        <strong class="text-zinc-200">Ekstrak ke Folder Game:</strong> Copy dan paste
-                                        (timpa / overwrite file jika diminta) seluruh isi file fix tersebut ke folder
-                                        utama direktori instalasi game kamu.
-                                    </li>
-                                    <li>
-                                        <strong class="text-zinc-200">Buka Steam:</strong> Pastikan aplikasi Steam dalam
-                                        keadaan terbuka/aktif di background.
-                                    </li>
-                                    <li>
-                                        <strong class="text-zinc-200">Jalankan & Invite:</strong> Buka game lewat
-                                        executable patcher, lalu gunakan overlay Steam (<code
-                                            class="font-mono text-zinc-200">Shift + Tab</code>) untuk mengundang sesama
-                                        teman.
-                                    </li>
-                                </ol>
-                            </div>
                         </div>
-
                     </div>
                 </section>
 
                 <!-- SECTION 3 -->
-                <section id="section-fix" class="scroll-mt-20 mb-10 sm:mb-14">
-                    <h2
-                        class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
-                        <span
-                            class="w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">3</span>
-                        <span>Fix Error "No Internet Connection"</span>
+                <section id="section-fix" class="scroll-mt-20 mb-10 sm:mb-12">
+                    <h2 class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight mb-4 flex items-center gap-2">
+                        <span class="step-number-badge w-6 h-6 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs flex items-center justify-center font-mono shrink-0">3</span>
+                        <span data-i18n="section3_title">Fix Error "No Internet Connection"</span>
                     </h2>
 
-                    <div
-                        class="mb-5 p-3 sm:p-3.5 rounded-md bg-amber-500/5 border border-amber-500/20 text-xs text-amber-200/90 leading-relaxed flex items-start gap-2.5">
-                        <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xs mt-0.5 shrink-0"></i>
-                        <div>
-                            <strong class="text-amber-300 font-medium">Solusi Jika Download Bermasalah:</strong> Langkah
-                            di bawah ini dipakai kalau lu ngalamin error tulisan <em>"No Internet Connection"</em> saat
-                            pencet tombol download game di dalam Steam.
-                        </div>
-                    </div>
-
                     <div class="space-y-3 text-xs text-zinc-400">
-                        <ol
-                            class="list-decimal list-inside space-y-2.5 p-3.5 sm:p-4 rounded-lg bg-zinc-900/40 border border-zinc-800/80 leading-relaxed">
-                            <li class="pl-1">
-                                Buka situs mirror manifest alternatif di <a href="https://ahd-manifest.lovable.app/"
-                                    target="_blank" rel="noopener noreferrer"
-                                    class="text-emerald-400 underline">ahd-manifest.lovable.app</a>.
-                            </li>
-                            <li class="pl-1">
-                                Paste <strong class="text-zinc-200">App ID</strong> game di kolom search &rarr; lalu
-                                klik tombol <strong class="text-zinc-200">Download All</strong>.
-                            </li>
-                            <li class="pl-1">
-                                Klik kanan pada overlay SteamTools &rarr; masuk ke menu <code
-                                    class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded">Steam Folder</code>
-                                &gt; pilih <code
-                                    class="text-zinc-200 font-mono bg-zinc-900 px-1 py-0.5 rounded">Steam Manifests</code>.
-                            </li>
-                            <li class="pl-1">
-                                Paste semua file manifest yang baru saja di-download dari situs mirror tadi ke dalam
-                                folder tersebut.
-                            </li>
-                            <li class="pl-1">
-                                Drag semua file manifest tersebut ke overlay SteamTools.
-                            </li>
-                            <li class="pl-1">
-                                Restart Steam sekali lagi lewat menu overlay SteamTools. Beres!
-                            </li>
+                        <div class="p-3.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300/90 flex items-start gap-2.5">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xs mt-0.5 shrink-0"></i>
+                            <p data-i18n="sec3_warning" class="leading-relaxed">
+                                <strong class="text-amber-300 font-medium">Solusi Jika Download Bermasalah:</strong> Langkah di bawah ini dipakai kalau lu ngalamin error tulisan <em>"No Internet Connection"</em> saat pencet tombol download game di dalam Steam.
+                            </p>
+                        </div>
+                        <ol class="list-decimal list-inside space-y-2 p-4 rounded-lg bg-zinc-900/30 border border-zinc-800/80 leading-relaxed text-zinc-300">
+                            <li class="pl-1" data-i18n="sec3_s1">Buka situs mirror manifest alternatif di ahd-manifest.lovable.app.</li>
+                            <li class="pl-1" data-i18n="sec3_s2">Paste App ID game di kolom search -> lalu klik Download All.</li>
+                            <li class="pl-1" data-i18n="sec3_s3">Klik kanan overlay SteamTools -> Steam Folder > Steam Manifests.</li>
+                            <li class="pl-1" data-i18n="sec3_s4">Paste semua file manifest yang baru saja di-download ke folder tersebut.</li>
+                            <li class="pl-1" data-i18n="sec3_s5">Drag semua file manifest tersebut ke overlay SteamTools.</li>
+                            <li class="pl-1" data-i18n="sec3_s6">Restart Steam sekali lagi lewat menu overlay SteamTools. Beres!</li>
                         </ol>
                     </div>
                 </section>
@@ -715,54 +425,50 @@
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-2">
                         <h1 class="text-xl sm:text-2xl font-bold text-zinc-100 tracking-tight flex items-center gap-2">
                             <i class="fa-brands fa-reddit text-orange-500 text-lg sm:text-xl shrink-0"></i>
-                            <span>Forum Problem Solver</span>
+                            <span data-i18n="forum_header_title">Forum Problem Solver</span>
                         </h1>
-                        <span
-                            class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-400 self-start sm:self-auto shrink-0">
+                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-orange-500/10 border border-orange-500/20 text-orange-400 self-start sm:self-auto shrink-0">
                             Reddit Sourced
                         </span>
                     </div>
-                    <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-                        Kumpulan pertanyaan & diskusi kendala umum pengguna SteamTools yang diambil dari forum Reddit
-                        (<code class="font-mono text-[11px] text-zinc-300">r/PiratedGames</code>, <code
-                            class="font-mono text-[11px] text-zinc-300">r/FitGirlRepack</code>) lengkap dengan solusi
-                        teruji.
+                    <p class="text-xs text-zinc-400 leading-relaxed mb-4" data-i18n="forum_header_sub">
+                        Kumpulan pertanyaan & diskusi kendala umum pengguna SteamTools yang diambil dari forum Reddit lengkap dengan solusi teruji.
                     </p>
 
                     <!-- Forum Search Bar -->
                     <div class="relative">
-                        <i
-                            class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 text-xs"></i>
-                        <input type="text" id="forum-search-input" onkeyup="filterForumThreads()"
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 text-xs"></i>
+                        <input type="text" id="forum-search-input"
+                            data-i18n-placeholder="forum_search_placeholder"
                             placeholder="Cari masalah (cth: 'purchase', 'cache', 'powershell', 'cloud')..."
                             class="w-full bg-zinc-900 border border-zinc-800 rounded-lg pl-9 pr-4 py-2 text-xs text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-zinc-700 font-sans">
                     </div>
 
-                    <!-- Forum Category Quick Chips (Touch & Mobile Friendly Filter Bar) -->
+                    <!-- Forum Category Quick Chips -->
                     <div class="flex items-center gap-1.5 overflow-x-auto pb-1 mt-3 no-scrollbar text-xs">
                         <button onclick="filterForumCategory('all')"
                             class="forum-mobile-cat-btn active px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900 text-zinc-300 hover:text-white whitespace-nowrap transition text-[11px]"
-                            data-cat-val="all">
+                            data-cat-val="all" data-i18n="chip_all">
                             Semua Solusi
                         </button>
                         <button onclick="filterForumCategory('cache')"
                             class="forum-mobile-cat-btn px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900 text-zinc-400 hover:text-white whitespace-nowrap transition text-[11px]"
-                            data-cat-val="cache">
+                            data-cat-val="cache" data-i18n="chip_cache">
                             License & Cache
                         </button>
                         <button onclick="filterForumCategory('depot')"
                             class="forum-mobile-cat-btn px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900 text-zinc-400 hover:text-white whitespace-nowrap transition text-[11px]"
-                            data-cat-val="depot">
+                            data-cat-val="depot" data-i18n="chip_depot">
                             Encrypted Depot
                         </button>
                         <button onclick="filterForumCategory('permission')"
                             class="forum-mobile-cat-btn px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900 text-zinc-400 hover:text-white whitespace-nowrap transition text-[11px]"
-                            data-cat-val="permission">
+                            data-cat-val="permission" data-i18n="chip_permission">
                             PowerShell / Defender
                         </button>
                         <button onclick="filterForumCategory('cloud')"
                             class="forum-mobile-cat-btn px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900 text-zinc-400 hover:text-white whitespace-nowrap transition text-[11px]"
-                            data-cat-val="cloud">
+                            data-cat-val="cloud" data-i18n="chip_cloud">
                             Steam Cloud
                         </button>
                     </div>
@@ -770,498 +476,46 @@
 
                 <!-- Forum Thread List -->
                 <div id="forum-thread-list" class="space-y-4 text-xs">
-
-                    <!-- Thread Item 1 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="cache" data-keywords="purchase beli cache packageinfo lua">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
-                                <i class="fa-solid fa-circle-exclamation text-[9px]"></i> Cache / License Issue
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            [Tanya] Tombol Steam Masih Bertulisan "Beli / Purchase" Padahal File .LUA Sudah Di-drag?
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Setelah mendownload file `.lua`
-                            dari KernelOS dan
-                            men-drag-nya ke overlay SteamTools, tombol di library Steam masih berwarna hijau bertuliskan
-                            "Beli / Purchase" bukannya "Install".
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas (Reddit Tested):
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Buka menu <code
-                                        class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal">Steam Settings &gt; Downloads &gt; Clear Download Cache</code>.
-                                </li>
-                                <li>Atau buka folder instalasi Steam, masuk ke folder <code
-                                        class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">appcache</code>
-                                    lalu hapus file <code
-                                        class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">packageinfo.vdf</code>.
-                                </li>
-                                <li>Klik kanan overlay SteamTools lalu pilih <strong>Restart Steam</strong>. Tombol akan
-                                    berubah jadi <em>Install / Play</em>.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 2 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="depot" data-keywords="content still encrypted depot manifest key error download">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-mono">
-                                <i class="fa-solid fa-lock text-[9px]"></i> Depot & Encryption
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Error "Content Still Encrypted" Saat Memulai Download Game
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Mengalami pesan error "Content
-                            Still Encrypted" pada
-                            status unduhan Steam saat menekan tombol Install.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Unduh full depot manifest cadangan melalui situs <a
-                                        href="https://ahd-manifest.lovable.app/" target="_blank"
-                                        rel="noopener noreferrer" class="text-emerald-400 underline">AHD Manifest
-                                        Mirror</a>.</li>
-                                <li>Copy semua file manifest hasil unduhan ke dalam direktori <code
-                                        class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal">Steam/steamapps/depotcache</code>.
-                                </li>
-                                <li>Matikan Steam secara penuh lewat Task Manager lalu buka kembali SteamTools.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 3 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="permission"
-                        data-keywords="powershell administrator overlay defender antivirus missing">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
-                                <i class="fa-solid fa-shield-halved text-[9px]"></i> Permission / Defender
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Window Overlay SteamTools Tidak Muncul Sama Sekali di Atas Window Steam
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Sudah eksekusi script di
-                            PowerShell tetapi window kotak
-                            melayang (overlay) SteamTools tidak kunjung tampil.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Tutup aplikasi Steam secara menyeluruh di <strong>Task Manager</strong> (<code
-                                        class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">End Task steam.exe</code>).
-                                </li>
-                                <li>Buka terminal PowerShell dengan mode <strong>Run as Administrator</strong>.</li>
-                                <li>Ketik perintah bypass permission berikut: <code
-                                        class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal">Set-ExecutionPolicy Unrestricted -Scope Process</code>
-                                    lalu tekan <code
-                                        class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded">Y</code>.
-                                </li>
-                                <li>Jalankan ulang perintah installer utama: <code
-                                        class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal">irm steam.run | iex</code>.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 4 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="cloud" data-keywords="steam cloud sync error save game sync failed">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-mono">
-                                <i class="fa-solid fa-cloud text-[9px]"></i> Steam Cloud Mismatch
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Pesan Warning Merah "Steam Cloud Error" / Gagal Sync Save File
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Terdapat tulisan error berwarna
-                            merah "Unable to sync
-                            cloud save" saat mencoba meluncurkan game.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Buka menu <code
-                                        class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded break-all sm:break-normal">Steam Settings &gt; Cloud</code>.
-                                </li>
-                                <li>Matikan opsi <strong>"Enable Steam Cloud synchronization"</strong> (Toggle Off).
-                                </li>
-                                <li>Restart Steam. Warning merah akan hilang dan game dapat menyimpan progres secara
-                                    lokal.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 5 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="depot" data-keywords="denuvo drm crash play anti cheat bypass crack">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 font-mono">
-                                <i class="fa-solid fa-shield-cat text-[9px]"></i> DRM / Denuvo Restriction
-                            </span>
-                            <span class="text-zinc-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-info-circle"></i> Info Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Game Crash saat Klik "Play" atau Minta Denuvo Activation Key
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Game sudah selesai di-download
-                            100%, tetapi ketika
-                            di-play game langsung tertutup atau meminta lisensi Denuvo.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-amber-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-circle-info"></i> Catatan Penting Batasan SteamTools:
-                            </div>
-                            <p class="text-zinc-400 leading-relaxed">
-                                SteamTools <em>hanya berfungsi mengunduh file asli game dari server CDN Steam</em>.
-                                SteamTools <strong>tidak melakukan crack/bypass Denuvo DRM server-side</strong>. Untuk
-                                game bersistem Denuvo, kamu tetap memerlukan executable crack/bypass terpisah secara
-                                manual.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 6 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="cache" data-keywords="dlc lock locked unlock smokeapi creamapi paradox capcom bandai">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
-                                <i class="fa-solid fa-puzzle-piece text-[9px]"></i> Cache & DLC Unlock
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            DLC Tercentang di Library Steam, Tetapi di Dalam Game Konten Masih Terkunci?
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Setelah menambahkan file LUA DLC (seperti Tekken 8, Monster Hunter, ETS2, Persona, HOI4), Steam menampilkan status DLC sebagai "Installed", namun menu di dalam game tetap menganggap DLC belum dibeli.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas (SmokeAPI / CreamAPI):
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Beberapa game (terutama Capcom, Paradox, Bandai) memiliki verifikasi runtime internal pada file <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">steam_api64.dll</code>.</li>
-                                <li>Pasang <strong>SmokeAPI</strong> atau <strong>CreamAPI</strong> ke dalam folder instalasi executable game utama.</li>
-                                <li>Salin App ID DLC dari menu pencarian di sebelah kanan panduan ini, lalu masukkan ke dalam file konfigurasi <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">smokeapi.config.json</code> atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">cream_api.ini</code>.</li>
-                                <li>Jalankan game secara langsung dari Steam.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 7 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="depot" data-keywords="stuck 0 b/s download slow no internet connection timeout cdn speed">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-mono">
-                                <i class="fa-solid fa-gauge-simple-high text-[9px]"></i> Depot & Download
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Download Game Stuck di 0 B/s atau Muncul Pesan "No Internet Connection"
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Kecepatan download Steam tiba-tiba drop menjadi 0 B/s dan tidak bergerak, atau Steam melaporkan error koneksi saat mengunduh file game besar.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Buka menu <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Steam Settings &gt; Downloads</code> dan ubah <strong>Download Region</strong> ke <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Singapore</code> atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Germany - Frankfurt</code>.</li>
-                                <li>Nonaktifkan sementara protokol <strong>IPv6</strong> pada pengaturan Network Adapter Windows kamu.</li>
-                                <li>Jika depot manifest kadaluarsa, unduh manual file manifest via <a href="https://ahd-manifest.lovable.app/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline">AHD Manifest Mirror</a> lalu paste ke folder <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Steam/steamapps/depotcache</code>.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 8 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="permission" data-keywords="update klien hilang overlay re-inject reinject powershell hook hilang">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
-                                <i class="fa-solid fa-rotate text-[9px]"></i> Permission & Injection
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Overlay SteamTools Hilang Setelah Steam Melakukan Auto-Update Klien
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Setelah Steam mengunduh update klien otomatis dari Valve dan restart, window overlay SteamTools tidak lagi muncul dan menu game kembali normal.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas (Re-inject Hook):
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Update klien Steam sering menimpa file dynamic library (<code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">chrome_elf.dll</code> / <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">steamui.dll</code>) yang di-hook oleh SteamTools.</li>
-                                <li>Tutup Steam sepenuhnya dari Task Manager.</li>
-                                <li>Buka terminal PowerShell Administrator dan jalankan ulang perintah installer satu baris: <code class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded">irm steam.run | iex</code>.</li>
-                                <li>Buka kembali Steam. Semua file game dan konfigurasi LUA yang sudah terpasang <strong>tetap aman dan tidak hilang</strong>.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 9 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="permission" data-keywords="easy anti-cheat eac battleye vac multiplayer online kick untrusted">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 font-mono">
-                                <i class="fa-solid fa-shield-virus text-[9px]"></i> Anti-Cheat & Multiplayer
-                            </span>
-                            <span class="text-rose-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-triangle-exclamation"></i> Security Advisory
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Error "Easy Anti-Cheat Untrusted System File" atau Game Online Menolak Masuk Server
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Saat meluncurkan game multiplayer (seperti Dead by Daylight, Rust, Apex, atau game ber-EAC lainnya), game langsung force close dengan notifikasi "Untrusted system file".
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-amber-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-shield-halved"></i> Panduan Keamanan Akun:
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Anti-cheat level kernel (seperti Easy Anti-Cheat dan BattlEye) mendeteksi injeksi runtime memory pada Steam client.</li>
-                                <li>SteamTools <strong>hanya ditujukan untuk game singleplayer, offline, atau local co-op</strong>.</li>
-                                <li>Jangan pernah mencoba mengakses server resmi game ber-anti-cheat ketat menggunakan akun Steam utama untuk menghindari risiko ban akun (VAC/Game Ban).</li>
-                                <li>Untuk game dengan fitur multiplayer, gunakan komunitas server terpisah (Spacewar fix / Goldberg LAN emulator).</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 10 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="cache" data-keywords="update loop update required loop infinite loop acf stateflags">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
-                                <i class="fa-solid fa-arrows-rotate text-[9px]"></i> License & Cache
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Game Terjebak di Status "Update Required" dan Masuk Infinite Update Loop
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Tombol di Library Steam terus meminta "Update", dan setiap kali tombol Update ditekan, proses selesai seketika (0 detik) namun tombol kembali lagi menjadi "Update" bukannya "Play".
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas (Edit ACF StateFlags):
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Tutup Steam sepenuhnya dari Task Manager.</li>
-                                <li>Buka folder <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">C:\Program Files (x86)\Steam\steamapps\</code>.</li>
-                                <li>Cari file <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">appmanifest_[APPID].acf</code> sesuai App ID game yang bermasalah, lalu buka dengan Notepad.</li>
-                                <li>Cari baris <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">"StateFlags"</code> dan ubah nilainya menjadi <code class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded">"4"</code> (Status: Fully Installed).</li>
-                                <li>Pastikan baris <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">"BytesToDownload"</code> dan <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">"BytesDownloaded"</code> keduanya bernilai <code class="font-mono text-emerald-400 bg-zinc-900 px-1 py-0.5 rounded">"0"</code>.</li>
-                                <li>Simpan file (<kbd class="font-mono bg-zinc-900 px-1 rounded text-zinc-300">Ctrl+S</kbd>) lalu buka kembali Steam. Status game akan langsung berubah menjadi <strong>Play</strong>.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 11 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="cloud" data-keywords="save hilang progress savegame reset permission uac document">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 font-mono">
-                                <i class="fa-solid fa-floppy-disk text-[9px]"></i> Steam Cloud & Save
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Progres / Save File Game Tidak Tersimpan Setelah Menutup Game atau Restart PC
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Progres gameplay yang sudah dimainkan berjam-jam tidak tersimpan dan selalu memulai permainan baru (New Game) setiap kali game dibuka kembali.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Karena Steam Cloud dinonaktifkan, game menyimpan data secara lokal pada direktori <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">%USERPROFILE%\Saved Games</code>, <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">%APPDATA%</code>, atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">Documents</code>.</li>
-                                <li>Pastikan folder penyimpanan tersebut tidak berada dalam status <em>Read-Only</em> dan antivirus tidak mengunci izin tulis folder (Ransomware Protection).</li>
-                                <li>Jalankan shortcut executable game dengan opsi <strong>"Run as Administrator"</strong> agar game memiliki hak akses menulis file save data.</li>
-                                <li>Cek lokasi penyimpanan spesifik tiap game melalui situs <a href="https://www.pcgamingwiki.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 underline">PCGamingWiki</a>.</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <!-- Thread Item 12 -->
-                    <div class="forum-thread-card border border-zinc-800 rounded-lg overflow-hidden bg-zinc-900/40 p-3.5 sm:p-4 space-y-3"
-                        data-category="depot" data-keywords="invalid manifest lua corrupted archive extract gzip drop">
-                        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-mono">
-                                <i class="fa-solid fa-file-circle-exclamation text-[9px]"></i> Depot & Extraction
-                            </span>
-                            <span class="text-emerald-400 font-mono text-[10px] flex items-center gap-1">
-                                <i class="fa-solid fa-circle-check"></i> Solved Thread
-                            </span>
-                        </div>
-
-                        <h3 class="font-semibold text-zinc-100 text-xs sm:text-sm leading-snug">
-                            Error "Invalid Manifest Structure" atau "Corrupted File" saat Drag & Drop File LUA
-                        </h3>
-
-                        <p class="text-zinc-400 leading-relaxed text-xs">
-                            <strong class="text-zinc-300">Deskripsi Masalah:</strong> Muncul notifikasi error pada overlay SteamTools saat mencoba men-drag file konfigurasi LUA atau manifest yang baru diunduh.
-                        </p>
-
-                        <div
-                            class="p-3 sm:p-3.5 bg-zinc-950/80 rounded border border-zinc-800 space-y-2 text-zinc-300 text-[11px] sm:text-xs">
-                            <div class="font-semibold text-emerald-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-wrench"></i> Solusi Komunitas:
-                            </div>
-                            <ol class="list-decimal list-inside space-y-1 text-zinc-400">
-                                <li>Pastikan file yang di-drag adalah file mentah berekstensi <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">.lua</code> atau <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">.manifest</code>, <strong>bukan file arsip terkompresi (.zip / .rar / .7z)</strong>. Ekstrak terlebih dahulu jika berformat zip.</li>
-                                <li>Gunakan sumber file resmi terverifikasi dari <strong>KernelOS</strong> atau <strong>AHD Manifest Mirror</strong>.</li>
-                                <li>Hindari mengedit struktur tabel kode di dalam file <code class="font-mono text-zinc-200 bg-zinc-900 px-1 py-0.5 rounded">.lua</code> secara manual jika format string belum dipahami.</li>
-                            </ol>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
             <!-- Global Footer -->
-            <footer
-                class="pt-6 sm:pt-8 mt-10 sm:mt-12 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 text-center sm:text-left">
+            <footer class="pt-6 sm:pt-8 mt-10 sm:mt-12 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 text-center sm:text-left">
                 <div class="flex items-center gap-2">
                     <i class="fa-brands fa-github text-zinc-400"></i>
-                    <span>Dibuat oleh <strong class="text-zinc-300">glantrox</strong> • Hosted di <strong>GitHub
-                            Pages</strong></span>
+                    <span data-i18n="footer_built_by">Dibuat oleh <strong class="text-zinc-300">glantrox</strong> • Hosted di <strong>GitHub Pages</strong></span>
                 </div>
                 <div class="flex items-center gap-3">
                     <button onclick="copyCurrentUrl()"
                         class="hover:text-zinc-300 transition flex items-center gap-1 focus:outline-none">
-                        <i class="fa-regular fa-copy text-[10px]"></i> Salin Link Page
+                        <i class="fa-regular fa-copy text-[10px]"></i>
+                        <span data-i18n="footer_copy_link">Salin Link Page</span>
                     </button>
                     <span>•</span>
-                    <a href="#" class="hover:text-zinc-300 transition">Kembali ke Atas ↑</a>
+                    <a href="#" class="hover:text-zinc-300 transition" data-i18n="footer_back_top">Kembali ke Atas ↑</a>
                 </div>
             </footer>
 
         </main>
 
-        <!-- Right Sidebar (Find Game ID by Title & Quick Info) -->
+        <!-- Right Sidebar -->
         <aside class="hidden lg:block w-64 shrink-0">
             <div class="sticky top-20 space-y-4 text-xs">
 
                 <!-- Find Game & DLC App ID Widget -->
                 <div class="p-3 bg-zinc-900/60 border border-zinc-800/90 rounded-xl space-y-2.5">
-                    <!-- Header & Mode Switcher -->
-                    <div class="grid grid-cols-2 p-0.5 bg-zinc-950 rounded-lg border border-zinc-800/90 text-xs font-medium gap-0.5">
-                        <button id="search-mode-btn-game" onclick="setSearchMode('game')"
-                            class="py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm text-xs">
-                            <i class="fa-solid fa-gamepad text-[10px]"></i> Game
+                    <!-- Header & Sliding Mode Switcher -->
+                    <div id="search-mode-container" class="segmented-container w-full grid grid-cols-2">
+                        <div class="segmented-pill"></div>
+                        <button id="search-mode-btn-game"
+                            class="segmented-btn py-1 px-2 rounded-full transition-all flex items-center justify-center gap-1.5 text-zinc-100 text-xs">
+                            <i class="fa-solid fa-gamepad text-[10px]"></i>
+                            <span data-i18n="right_mode_game">Game</span>
                         </button>
-                        <button id="search-mode-btn-dlc" onclick="setSearchMode('dlc')"
-                            class="py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs">
-                            <i class="fa-solid fa-puzzle-piece text-[10px]"></i> DLC / Addon
+                        <button id="search-mode-btn-dlc"
+                            class="segmented-btn py-1 px-2 rounded-full transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs">
+                            <i class="fa-solid fa-puzzle-piece text-[10px]"></i>
+                            <span data-i18n="right_mode_dlc">DLC / Addon</span>
                         </button>
                     </div>
 
@@ -1270,7 +524,8 @@
                         <div class="border-beam-spinner"></div>
                         <div class="border-beam-inner">
                             <i class="fa-solid fa-magnifying-glass pl-2.5 text-zinc-500 text-[10px] shrink-0"></i>
-                            <input type="text" id="game-search-input" oninput="handleGameSearchInput()"
+                            <input type="text" id="game-search-input"
+                                data-i18n-placeholder="search_game_placeholder"
                                 placeholder="Cari judul game (GTA, Wukong...)"
                                 class="w-full bg-transparent pl-2 pr-2.5 py-1.5 text-xs text-zinc-200 placeholder-zinc-500 focus:outline-none font-sans">
                         </div>
@@ -1278,12 +533,10 @@
 
                     <!-- Dynamic Live Game Search Results List -->
                     <div id="game-search-results" class="space-y-1 max-h-72 overflow-y-auto pr-0.5">
-                        <!-- Populated by JS -->
                     </div>
 
                     <!-- Active Selected Game Action Bar -->
                     <div id="game-active-detail" class="hidden pt-2.5 border-t border-zinc-800/90 space-y-2">
-                        <!-- Active Game Header (Title & DRM Badge) -->
                         <div class="flex items-center justify-between gap-1.5">
                             <span id="game-active-title" class="text-xs font-semibold text-zinc-100 truncate flex-1 leading-tight"></span>
                             <span id="game-active-drm" class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">
@@ -1291,7 +544,6 @@
                             </span>
                         </div>
 
-                        <!-- ID & Copy Feedback -->
                         <div class="flex items-center justify-between text-[11px] font-mono text-zinc-400">
                             <span>App ID: <strong id="game-active-id" class="text-zinc-200"></strong></span>
                             <span class="text-emerald-400 text-[10px] flex items-center gap-1 font-mono">
@@ -1299,17 +551,14 @@
                             </span>
                         </div>
 
-                        <!-- Quick External Resources Grid (Direct Links) -->
                         <div class="grid grid-cols-2 gap-1.5">
                             <a id="link-kernel" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1.5 px-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold text-[11px] transition flex items-center justify-center gap-1.5 shadow-sm active:scale-95 text-center"
-                                title="Download LUA & Manifest resmi di KernelOS">
+                                class="py-1.5 px-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold text-[11px] transition flex items-center justify-center gap-1.5 shadow-sm active:scale-95 text-center">
                                 <i class="fa-solid fa-download text-[10px]"></i>
                                 <span>KernelOS</span>
                             </a>
                             <a id="link-mirror" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1.5 px-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-medium text-[11px] border border-zinc-700 transition flex items-center justify-center gap-1.5 active:scale-95 text-center"
-                                title="Download Manifest di AHD Mirror">
+                                class="py-1.5 px-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-medium text-[11px] border border-zinc-700 transition flex items-center justify-center gap-1.5 active:scale-95 text-center">
                                 <i class="fa-solid fa-server text-[10px]"></i>
                                 <span>AHD Mirror</span>
                             </a>
@@ -1317,13 +566,11 @@
 
                         <div class="grid grid-cols-2 gap-1.5 text-[10px] font-medium text-center">
                             <a id="link-steamdb" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1 px-1 rounded bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 transition flex items-center justify-center gap-1"
-                                title="Cek di SteamDB">
+                                class="py-1 px-1 rounded bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 transition flex items-center justify-center gap-1">
                                 <i class="fa-solid fa-globe text-[9px]"></i> SteamDB
                             </a>
                             <a id="link-dlcs" href="#" target="_blank" rel="noopener noreferrer"
-                                class="py-1 px-1 rounded bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-amber-300 border border-zinc-800 transition flex items-center justify-center gap-1"
-                                title="Lihat Daftar DLC">
+                                class="py-1 px-1 rounded bg-zinc-950/80 hover:bg-zinc-800 text-zinc-400 hover:text-amber-300 border border-zinc-800 transition flex items-center justify-center gap-1">
                                 <i class="fa-solid fa-puzzle-piece text-[9px]"></i> Daftar DLC
                             </a>
                         </div>
@@ -1335,58 +582,38 @@
                     <div class="flex items-center justify-between">
                         <span class="font-semibold text-zinc-200 text-xs flex items-center gap-1.5">
                             <i class="fa-solid fa-folder-open text-amber-400 text-[11px]"></i>
-                            <span>Steam Folder Helper</span>
+                            <span data-i18n="folder_helper_title">Steam Folder Helper</span>
                         </span>
                         <span class="text-[10px] text-zinc-500 font-mono">Win + R</span>
                     </div>
-                    <p class="text-[11px] text-zinc-400 leading-tight">Klik untuk menyalin perintah buka folder cepat:</p>
+                    <p class="text-[11px] text-zinc-400 leading-tight" data-i18n="folder_helper_sub">Klik untuk menyalin perintah buka folder cepat:</p>
 
                     <div class="space-y-1.5">
-                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\appcache&quot;', 'Folder appcache')"
-                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\appcache&quot;', 'Folder appcache', this)"
+                            class="folder-row-btn w-full text-left p-1.5 rounded bg-zinc-950 border border-zinc-800/80 flex items-center justify-between group transition">
                             <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 appcache <span class="text-[10px] text-zinc-500 font-sans">(Hapus packageinfo)</span></span>
-                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                            <i class="copy-icon-slide fa-regular fa-copy text-[10px] text-zinc-500 shrink-0 ml-1"></i>
                         </button>
-                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\steamapps\\depotcache&quot;', 'Folder depotcache')"
-                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\steamapps\\depotcache&quot;', 'Folder depotcache', this)"
+                            class="folder-row-btn w-full text-left p-1.5 rounded bg-zinc-950 border border-zinc-800/80 flex items-center justify-between group transition">
                             <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 depotcache <span class="text-[10px] text-zinc-500 font-sans">(Paste manifest)</span></span>
-                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                            <i class="copy-icon-slide fa-regular fa-copy text-[10px] text-zinc-500 shrink-0 ml-1"></i>
                         </button>
-                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\steamapps\\common&quot;', 'Folder common')"
-                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                        <button onclick="copyWinRPath('explorer &quot;%ProgramFiles(x86)%\\Steam\\steamapps\\common&quot;', 'Folder common', this)"
+                            class="folder-row-btn w-full text-left p-1.5 rounded bg-zinc-950 border border-zinc-800/80 flex items-center justify-between group transition">
                             <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 steamapps/common <span class="text-[10px] text-zinc-500 font-sans">(Game install)</span></span>
-                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                            <i class="copy-icon-slide fa-regular fa-copy text-[10px] text-zinc-500 shrink-0 ml-1"></i>
                         </button>
-                        <button onclick="copyWinRPath('explorer &quot;%USERPROFILE%\\Saved Games&quot;', 'Folder Saved Games')"
-                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                        <button onclick="copyWinRPath('explorer &quot;%USERPROFILE%\\Saved Games&quot;', 'Folder Saved Games', this)"
+                            class="folder-row-btn w-full text-left p-1.5 rounded bg-zinc-950 border border-zinc-800/80 flex items-center justify-between group transition">
                             <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 Saved Games <span class="text-[10px] text-zinc-500 font-sans">(Save file)</span></span>
-                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                            <i class="copy-icon-slide fa-regular fa-copy text-[10px] text-zinc-500 shrink-0 ml-1"></i>
                         </button>
-                        <button onclick="copyWinRPath('explorer &quot;%LOCALAPPDATA%\\SteamTools&quot;', 'Folder SteamTools')"
-                            class="w-full text-left p-1.5 rounded bg-zinc-950 hover:bg-zinc-800/80 border border-zinc-800/80 hover:border-zinc-700 flex items-center justify-between group transition">
+                        <button onclick="copyWinRPath('explorer &quot;%LOCALAPPDATA%\\SteamTools&quot;', 'Folder SteamTools', this)"
+                            class="folder-row-btn w-full text-left p-1.5 rounded bg-zinc-950 border border-zinc-800/80 flex items-center justify-between group transition">
                             <span class="font-mono text-[11px] text-zinc-300 group-hover:text-white truncate">📁 SteamTools <span class="text-[10px] text-zinc-500 font-sans">(Config & Logs)</span></span>
-                            <i class="fa-regular fa-copy text-[10px] text-zinc-500 group-hover:text-emerald-400 shrink-0 ml-1"></i>
+                            <i class="copy-icon-slide fa-regular fa-copy text-[10px] text-zinc-500 shrink-0 ml-1"></i>
                         </button>
-                    </div>
-                </div>
-
-                <!-- Warning Notice Box -->
-                <div class="p-3 bg-zinc-900/40 border border-zinc-800/80 rounded-lg space-y-1.5">
-                    <h4
-                        class="font-semibold text-zinc-400 uppercase tracking-wider text-[10px] flex items-center gap-1.5">
-                        <i class="fa-solid fa-circle-exclamation text-amber-500"></i> PERINGATAN
-                    </h4>
-
-                    <!-- Guides TOC -->
-                    <div id="toc-guides-list" class="space-y-1 text-[11px] text-zinc-500">
-                        <p class="leading-relaxed">KALO LU PUNYA DUIT YA BELI DONG GAME NYA JANGAN KESINI!</p>
-                    </div>
-
-                    <!-- Forums TOC -->
-                    <div id="toc-forums-list" class="hidden space-y-1 text-[11px] text-zinc-500">
-                        <p class="leading-relaxed">Gunakan kolom pencarian di forum untuk mencari kode error spesifik
-                            atau
-                            filter berdasarkan tag.</p>
                     </div>
                 </div>
 
@@ -1395,718 +622,15 @@
 
     </div>
 
-    <!-- Toast Notification Container (Positioned responsively) -->
+    <!-- Toast Notification Container -->
     <div id="toast"
         class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 z-50 translate-y-10 opacity-0 transition-all duration-200 bg-zinc-900 border border-zinc-700 text-zinc-200 px-3.5 py-2.5 rounded-lg shadow-xl text-xs flex items-center gap-2 max-w-sm ml-auto pointer-events-none">
         <i class="fa-solid fa-check text-emerald-400 text-xs shrink-0"></i>
         <span id="toast-msg" class="truncate">Notifikasi</span>
     </div>
 
-    <script>
-        function switchTab(tab) {
-            const btnGuides = document.getElementById('tab-btn-guides');
-            const btnForums = document.getElementById('tab-btn-forums');
-
-            const contentGuides = document.getElementById('tab-content-guides');
-            const contentForums = document.getElementById('tab-content-forums');
-
-            const sidebarGuides = document.getElementById('sidebar-guides-nav');
-            const sidebarForums = document.getElementById('sidebar-forums-nav');
-
-            const tocGuides = document.getElementById('toc-guides-list');
-            const tocForums = document.getElementById('toc-forums-list');
-
-            const activeClasses = 'tab-nav-btn active flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 bg-zinc-800 text-zinc-100 shadow-sm border border-zinc-700/60';
-            const inactiveClasses = 'tab-nav-btn flex items-center gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 text-xs font-medium rounded-full transition-all duration-200 text-zinc-400 hover:text-zinc-200 border border-transparent';
-
-            if (tab === 'guides') {
-                btnGuides.className = activeClasses;
-                btnForums.className = inactiveClasses;
-
-                contentGuides.classList.remove('hidden');
-                contentForums.classList.add('hidden');
-
-                sidebarGuides.classList.remove('hidden');
-                sidebarForums.classList.add('hidden');
-
-                tocGuides.classList.remove('hidden');
-                tocForums.classList.add('hidden');
-            } else {
-                btnForums.className = activeClasses;
-                btnGuides.className = inactiveClasses;
-
-                contentForums.classList.remove('hidden');
-                contentGuides.classList.add('hidden');
-
-                sidebarForums.classList.remove('hidden');
-                sidebarGuides.classList.add('hidden');
-
-                tocForums.classList.remove('hidden');
-                tocGuides.classList.add('hidden');
-            }
-        }
-
-        // Forum Filter & Search Logic
-        function filterForumCategory(cat) {
-            const btns = document.querySelectorAll('.forum-cat-btn');
-            btns.forEach(btn => {
-                const val = btn.getAttribute('data-cat-val');
-                if (val === cat) {
-                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-emerald-400 bg-zinc-900/80 transition';
-                } else {
-                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition';
-                }
-            });
-
-            applyForumFilters();
-        }
-
-        function filterForumCategoryChip(cat, el) {
-            const chips = document.querySelectorAll('.forum-chip');
-            chips.forEach(chip => {
-                chip.className = 'forum-chip px-2.5 py-1 rounded-full bg-zinc-900 text-zinc-400 border border-zinc-800 hover:border-zinc-700 transition text-[11px] whitespace-nowrap';
-            });
-            el.className = 'forum-chip px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-medium transition text-[11px] whitespace-nowrap';
-
-            // Sync left sidebar button as well
-            const btns = document.querySelectorAll('.forum-cat-btn');
-            btns.forEach(btn => {
-                const val = btn.getAttribute('data-cat-val');
-                if (val === cat) {
-                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-emerald-400 bg-zinc-900/80 transition';
-                } else {
-                    btn.className = 'forum-cat-btn w-full text-left flex items-center justify-between px-2.5 py-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/60 transition';
-                }
-            });
-
-            applyForumFilters();
-        }
-
-        function handleForumSearch() {
-            applyForumFilters();
-        }
-
-        function applyForumFilters() {
-            const searchInput = document.getElementById('forum-search-input');
-            const query = (searchInput?.value || '').toLowerCase().trim();
-
-            const activeBtn = document.querySelector('.forum-cat-btn.text-emerald-400');
-            const selectedCat = activeBtn ? activeBtn.getAttribute('data-cat-val') : 'all';
-
-            const cards = document.querySelectorAll('.forum-thread-card');
-            let visibleCount = 0;
-
-            cards.forEach(card => {
-                const cardCat = card.getAttribute('data-category');
-                const cardKeywords = (card.getAttribute('data-keywords') || '').toLowerCase();
-                const cardText = card.innerText.toLowerCase();
-
-                const matchesCat = (selectedCat === 'all' || cardCat === selectedCat);
-                const matchesQuery = (!query || cardKeywords.includes(query) || cardText.includes(query));
-
-                if (matchesCat && matchesQuery) {
-                    card.classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-
-            const emptyNotice = document.getElementById('forum-empty-state');
-            if (emptyNotice) {
-                if (visibleCount === 0) {
-                    emptyNotice.classList.remove('hidden');
-                } else {
-                    emptyNotice.classList.add('hidden');
-                }
-            }
-        }
-
-        function copyInstallCode() {
-            const code = document.getElementById('install-code').innerText;
-            const btnText = document.getElementById('btn-copy-text');
-            const icon = document.getElementById('btn-copy-icon');
-
-            const textArea = document.createElement("textarea");
-            textArea.value = code;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-
-            if (btnText) btnText.innerText = 'Tersalin!';
-            if (icon) icon.className = 'fa-solid fa-check text-emerald-400';
-
-            showToast('Perintah disalin ke clipboard');
-
-            setTimeout(() => {
-                if (btnText) btnText.innerText = 'Salin Perintah';
-                if (icon) icon.className = 'fa-regular fa-copy';
-            }, 2000);
-        }
-
-        function copyCurrentUrl() {
-            const url = window.location.href;
-            const textArea = document.createElement("textarea");
-            textArea.value = url;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            showToast('Link halaman disalin');
-        }
-
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toast-msg');
-            toastMsg.innerText = msg;
-
-            toast.classList.remove('translate-y-10', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-10', 'opacity-0');
-            }, 2500);
-        }
-
-        // Mobile Sidebar Drawer Management
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const sidebar = document.getElementById('sidebar-nav');
-        const overlay = document.getElementById('sidebar-overlay');
-
-        function toggleSidebar() {
-            sidebar.classList.toggle('-translate-x-full');
-            overlay.classList.toggle('hidden');
-            document.body.classList.toggle('overflow-hidden', !sidebar.classList.contains('-translate-x-full'));
-        }
-
-        function closeSidebarOnMobile() {
-            if (window.innerWidth < 1024 && !sidebar.classList.contains('-translate-x-full')) {
-                toggleSidebar();
-            }
-        }
-
-        mobileBtn?.addEventListener('click', toggleSidebar);
-        overlay?.addEventListener('click', toggleSidebar);
-
-        let apiSearchTimeout = null;
-        let activeSearchAbortController = null;
-        let currentSearchMode = 'game'; // 'game' or 'dlc'
-
-        function setSearchMode(mode) {
-            currentSearchMode = mode;
-            const btnGame = document.getElementById('search-mode-btn-game');
-            const btnDlc = document.getElementById('search-mode-btn-dlc');
-            const input = document.getElementById('game-search-input');
-
-            if (mode === 'game') {
-                btnGame.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm text-xs';
-                btnDlc.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs';
-                if (input) input.placeholder = 'Cari judul game (GTA, Wukong...)';
-            } else {
-                btnDlc.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 bg-zinc-800 text-zinc-100 shadow-sm text-xs';
-                btnGame.className = 'py-1 px-2 rounded-md transition-all flex items-center justify-center gap-1.5 text-zinc-400 hover:text-zinc-200 text-xs';
-                if (input) input.placeholder = 'Cari nama DLC (Phantom Liberty, DLC...)';
-            }
-
-            // Clear text field, active item bar, and results list on tab switch
-            if (input) input.value = '';
-            const activeDetail = document.getElementById('game-active-detail');
-            if (activeDetail) activeDetail.classList.add('hidden');
-
-            handleGameSearchInput();
-            if (input) input.focus();
-        }
-
-        function handleGameSearchInput() {
-            const query = (document.getElementById('game-search-input')?.value || '').trim();
-            const resultsContainer = document.getElementById('game-search-results');
-
-            // Clear pending debounce timer & previous abort controller
-            if (apiSearchTimeout) clearTimeout(apiSearchTimeout);
-            if (activeSearchAbortController) {
-                activeSearchAbortController.abort();
-                activeSearchAbortController = null;
-            }
-
-            // If query is empty or too short, show helpful prompt
-            if (query.length < 2) {
-                const wrapper = document.getElementById('game-search-wrapper');
-                if (wrapper) wrapper.classList.remove('is-loading');
-
-                if (resultsContainer) {
-                    if (currentSearchMode === 'game') {
-                        resultsContainer.innerHTML = `
-                            <div class="p-3 text-center bg-zinc-950/40 rounded-lg text-zinc-500 text-[11px] leading-relaxed">
-                                Ketik nama game untuk mencari App ID & Manifest.
-                            </div>
-                        `;
-                    } else {
-                        resultsContainer.innerHTML = `
-                            <div class="p-3 text-center bg-zinc-950/40 rounded-lg text-zinc-500 text-[11px] leading-relaxed">
-                                Ketik nama DLC untuk mencari App ID DLC.
-                            </div>
-                        `;
-                    }
-                }
-                return;
-            }
-
-            // Trigger live external Steam API search with spinning border beam
-            const wrapper = document.getElementById('game-search-wrapper');
-            if (wrapper) wrapper.classList.add('is-loading');
-
-            apiSearchTimeout = setTimeout(() => {
-                fetchLiveSteamGames(query);
-            }, 300);
-        }
-
-        // Dedicated Steam DLC Database for popular SteamTools games & expansions
-        const STEAM_DLC_DATABASE = [
-            // Euro Truck Simulator 2 DLCs
-            { name: "Euro Truck Simulator 2 - Nordic Horizons", id: "2780810", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Greece", id: "2604420", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - West Balkans", id: "2004210", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Iberia", id: "1209460", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Road to the Black Sea", id: "1056760", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Beyond the Baltic Sea", id: "925580", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Italia", id: "558244", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Vive la France !", id: "531130", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Scandinavia", id: "304212", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Going East!", id: "227310", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Special Transport", id: "558245", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Heavy Cargo Pack", id: "531131", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - High Power Cargo Pack", id: "304214", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Cabin Accessories", id: "388470", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Wheel Tuning Pack", id: "388475", game: "Euro Truck Simulator 2", isDlc: true },
-            { name: "Euro Truck Simulator 2 - Michelin Fan Pack", id: "388477", game: "Euro Truck Simulator 2", isDlc: true },
-
-            // American Truck Simulator DLCs
-            { name: "American Truck Simulator - Nebraska", id: "2588150", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Kansas", id: "2298430", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Oklahoma", id: "2209650", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Texas", id: "1465750", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Montana", id: "1576200", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Wyoming", id: "1415692", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Colorado", id: "1209471", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Idaho", id: "1209470", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Utah", id: "1104880", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Washington", id: "1015160", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - Oregon", id: "800370", game: "American Truck Simulator", isDlc: true },
-            { name: "American Truck Simulator - New Mexico", id: "684690", game: "American Truck Simulator", isDlc: true },
-
-            // Cyberpunk 2077 DLCs
-            { name: "Cyberpunk 2077: Phantom Liberty", id: "2138330", game: "Cyberpunk 2077", isDlc: true },
-
-            // Elden Ring DLCs
-            { name: "ELDEN RING Shadow of the Erdtree", id: "2778580", game: "ELDEN RING", isDlc: true },
-            { name: "ELDEN RING Shadow of the Erdtree Premium Bundle", id: "2778590", game: "ELDEN RING", isDlc: true },
-
-            // Resident Evil 4 Remake DLCs
-            { name: "Resident Evil 4 - Separate Ways", id: "2109315", game: "Resident Evil 4", isDlc: true },
-            { name: "Resident Evil 4 - Extra DLC Pack", id: "2109301", game: "Resident Evil 4", isDlc: true },
-
-            // Monster Hunter DLCs
-            { name: "Monster Hunter World: Iceborne", id: "1118010", game: "Monster Hunter: World", isDlc: true },
-            { name: "Monster Hunter Rise: Sunbreak", id: "1880360", game: "Monster Hunter Rise", isDlc: true },
-
-            // The Witcher 3 DLCs
-            { name: "The Witcher 3: Wild Hunt - Blood and Wine", id: "378648", game: "The Witcher 3: Wild Hunt", isDlc: true },
-            { name: "The Witcher 3: Wild Hunt - Hearts of Stone", id: "378649", game: "The Witcher 3: Wild Hunt", isDlc: true },
-            { name: "The Witcher 3: Wild Hunt - Expansion Pass", id: "355880", game: "The Witcher 3: Wild Hunt", isDlc: true },
-
-            // Forza Horizon 5 DLCs
-            { name: "Forza Horizon 5 Rally Adventure", id: "1613281", game: "Forza Horizon 5", isDlc: true },
-            { name: "Forza Horizon 5 Hot Wheels", id: "1613280", game: "Forza Horizon 5", isDlc: true },
-            { name: "Forza Horizon 5 Car Pass", id: "1613282", game: "Forza Horizon 5", isDlc: true },
-            { name: "Forza Horizon 5 Premium Add-Ons Bundle", id: "1613285", game: "Forza Horizon 5", isDlc: true },
-
-            // Dead by Daylight DLCs
-            { name: "Dead by Daylight - Castlevania Chapter", id: "3139360", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Tomb Raider Chapter", id: "3052820", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Dungeons & Dragons Chapter", id: "2825470", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Alan Wake Chapter", id: "2729900", game: "Dead by Daylight", isDlc: true },
-            { name: "Dead by Daylight - Stranger Things Chapter", id: "1135280", game: "Dead by Daylight", isDlc: true },
-
-            // The Sims 4 DLCs
-            { name: "The Sims 4 Lovestruck Expansion Pack", id: "2830880", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 For Rent Expansion Pack", id: "2444630", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Horse Ranch Expansion Pack", id: "2353060", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Growing Together Expansion Pack", id: "2168540", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 High School Years Expansion Pack", id: "1978280", game: "The Sims 4", isDlc: true },
-            { name: "The Sims 4 Cottage Living Expansion Pack", id: "1598710", game: "The Sims 4", isDlc: true },
-
-            // Cities: Skylines DLCs
-            { name: "Cities: Skylines - Hotels & Retreats", id: "2224690", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Financial Districts", id: "2148901", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Plazas & Promenades", id: "2008400", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Airports", id: "1726380", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Sunset Harbor", id: "1146930", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Campus", id: "944071", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Industries", id: "715190", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Parklife", id: "715194", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Green Cities", id: "614580", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Mass Transit", id: "547502", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Natural Disasters", id: "515120", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - Snowfall", id: "420610", game: "Cities: Skylines", isDlc: true },
-            { name: "Cities: Skylines - After Dark", id: "369110", game: "Cities: Skylines", isDlc: true },
-
-            // Fallout 4 DLCs
-            { name: "Fallout 4 - Nuka-World", id: "404090", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 - Vault-Tec Workshop", id: "480631", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 - Contraptions Workshop", id: "480630", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 - Far Harbor", id: "435881", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 - Wasteland Workshop", id: "435880", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 - Automatron", id: "435870", game: "Fallout 4", isDlc: true },
-            { name: "Fallout 4 Season Pass", id: "404090", game: "Fallout 4", isDlc: true },
-
-            // Skyrim Special Edition DLCs
-            { name: "Skyrim Special Edition: Survival Mode", id: "761600", game: "The Elder Scrolls V: Skyrim Special Edition", isDlc: true },
-            { name: "Skyrim Anniversary Edition Upgrade", id: "1746860", game: "The Elder Scrolls V: Skyrim Special Edition", isDlc: true },
-
-            // Persona 3 Reload DLCs
-            { name: "Persona 3 Reload: Expansion Pass", id: "2775610", game: "Persona 3 Reload", isDlc: true },
-            { name: "Persona 3 Reload - Episode Aigis -The Answer-", id: "2775620", game: "Persona 3 Reload", isDlc: true },
-
-            // Persona 5 Royal DLCs
-            { name: "Persona 5 Royal - DLC Pack", id: "2079080", game: "Persona 5 Royal", isDlc: true },
-
-            // Black Myth: Wukong DLCs
-            { name: "Black Myth: Wukong - Deluxe Edition Upgrade", id: "2826350", game: "Black Myth: Wukong", isDlc: true }
-        ];
-
-        async function fetchLiveSteamGames(query) {
-            activeSearchAbortController = new AbortController();
-            const signal = activeSearchAbortController.signal;
-
-            try {
-                let liveResults = [];
-                const qLower = query.toLowerCase().trim();
-
-                if (currentSearchMode === 'dlc') {
-                    // --- DLC SEARCH: Look up actual DLCs by game title or DLC title ---
-                    const dlcMatches = STEAM_DLC_DATABASE.filter(item => 
-                        item.name.toLowerCase().includes(qLower) || 
-                        item.game.toLowerCase().includes(qLower) ||
-                        qLower.split(' ').every(word => item.name.toLowerCase().includes(word) || item.game.toLowerCase().includes(word))
-                    );
-
-                    dlcMatches.forEach(item => {
-                        liveResults.push({
-                            name: item.name,
-                            id: item.id,
-                            logo: `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${item.id}/capsule_231x87.jpg`,
-                            isDlc: true
-                        });
-                    });
-
-                    // Also search external CheapShark for specific DLC expansions if needed
-                    if (liveResults.length < 5) {
-                        try {
-                            const cheapSharkUrl = `https://www.cheapshark.com/api/1.0/games?title=${encodeURIComponent(query)}&limit=15`;
-                            const res = await fetch(cheapSharkUrl, { signal });
-                            if (res.ok) {
-                                const items = await res.json();
-                                if (Array.isArray(items)) {
-                                    items.forEach(item => {
-                                        let appId = item.steamAppID;
-                                        if ((!appId || appId === "null") && item.thumb) {
-                                            const match = item.thumb.match(/\/apps\/(\d+)\//);
-                                            if (match && match[1]) appId = match[1];
-                                        }
-
-                                        const titleLower = item.external.toLowerCase();
-                                        const isExplicitDlc = titleLower.includes('dlc') || 
-                                                             titleLower.includes('expansion') || 
-                                                             titleLower.includes('season pass') || 
-                                                             titleLower.includes('pack') || 
-                                                             titleLower.includes('upgrade') || 
-                                                             titleLower.includes('edition upgrade') ||
-                                                             titleLower.includes('phantom liberty') ||
-                                                             titleLower.includes('erdtree') ||
-                                                             titleLower.includes('iceborne') ||
-                                                             titleLower.includes('sunbreak');
-
-                                        if (appId && appId !== "null" && isExplicitDlc) {
-                                            liveResults.push({
-                                                name: item.external,
-                                                id: appId,
-                                                logo: item.thumb || `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appId}/capsule_231x87.jpg`,
-                                                isDlc: true
-                                            });
-                                        }
-                                    });
-                                }
-                            }
-                        } catch (e) { }
-                    }
-                } else {
-                    // --- BASE GAME SEARCH: Query CheapShark for base games ---
-                    try {
-                        const cheapSharkUrl = `https://www.cheapshark.com/api/1.0/games?title=${encodeURIComponent(query)}&limit=15`;
-                        const res = await fetch(cheapSharkUrl, { signal });
-                        if (res.ok) {
-                            const items = await res.json();
-                            if (Array.isArray(items) && items.length > 0) {
-                                items.forEach(item => {
-                                    let appId = item.steamAppID;
-                                    if ((!appId || appId === "null") && item.thumb) {
-                                        const match = item.thumb.match(/\/apps\/(\d+)\//);
-                                        if (match && match[1]) appId = match[1];
-                                    }
-
-                                    if (appId && appId !== "null") {
-                                        liveResults.push({
-                                            name: item.external,
-                                            id: appId,
-                                            logo: item.thumb || `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appId}/capsule_231x87.jpg`,
-                                            isDlc: false
-                                        });
-                                    }
-                                });
-                            }
-                        }
-                    } catch (cheapSharkErr) {
-                        console.warn('CheapShark search error:', cheapSharkErr);
-                    }
-                }
-
-                // Render live results
-                const currentInput = (document.getElementById('game-search-input')?.value || '').trim().toLowerCase();
-                if (currentInput.includes(query.toLowerCase()) || query.toLowerCase().includes(currentInput) || query.toLowerCase() === currentInput) {
-                    const seenIds = new Set();
-                    const uniqueResults = [];
-
-                    liveResults.forEach(item => {
-                        if (!seenIds.has(String(item.id))) {
-                            seenIds.add(String(item.id));
-                            uniqueResults.push(item);
-                        }
-                    });
-
-                    renderGameResults(uniqueResults, query);
-                }
-            } catch (err) {
-                if (err.name !== 'AbortError') {
-                    console.warn('External live search error:', err);
-                }
-            } finally {
-                const wrapper = document.getElementById('game-search-wrapper');
-                if (wrapper) wrapper.classList.remove('is-loading');
-            }
-        }
-
-        // DRM & Anti-Cheat Compatibility Database
-        const DRM_DATABASE = {
-            // Denuvo Protected Games (Amber/Yellow badge)
-            "2358720": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Black Myth: Wukong
-            "2161700": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Persona 3 Reload
-            "1687950": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Persona 5 Royal
-            "2050650": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Resident Evil 4
-            "1693980": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Dead Space
-            "2054970": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Dragon's Dogma 2
-            "2195250": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // EA Sports FC 24
-            "2669320": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // EA Sports FC 25
-            "1142710": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Total War Warhammer 3
-            "1364780": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Street Fighter 6
-            "1627720": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Lies of P
-            "990080":  { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Hogwarts Legacy
-            "1774580": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // STAR WARS Jedi: Survivor
-            "1235140": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Yakuza: Like a Dragon
-            "2072450": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Like a Dragon: Infinite Wealth
-            "2246340": { status: "denuvo", label: "Denuvo DRM", desc: "Butuh crack/bypass terpisah" }, // Monster Hunter Wilds
-
-            // Kernel Anti-Cheat (Red badge)
-            "1172470": { status: "anticheat", label: "Kernel EAC", desc: "Hanya aman Singleplayer / Offline" }, // Apex Legends
-            "252490":  { status: "anticheat", label: "Easy Anti-Cheat", desc: "Hanya aman Singleplayer / Offline" }, // Rust
-            "359550":  { status: "anticheat", label: "BattlEye AC", desc: "Hanya aman Singleplayer / Offline" }, // Tom Clancy's Rainbow Six Siege
-            "381210":  { status: "anticheat", label: "Easy Anti-Cheat", desc: "Hanya aman Singleplayer / Offline" }, // Dead by Daylight
-            "578080":  { status: "anticheat", label: "BattlEye AC", desc: "Hanya aman Singleplayer / Offline" }, // PUBG: BATTLEGROUNDS
-            "1085660": { status: "anticheat", label: "BattlEye AC", desc: "Hanya aman Singleplayer / Offline" }, // Destiny 2
-
-            // Clean Steam / Playable (Emerald badge)
-            "1222670": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // The Sims 4
-            "227300":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // ETS2
-            "270880":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // ATS
-            "1245620": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Elden Ring
-            "1091500": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Cyberpunk 2077
-            "292030":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // The Witcher 3
-            "1551360": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Forza Horizon 5
-            "271590":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // GTA V
-            "1174180": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Red Dead Redemption 2
-            "1086940": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Baldur's Gate 3
-            "582010":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Monster Hunter: World
-            "1446780": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Monster Hunter Rise
-            "489830":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Skyrim SE
-            "377160":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Fallout 4
-            "255710":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Cities Skylines
-            "218620":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Payday 2
-            "1817070": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Spider-Man Remastered
-            "1817190": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Spider-Man: Miles Morales
-            "1593500": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // God of War
-            "1332010": { status: "clean", label: "Clean Steam", desc: "100% Playable" }, // Stray
-            "814380":  { status: "clean", label: "Clean Steam", desc: "100% Playable" }  // Sekiro
-        };
-
-        function getGameDrmInfo(appId, gameName) {
-            if (DRM_DATABASE[String(appId)]) {
-                return DRM_DATABASE[String(appId)];
-            }
-            const nameLower = (gameName || '').toLowerCase();
-            if (nameLower.includes('wukong') || nameLower.includes('persona 3 reload') || nameLower.includes('persona 5') || nameLower.includes('fc 24') || nameLower.includes('fc 25') || nameLower.includes('fifa') || nameLower.includes('denuvo') || nameLower.includes('sonic frontiers') || nameLower.includes('like a dragon') || nameLower.includes('jedi survivor')) {
-                return { status: 'denuvo', label: 'Denuvo DRM', desc: 'Butuh crack/bypass terpisah' };
-            }
-            if (nameLower.includes('apex') || nameLower.includes('rust') || nameLower.includes('rainbow six') || nameLower.includes('siege') || nameLower.includes('destiny 2') || nameLower.includes('pubg') || nameLower.includes('easy anti-cheat') || nameLower.includes('battleye')) {
-                return { status: 'anticheat', label: 'Kernel AC', desc: 'Hanya aman Singleplayer / Offline' };
-            }
-            return { status: 'clean', label: 'Clean Steam', desc: '100% Playable' };
-        }
-
-        function renderGameResults(games, query) {
-            const resultsContainer = document.getElementById('game-search-results');
-            if (!resultsContainer) return;
-
-            if (games.length === 0) {
-                const searchTypeLabel = currentSearchMode === 'dlc' ? 'DLC / Game' : 'Game';
-                resultsContainer.innerHTML = `
-                    <div class="p-3 text-center bg-zinc-950/40 rounded-lg space-y-1.5">
-                        <p class="text-zinc-500 text-[11px]">${searchTypeLabel} tidak ditemukan.</p>
-                        <a href="https://steamdb.info/search/?a=app&q=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-1 text-[11px] text-zinc-400 hover:text-zinc-200 hover:underline">
-                            <span>Cari "${query}" di SteamDB</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                        </a>
-                    </div>
-                `;
-                return;
-            }
-
-            const isDlcMode = currentSearchMode === 'dlc';
-
-            resultsContainer.innerHTML = games.slice(0, 10).map(game => {
-                const isDlc = isDlcMode || game.isDlc;
-                const drm = getGameDrmInfo(game.id, game.name);
-
-                let badgeHtml = '';
-                if (isDlc) {
-                    badgeHtml = `<span class="text-[9px] font-mono font-bold text-amber-300 bg-amber-500/30 px-1 py-0.2 rounded border border-amber-500/40 backdrop-blur-sm shrink-0">DLC</span>`;
-                } else if (drm.status === 'denuvo') {
-                    badgeHtml = `<span class="text-[9px] font-mono font-medium px-1 py-0.2 rounded bg-amber-500/30 text-amber-300 border border-amber-500/40 backdrop-blur-sm shrink-0" title="${drm.desc}">Denuvo</span>`;
-                } else if (drm.status === 'anticheat') {
-                    badgeHtml = `<span class="text-[9px] font-mono font-medium px-1 py-0.2 rounded bg-rose-500/30 text-rose-300 border border-rose-500/40 backdrop-blur-sm shrink-0" title="${drm.desc}">AC</span>`;
-                }
-
-                return `
-                <div onclick="copyGameId(${game.id}, '${game.name.replace(/'/g, "\\'")}', ${isDlc})"
-                    class="group relative overflow-hidden rounded-lg min-h-[58px] p-2 flex flex-col justify-end border border-zinc-800/80 hover:border-zinc-500 transition-all duration-200 cursor-pointer select-none bg-zinc-950 shadow-sm"
-                    title="Klik untuk memilih & salin ID: ${game.id}">
-                    
-                    <!-- Full Game Capsule Background Image -->
-                    ${game.logo ? `
-                        <img src="${game.logo}" alt="" 
-                            class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300 pointer-events-none"
-                            onerror="this.style.display='none'">
-                    ` : ''}
-                    
-                    <!-- Smooth Bottom-to-Top Scrim Gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/20 pointer-events-none"></div>
-
-                    <!-- Overlay Content -->
-                    <div class="relative z-10 space-y-0.5 w-full min-w-0">
-                        <div class="flex items-center gap-1.5 min-w-0">
-                            ${badgeHtml}
-                            <div class="marquee-wrapper min-w-0 flex-1">
-                                <p class="marquee-content text-xs font-semibold text-white drop-shadow-md group-hover:text-emerald-300 transition">${game.name}</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between text-[11px] font-mono text-zinc-300 pt-0.5">
-                            <span class="text-zinc-400">ID: <strong class="${isDlc ? 'text-amber-400' : 'text-emerald-400'}">${game.id}</strong></span>
-                            <span class="text-[10px] text-zinc-400 opacity-0 group-hover:opacity-100 transition flex items-center gap-1">
-                                <i class="fa-regular fa-copy text-[9px]"></i> Salin
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            `}).join('');
-        }
-
-        let activeSelectedGame = null;
-
-        function copyGameId(appId, gameName, isDlc = false) {
-            const textArea = document.createElement("textarea");
-            textArea.value = appId;
-            document.body.appendChild(textArea);
-            textArea.select();
-            try { document.execCommand('copy'); } catch (err) { }
-            document.body.removeChild(textArea);
-
-            const prefix = isDlc ? 'DLC App ID' : 'App ID';
-            showToast(`${prefix} ${appId} (${gameName}) disalin!`);
-
-            activeSelectedGame = { appId, gameName, isDlc };
-
-            // Update Active Detail Card in Sidebar
-            const activeDetail = document.getElementById('game-active-detail');
-            const activeTitleEl = document.getElementById('game-active-title');
-            const activeIdEl = document.getElementById('game-active-id');
-            const activeDrmEl = document.getElementById('game-active-drm');
-            const linkSteamdb = document.getElementById('link-steamdb');
-            const linkDlcs = document.getElementById('link-dlcs');
-            const linkKernel = document.getElementById('link-kernel');
-            const linkMirror = document.getElementById('link-mirror');
-
-            if (activeDetail && activeIdEl) {
-                if (activeTitleEl) {
-                    activeTitleEl.innerText = gameName;
-                    activeTitleEl.title = gameName;
-                }
-                activeIdEl.innerText = appId;
-                if (linkSteamdb) linkSteamdb.href = `https://steamdb.info/app/${appId}/`;
-                if (linkDlcs) linkDlcs.href = `https://steamdb.info/app/${appId}/dlc/`;
-                if (linkKernel) linkKernel.href = `https://kernelos.org/games?search=${appId}`;
-                if (linkMirror) linkMirror.href = `https://ahd-manifest.lovable.app/?appid=${appId}`;
-
-                if (activeDrmEl) {
-                    if (isDlc) {
-                        activeDrmEl.innerText = 'DLC / Addon';
-                        activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20';
-                    } else {
-                        const drm = getGameDrmInfo(appId, gameName);
-                        activeDrmEl.innerText = drm.label;
-                        if (drm.status === 'denuvo') {
-                            activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20';
-                        } else if (drm.status === 'anticheat') {
-                            activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20';
-                        } else {
-                            activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
-                        }
-                    }
-                }
-
-                activeDetail.classList.remove('hidden');
-            }
-        }
-
-        // --- Steam Folder Helper (Win + R Copy Handler) ---
-        function copyWinRPath(pathCommand, label) {
-            const textArea = document.createElement("textarea");
-            textArea.value = pathCommand;
-            document.body.appendChild(textArea);
-            textArea.select();
-            try { document.execCommand('copy'); } catch (err) { }
-            document.body.removeChild(textArea);
-
-            showToast(`Perintah ${label} disalin! (Buka via Win + R)`);
-        }
-
-        // Initialize UI on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            handleGameSearchInput();
-        });
-        // Also run immediately in case DOM is already parsed
-        handleGameSearchInput();
-    </script>
+    <!-- Main JavaScript Modules -->
+    <script type="module" src="assets/js/app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,371 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+/* Hide horizontal scrollbar for chips on touch */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ==========================================================================
+   Hero Article Cover Card with Animated Moving Grid Background
+   ========================================================================== */
+.hero-cover-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.875rem;
+    border: 1px solid rgba(39, 39, 42, 0.9);
+    background-color: #09090b;
+    padding: 1.5rem 1.25rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .hero-cover-card {
+        padding: 2.25rem 2rem;
+    }
+}
+
+/* Moving Grid Pattern Overlay */
+.hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    animation: grid-move-slide 20s linear infinite;
+    mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 90%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 90%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes grid-move-slide {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 28px 28px;
+    }
+}
+
+/* Ambient Subtle Corner Glows */
+.hero-cover-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-cover-card::before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-cover-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   1. Sliding Tab Indicator & Pill Controls (Input Driven)
+   ========================================================================== */
+.segmented-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(24, 24, 27, 0.9);
+    border: 1px solid rgba(39, 39, 42, 0.9);
+    padding: 3px;
+    border-radius: 9999px;
+    backdrop-filter: blur(12px);
+}
+
+.segmented-pill {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 9999px;
+    background-color: #27272a;
+    border: 1px solid rgba(63, 63, 70, 0.6);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), width 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.segmented-btn {
+    position: relative;
+    z-index: 1;
+    transition: color 0.15s ease;
+}
+
+/* ==========================================================================
+   2. Unified Sidebar Nav Links & Section Badges
+   ========================================================================== */
+.nav-link,
+.forum-cat-btn {
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.nav-link.active,
+.forum-cat-btn.active {
+    color: #34d399 !important;
+    background-color: rgba(24, 24, 27, 0.8) !important;
+}
+
+.step-number-badge {
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.step-number-badge.active-step {
+    border-color: rgba(16, 185, 129, 0.5) !important;
+    color: #34d399 !important;
+    background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+/* ==========================================================================
+   3. Checklist State & Input Feedback
+   ========================================================================== */
+.custom-checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.custom-checkbox-box {
+    position: relative;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 0.25rem;
+    border: 1.5px solid #3f3f46;
+    background-color: #09090b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+    shrink: 0;
+}
+
+.custom-checkbox-container input:checked + .custom-checkbox-box {
+    background-color: rgba(16, 185, 129, 0.15);
+    border-color: #10b981;
+}
+
+.check-svg {
+    width: 12px;
+    height: 12px;
+    stroke: #10b981;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+.check-path {
+    stroke-dasharray: 24;
+    stroke-dashoffset: 24;
+    transition: stroke-dashoffset 0.2s ease;
+}
+
+.custom-checkbox-container input:checked + .custom-checkbox-box .check-path {
+    stroke-dashoffset: 0;
+}
+
+.custom-checkbox-container input:checked ~ .custom-checkbox-text {
+    color: #71717a !important;
+    text-decoration: line-through;
+    text-decoration-color: rgba(113, 113, 122, 0.5);
+}
+
+/* ==========================================================================
+   4. Copy Button Feedback & Subtle Border Pulse
+   ========================================================================== */
+@keyframes container-pulse-glow {
+    0% {
+        border-color: #10b981;
+    }
+    100% {
+        border-color: rgba(39, 39, 42, 0.8);
+    }
+}
+
+.pulse-border-emerald {
+    animation: container-pulse-glow 0.4s ease forwards;
+}
+
+/* ==========================================================================
+   5. Interactive Hover States (Mouse Focus Only)
+   ========================================================================== */
+.spotlight-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(16, 185, 129, 0.08), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.spotlight-card:hover::before {
+    opacity: 1;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.prompt-cursor {
+    animation: blink 1.2s ease-in-out infinite;
+    display: inline-block;
+}
+
+.folder-row-btn {
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.folder-row-btn:hover {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.folder-row-btn .copy-icon-slide {
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.folder-row-btn:hover .copy-icon-slide {
+    transform: translateX(3px);
+    color: #10b981 !important;
+}
+
+/* Search bar glowing beam */
+@keyframes border-beam-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.border-beam-container {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 1px;
+    background: #27272a;
+    transition: all 0.2s ease;
+}
+
+.border-beam-container:focus-within {
+    background: #3f3f46;
+}
+
+.border-beam-spinner {
+    position: absolute;
+    inset: -200%;
+    background: conic-gradient(from 0deg, transparent 0deg, transparent 270deg, rgba(16, 185, 129, 0.3) 310deg, #10b981 340deg, #6ee7b7 360deg);
+    animation: border-beam-spin 1.4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.border-beam-container.is-loading .border-beam-spinner {
+    opacity: 1;
+}
+
+.border-beam-container.is-loading {
+    background: transparent;
+    box-shadow: 0 0 16px -2px rgba(16, 185, 129, 0.35);
+}
+
+.border-beam-inner {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    background-color: #09090b;
+    border-radius: calc(0.5rem - 1px);
+    display: flex;
+    align-items: center;
+}
+
+/* Marquee for titles */
+.marquee-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    min-width: 0;
+    mask-image: linear-gradient(to right, black 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 88%, transparent 100%);
+}
+
+.group:hover .marquee-wrapper {
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.group:hover .marquee-content {
+    animation: marquee-slide-title 4s ease-in-out infinite alternate;
+}
+
+@keyframes marquee-slide-title {
+    0%, 20% { transform: translateX(0%); }
+    80%, 100% { transform: translateX(min(0px, calc(180px - 100%))); }
+}
+
+.forum-mobile-cat-btn.active {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.35);
+}
