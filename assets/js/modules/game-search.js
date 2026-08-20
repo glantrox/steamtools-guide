@@ -1,5 +1,6 @@
 /**
  * Live Game & DLC App ID Search Module
+ * Includes Linear / Raycast style Multiplayer & DRM Compatibility Status Badges
  */
 import { STEAM_DLC_DATABASE } from '../data/dlc-db.js';
 import { getGameDrmInfo } from '../data/drm-db.js';
@@ -14,11 +15,8 @@ export function setSearchMode(mode) {
     currentSearchMode = mode;
     const btnGame = document.getElementById('search-mode-btn-game');
     const btnDlc = document.getElementById('search-mode-btn-dlc');
-    const modeContainer = document.getElementById('search-mode-container');
     const input = document.getElementById('game-search-input');
     const lang = getCurrentLanguage();
-
-    const activeBtn = mode === 'game' ? btnGame : btnDlc;
 
     if (mode === 'game') {
         if (btnGame) {
@@ -213,8 +211,10 @@ function renderGameResults(games, query) {
     if (!resultsContainer) return;
     const lang = getCurrentLanguage();
 
+    const isDlcMode = currentSearchMode === 'dlc';
+
     if (games.length === 0) {
-        const searchTypeLabel = currentSearchMode === 'dlc' ? 'DLC / Game' : 'Game';
+        const searchTypeLabel = isDlcMode ? 'DLC / Game' : 'Game';
         resultsContainer.innerHTML = `
             <div class="p-3 text-center bg-zinc-950/40 rounded-lg space-y-1.5">
                 <p class="text-zinc-500 text-[11px]">${searchTypeLabel} ${lang === 'id' ? 'tidak ditemukan.' : 'not found.'}</p>
@@ -228,21 +228,24 @@ function renderGameResults(games, query) {
         return;
     }
 
-    const isDlcMode = currentSearchMode === 'dlc';
-
     resultsContainer.innerHTML = games.slice(0, 10).map((game, idx) => {
         const isDlc = isDlcMode || game.isDlc;
         const drm = getGameDrmInfo(game.id, game.name);
 
         let badgeHtml = '';
         if (isDlc) {
-            badgeHtml = `<span class="text-[9px] font-mono font-bold text-amber-300 bg-amber-500/30 px-1 py-0.2 rounded border border-amber-500/40 backdrop-blur-sm shrink-0">DLC</span>`;
-        } else if (drm.status === 'denuvo') {
+            badgeHtml = `
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono text-[10px] shrink-0">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                    <span>DLC</span>
+                </span>`;
+        } else {
             const drmDesc = drm.desc[lang] || drm.desc['id'];
-            badgeHtml = `<span class="text-[9px] font-mono font-medium px-1 py-0.2 rounded bg-amber-500/30 text-amber-300 border border-amber-500/40 backdrop-blur-sm shrink-0" title="${drmDesc}">Denuvo</span>`;
-        } else if (drm.status === 'anticheat') {
-            const drmDesc = drm.desc[lang] || drm.desc['id'];
-            badgeHtml = `<span class="text-[9px] font-mono font-medium px-1 py-0.2 rounded bg-rose-500/30 text-rose-300 border border-rose-500/40 backdrop-blur-sm shrink-0" title="${drmDesc}">AC</span>`;
+            badgeHtml = `
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md ${drm.badgeClass} border font-mono text-[10px] shrink-0" title="${drmDesc}">
+                    <span class="w-1.5 h-1.5 rounded-full ${drm.dotClass}"></span>
+                    <span>${drm.badgeText}</span>
+                </span>`;
         }
 
         const safeTitle = game.name.replace(/'/g, "\\'");
@@ -261,18 +264,13 @@ function renderGameResults(games, query) {
             
             <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/20 pointer-events-none"></div>
 
-            <div class="relative z-10 space-y-0.5 w-full min-w-0">
-                <div class="flex items-center gap-1.5 min-w-0">
-                    ${badgeHtml}
-                    <div class="marquee-wrapper min-w-0 flex-1">
-                        <p class="marquee-content text-xs font-semibold text-white drop-shadow-md group-hover:text-emerald-300 transition">${game.name}</p>
-                    </div>
+            <div class="relative z-10 space-y-1 w-full min-w-0">
+                <div class="marquee-wrapper min-w-0 w-full">
+                    <p class="marquee-content text-xs font-semibold text-white drop-shadow-md group-hover:text-emerald-300 transition">${game.name}</p>
                 </div>
                 <div class="flex items-center justify-between text-[11px] font-mono text-zinc-300 pt-0.5">
                     <span class="text-zinc-400">ID: <strong class="${isDlc ? 'text-amber-400' : 'text-emerald-400'}">${game.id}</strong></span>
-                    <span class="text-[10px] text-zinc-400 opacity-0 group-hover:opacity-100 transition flex items-center gap-1">
-                        <i class="fa-regular fa-copy text-[9px]"></i> ${lang === 'id' ? 'Salin' : 'Copy'}
-                    </span>
+                    ${badgeHtml}
                 </div>
             </div>
         </div>
@@ -312,20 +310,23 @@ export function copyGameId(appId, gameName, isDlc = false) {
         if (linkKernel) linkKernel.href = `https://kernelos.org/games?search=${appId}`;
         if (linkMirror) linkMirror.href = `https://ahd-manifest.lovable.app/?appid=${appId}`;
 
+        const descEl = document.getElementById('game-active-desc-text');
         if (activeDrmEl) {
             if (isDlc) {
-                activeDrmEl.innerText = 'DLC / Addon';
-                activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20';
+                activeDrmEl.innerHTML = `
+                    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono text-[10px]">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        <span>DLC / Addon</span>
+                    </span>`;
+                if (descEl) descEl.innerText = lang === 'id' ? 'File DLC / Addon (Membutuhkan base game Steam).' : 'DLC / Addon File (Requires Steam base game).';
             } else {
                 const drm = getGameDrmInfo(appId, gameName);
-                activeDrmEl.innerText = drm.label;
-                if (drm.status === 'denuvo') {
-                    activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20';
-                } else if (drm.status === 'anticheat') {
-                    activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20';
-                } else {
-                    activeDrmEl.className = 'text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20';
-                }
+                activeDrmEl.innerHTML = `
+                    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md ${drm.badgeClass} border font-mono text-[10px]">
+                        <span class="w-1.5 h-1.5 rounded-full ${drm.dotClass}"></span>
+                        <span>${drm.badgeText}</span>
+                    </span>`;
+                if (descEl) descEl.innerText = drm.desc[lang] || drm.desc['id'];
             }
         }
 

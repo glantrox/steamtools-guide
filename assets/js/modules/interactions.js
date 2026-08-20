@@ -91,8 +91,43 @@ export function initSubstepSpy() {
     substepTargets.forEach(target => observer.observe(target));
 }
 
+export function openLegalModal() {
+    const modal = document.getElementById('legal-modal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+}
+
+export function closeLegalModal() {
+    const modal = document.getElementById('legal-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+}
+
+export function initLegalModalEvents() {
+    const modal = document.getElementById('legal-modal');
+    if (!modal) return;
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeLegalModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeLegalModal();
+        }
+    });
+
+    window.openLegalModal = openLegalModal;
+    window.closeLegalModal = closeLegalModal;
+}
+
 export function initInteractions() {
     initSpotlightCards();
     initScrollSpy();
     initSubstepSpy();
+    initLegalModalEvents();
 }

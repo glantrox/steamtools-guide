@@ -1,67 +1,102 @@
 /**
  * DRM & Anti-Cheat Compatibility Database
+ * Categorizes games into 3 clean developer-grade online status tags (Linear / Raycast Style):
+ * 1. SP Only (Muted Zinc/Neutral) -> Works natively out of the box (Single Player via Lua/Manifest)
+ * 2. Online Fix (Emerald/Cyan) -> Supports community multiplayer patch (online-fix.me / Spacewar 480)
+ * 3. Denuvo / DRM (Rose/Amber) -> Denuvo protected or Kernel Anti-Cheat (Severely restricted / unplayable)
  */
-export const DRM_DATABASE = {
-    // Denuvo Protected Games (Amber/Yellow badge)
-    "2358720": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Black Myth: Wukong
-    "2161700": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Persona 3 Reload
-    "1687950": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Persona 5 Royal
-    "2050650": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Resident Evil 4
-    "1693980": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Dead Space
-    "2054970": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Dragon's Dogma 2
-    "2195250": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // EA Sports FC 24
-    "2669320": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // EA Sports FC 25
-    "1142710": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Total War Warhammer 3
-    "1364780": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Street Fighter 6
-    "1627720": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Lies of P
-    "990080":  { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Hogwarts Legacy
-    "1774580": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // STAR WARS Jedi: Survivor
-    "1235140": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Yakuza: Like a Dragon
-    "2072450": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Like a Dragon: Infinite Wealth
-    "2246340": { status: "denuvo", label: "Denuvo DRM", desc: { id: "Butuh crack/bypass terpisah", en: "Requires separate crack/bypass" } }, // Monster Hunter Wilds
 
-    // Kernel Anti-Cheat (Red badge)
-    "1172470": { status: "anticheat", label: "Kernel EAC", desc: { id: "Hanya aman Singleplayer / Offline", en: "Singleplayer / Offline only" } }, // Apex Legends
-    "252490":  { status: "anticheat", label: "Easy Anti-Cheat", desc: { id: "Hanya aman Singleplayer / Offline", en: "Singleplayer / Offline only" } }, // Rust
-    "359550":  { status: "anticheat", label: "BattlEye AC", desc: { id: "Hanya aman Singleplayer / Offline", en: "Singleplayer / Offline only" } }, // Tom Clancy's Rainbow Six Siege
-    "381210":  { status: "anticheat", label: "Easy Anti-Cheat", desc: { id: "Hanya aman Singleplayer / Offline", en: "Singleplayer / Offline only" } }, // Dead by Daylight
-    "578080":  { status: "anticheat", label: "BattlEye AC", desc: { id: "Hanya aman Singleplayer / Offline", en: "Singleplayer / Offline only" } }, // PUBG: BATTLEGROUNDS
-    "1085660": { status: "anticheat", label: "BattlEye AC", desc: { id: "Hanya aman Singleplayer / Offline", en: "Singleplayer / Offline only" } }, // Destiny 2
+export const ONLINE_FIX_GAMES = new Set([
+    "1551360", // Forza Horizon 5
+    "271590",  // GTA V
+    "218620",  // Payday 2
+    "582010",  // Monster Hunter: World
+    "1446780", // Monster Hunter Rise
+    "1245620", // Elden Ring
+    "1086940", // Baldur's Gate 3
+    "1623730", // Palworld
+    "1942630", // Lethal Company
+    "739630",  // Phasmophobia
+    "632360",  // Risk of Rain 2
+    "1426210", // It Takes Two
+    "447040"   // Watch Dogs 2
+]);
 
-    // Clean Steam / Playable (Emerald badge)
-    "1222670": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // The Sims 4
-    "227300":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // ETS2
-    "270880":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // ATS
-    "1245620": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Elden Ring
-    "1091500": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Cyberpunk 2077
-    "292030":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // The Witcher 3
-    "1551360": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Forza Horizon 5
-    "271590":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // GTA V
-    "1174180": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Red Dead Redemption 2
-    "1086940": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Baldur's Gate 3
-    "582010":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Monster Hunter: World
-    "1446780": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Monster Hunter Rise
-    "489830":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Skyrim SE
-    "377160":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Fallout 4
-    "255710":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Cities Skylines
-    "218620":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Payday 2
-    "1817070": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Spider-Man Remastered
-    "1817190": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Spider-Man: Miles Morales
-    "1593500": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // God of War
-    "1332010": { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }, // Stray
-    "814380":  { status: "clean", label: "Clean Steam", desc: { id: "100% Playable", en: "100% Playable" } }   // Sekiro
-};
+export const DENUVO_GAMES = new Set([
+    "2358720", // Black Myth: Wukong
+    "2161700", // Persona 3 Reload
+    "1687950", // Persona 5 Royal
+    "2050650", // Resident Evil 4
+    "1693980", // Dead Space
+    "2054970", // Dragon's Dogma 2
+    "2195250", // EA Sports FC 24
+    "2669320", // EA Sports FC 25
+    "1142710", // Total War Warhammer 3
+    "1364780", // Street Fighter 6
+    "1627720", // Lies of P
+    "990080",  // Hogwarts Legacy
+    "1774580", // STAR WARS Jedi: Survivor
+    "1235140", // Yakuza: Like a Dragon
+    "2072450", // Like a Dragon: Infinite Wealth
+    "2246340"  // Monster Hunter Wilds
+]);
+
+export const KERNEL_AC_GAMES = new Set([
+    "1172470", // Apex Legends
+    "252490",  // Rust
+    "359550",  // Tom Clancy's Rainbow Six Siege
+    "381210",  // Dead by Daylight
+    "578080",  // PUBG: BATTLEGROUNDS
+    "1085660"  // Destiny 2
+]);
 
 export function getGameDrmInfo(appId, gameName) {
-    if (DRM_DATABASE[String(appId)]) {
-        return DRM_DATABASE[String(appId)];
-    }
+    const appIdStr = String(appId);
     const nameLower = (gameName || '').toLowerCase();
-    if (nameLower.includes('wukong') || nameLower.includes('persona 3 reload') || nameLower.includes('persona 5') || nameLower.includes('fc 24') || nameLower.includes('fc 25') || nameLower.includes('fifa') || nameLower.includes('denuvo') || nameLower.includes('sonic frontiers') || nameLower.includes('like a dragon') || nameLower.includes('jedi survivor')) {
-        return { status: 'denuvo', label: 'Denuvo DRM', desc: { id: 'Butuh crack/bypass terpisah', en: 'Requires separate crack/bypass' } };
+
+    // 1. Check Denuvo or Kernel Anti-Cheat (Rose / Amber Tag)
+    if (DENUVO_GAMES.has(appIdStr) || KERNEL_AC_GAMES.has(appIdStr) ||
+        nameLower.includes('wukong') || nameLower.includes('persona 3 reload') || nameLower.includes('persona 5') ||
+        nameLower.includes('fc 24') || nameLower.includes('fc 25') || nameLower.includes('fifa') ||
+        nameLower.includes('denuvo') || nameLower.includes('jedi survivor') || nameLower.includes('apex') ||
+        nameLower.includes('rust') || nameLower.includes('rainbow six') || nameLower.includes('pubg') ||
+        nameLower.includes('destiny 2')) {
+        return {
+            status: 'denuvo',
+            category: 'denuvo',
+            label: 'Denuvo / DRM',
+            badgeText: 'Denuvo / DRM',
+            badgeClass: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
+            dotClass: 'bg-rose-400',
+            desc: { id: 'Server-Sided / Denuvo Protection', en: 'Server-Sided / Denuvo Protection' }
+        };
     }
-    if (nameLower.includes('apex') || nameLower.includes('rust') || nameLower.includes('rainbow six') || nameLower.includes('siege') || nameLower.includes('destiny 2') || nameLower.includes('pubg') || nameLower.includes('easy anti-cheat') || nameLower.includes('battleye')) {
-        return { status: 'anticheat', label: 'Kernel AC', desc: { id: 'Hanya aman Singleplayer / Offline', en: 'Singleplayer / Offline only' } };
+
+    // 2. Check Online Fix Games (Emerald / Cyan Tag)
+    if (ONLINE_FIX_GAMES.has(appIdStr) ||
+        nameLower.includes('forza') || nameLower.includes('gta') || nameLower.includes('payday') ||
+        nameLower.includes('palworld') || nameLower.includes('lethal company') || nameLower.includes('phasmophobia') ||
+        nameLower.includes('it takes two') || nameLower.includes('elden ring') || nameLower.includes('baldur') ||
+        nameLower.includes('monster hunter: world') || nameLower.includes('online-fix') || nameLower.includes('multiplayer')) {
+        return {
+            status: 'online-fix',
+            category: 'online-fix',
+            label: 'Online Fix',
+            badgeText: 'Online Fix',
+            badgeClass: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+            dotClass: 'bg-emerald-400',
+            desc: { id: 'Dukungan Multiplayer via Online-Fix / Spacewar', en: 'Multiplayer Supported via Online-Fix / Spacewar' }
+        };
     }
-    return { status: 'clean', label: 'Clean Steam', desc: { id: '100% Playable', en: '100% Playable' } };
+
+    // 3. Default SP Only (Muted Zinc/Neutral Tag)
+    return {
+        status: 'sp-only',
+        category: 'sp-only',
+        label: 'SP Only',
+        badgeText: 'SP Only',
+        badgeClass: 'bg-zinc-800/80 text-zinc-300 border-zinc-700/60',
+        dotClass: 'bg-zinc-400',
+        desc: { id: 'Plug & Play Singleplayer via Lua/Manifest', en: 'Plug & Play Singleplayer via Lua/Manifest' }
+    };
 }

@@ -6,7 +6,7 @@ import { initNavigation, switchTab } from './modules/navigation.js';
 import { initClipboard } from './modules/clipboard.js';
 import { initForum, renderForumThreads } from './modules/forum.js';
 import { initGameSearch, handleGameSearchInput, setSearchMode } from './modules/game-search.js';
-import { initInteractions } from './modules/interactions.js';
+import { initInteractions, openLegalModal, closeLegalModal } from './modules/interactions.js';
 
 function startApp() {
     // Expose global functions to window so inline onclick handlers always work
@@ -14,6 +14,8 @@ function startApp() {
     window.setLanguage = setLanguage;
     window.switchTab = switchTab;
     window.setSearchMode = setSearchMode;
+    window.openLegalModal = openLegalModal;
+    window.closeLegalModal = closeLegalModal;
 
     // 1. Initialize Internationalization (i18n) Engine
     initI18n();
